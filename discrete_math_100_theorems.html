@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이산수학 주요 정리 100개</title>
+<style>
+body{margin:0;font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;background:#f4f7fb;color:#172033;line-height:1.75}
+header{position:sticky;top:0;z-index:10;background:#1f3a5f;color:white;padding:14px 22px;box-shadow:0 2px 10px #0002}
+h1{margin:0;font-size:24px} .sub{font-size:13px;opacity:.9}
+main{max-width:1100px;margin:24px auto;padding:0 18px 40px}
+.card{background:white;border-radius:18px;margin:18px 0;padding:22px 24px;box-shadow:0 4px 16px #1b35551c;border-left:7px solid #3b6ea8}
+.num{display:inline-block;background:#e9f2ff;color:#174e8a;border-radius:999px;padding:3px 12px;font-weight:700;margin-bottom:8px}
+h2{margin:8px 0 10px;font-size:22px;color:#17365d}.ko-title{color:#7b3f00;font-weight:700}
+.section{margin-top:13px;padding:12px 14px;border-radius:12px;background:#f8fbff}.section strong{color:#1f3a5f}
+.ex{background:#fffaf2;border-left:4px solid #f0a43a;margin-top:10px;padding:11px 13px;border-radius:10px}.ex b{color:#9a5700}
+.footer{text-align:center;color:#667;margin:28px 0;font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>이산수학 주요 정리 100개</h1><div class="sub">각 정리: 영어 원문 · 한글 번역 · 실생활 예시 2개 · 상세 풀이</div></header>
+<main>
+
+<section class="card" id="thm001">
+  <div class="num">정리 001</div>
+  <h2>Sum Rule <span class="ko-title">/ 합의 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If a task can be done in m ways and another mutually exclusive task can be done in n ways, then one of the tasks can be done in m+n ways.</div>
+  <div class="section"><strong>한글 번역</strong><br>서로 동시에 일어나지 않는 두 선택이 각각 m가지, n가지라면 둘 중 하나를 고르는 방법은 m+n가지이다.</div>
+  <div class="ex"><b>실생활 예시 1: 동아리 선택</b><br>학생이 과학 동아리 4개 또는 예술 동아리 3개 중 하나만 가입한다면 총 선택지는 4+3=7개이다. 두 종류를 동시에 선택하지 않으므로 합의 법칙을 쓴다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 할인 쿠폰 경로</b><br>음수 비용 간선이 있어도 음수 사이클이 없으면 벨만-포드로 최저 비용 경로를 찾을 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm002">
+  <div class="num">정리 002</div>
+  <h2>Product Rule <span class="ko-title">/ 곱의 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If a procedure has two successive steps with m choices for the first step and n choices for the second, then the procedure can be done in mn ways.</div>
+  <div class="section"><strong>한글 번역</strong><br>연속된 두 단계가 각각 m가지, n가지라면 전체 방법 수는 mn가지이다.</div>
+  <div class="ex"><b>실생활 예시 1: 급식 메뉴</b><br>밥 종류 2개와 반찬 종류 5개를 차례로 고르면 2×5=10가지 식단이 가능하다. 단계가 연속되므로 곱의 법칙을 적용한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 도시 간 거리표</b><br>모든 도시 쌍의 최단거리를 한 번에 계산할 때 플로이드-워셜을 사용한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm003">
+  <div class="num">정리 003</div>
+  <h2>Subtraction Rule <span class="ko-title">/ 뺄셈의 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If there are n total objects and m of them are forbidden, then n-m objects are allowed.</div>
+  <div class="section"><strong>한글 번역</strong><br>전체 n개에서 제외해야 할 m개를 빼면 가능한 경우는 n-m개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 비밀번호 금지 조건</b><br>0000~9999의 10000개 비밀번호 중 생일 365개를 금지하면 남는 후보는 9635개이다. 전체에서 금지 경우를 빼면 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 전기선 연결</b><br>마을을 두 그룹으로 나누는 경계에서 가장 싼 전선은 어떤 최소 비용 연결망에 포함될 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm004">
+  <div class="num">정리 004</div>
+  <h2>Division Rule <span class="ko-title">/ 나눗셈의 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If each outcome is counted exactly d times, then the number of distinct outcomes is the total count divided by d.</div>
+  <div class="section"><strong>한글 번역</strong><br>각 결과가 정확히 d번씩 중복 계산되면 서로 다른 결과 수는 전체 계산값을 d로 나눈 값이다.</div>
+  <div class="ex"><b>실생활 예시 1: 중복 좌석 배치</b><br>원탁에 6명을 배치할 때 회전이 같은 배치를 6번씩 세면 6!/6=120가지이다. 같은 결과가 6번 중복되므로 나눈다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 불필요한 고가 간선</b><br>사이클 안에서 유일하게 가장 비싼 도로는 최소 연결망에서 제외해도 연결성이 유지된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm005">
+  <div class="num">정리 005</div>
+  <h2>Pigeonhole Principle <span class="ko-title">/ 비둘기집 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If n+1 objects are placed into n boxes, then at least one box contains at least two objects.</div>
+  <div class="section"><strong>한글 번역</strong><br>n+1개의 물건을 n개의 상자에 넣으면 적어도 한 상자에는 2개 이상 들어간다.</div>
+  <div class="ex"><b>실생활 예시 1: 생일 같은 학생</b><br>31명 학급에서 생일의 날짜가 30일인 달만 생각하면 적어도 같은 날짜 생일 두 명이 있다. 31명을 30칸에 넣기 때문이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 인터넷 망 구축</b><br>가장 싼 연결부터 고르되 사이클이 생기면 버리면 전체 최소 비용 연결망을 얻는다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm006">
+  <div class="num">정리 006</div>
+  <h2>Generalized Pigeonhole Principle <span class="ko-title">/ 일반화된 비둘기집 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If N objects are placed into k boxes, then some box contains at least ceiling(N/k) objects.</div>
+  <div class="section"><strong>한글 번역</strong><br>N개의 물건을 k개의 상자에 넣으면 어떤 상자에는 적어도 천장함수 ceil(N/k)개가 들어간다.</div>
+  <div class="ex"><b>실생활 예시 1: 사물함 배정</b><br>73개의 물건을 10개 사물함에 넣으면 어떤 사물함에는 적어도 ceil(73/10)=8개가 들어간다. 평균보다 작게 모두 넣을 수 없다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 새 건물 연결</b><br>이미 연결된 건물 집합에서 바깥으로 나가는 가장 싼 간선을 반복 추가하면 최소 연결망이 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm007">
+  <div class="num">정리 007</div>
+  <h2>Inclusion-Exclusion for Two Sets <span class="ko-title">/ 두 집합의 포함배제 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For finite sets A and B, |A union B| = |A| + |B| - |A intersection B|.</div>
+  <div class="section"><strong>한글 번역</strong><br>두 유한집합 A, B에 대해 합집합의 크기는 각 크기의 합에서 교집합의 크기를 뺀 값이다.</div>
+  <div class="ex"><b>실생활 예시 1: 앱 사용자 집계</b><br>음악앱 120명, 영상앱 90명, 둘 다 40명이면 적어도 하나 이용자는 120+90-40=170명이다. 중복 이용자를 한 번 빼야 한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 수강 선수과목</b><br>선수과목 관계가 사이클 없을 때만 학습 순서를 위상정렬로 정할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm008">
+  <div class="num">정리 008</div>
+  <h2>Inclusion-Exclusion for Three Sets <span class="ko-title">/ 세 집합의 포함배제 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For finite sets A, B, C, add single set sizes, subtract pairwise intersections, and add the triple intersection.</div>
+  <div class="section"><strong>한글 번역</strong><br>세 집합에서는 각 집합의 크기를 더하고 두 집합 교집합을 빼며 세 집합 교집합을 다시 더한다.</div>
+  <div class="ex"><b>실생활 예시 1: 세 과목 신청</b><br>수학 40명, 정보 35명, 과학 30명, 두 과목 중복 10·8·7명, 세 과목 모두 3명이면 전체는 40+35+30-10-8-7+3=83명이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 웹페이지 그룹</b><br>서로 링크로 왕복 가능한 페이지 묶음을 하나로 줄이면 큰 흐름은 사이클 없는 방향 그래프가 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm009">
+  <div class="num">정리 009</div>
+  <h2>Permutation Formula <span class="ko-title">/ 순열 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of ordered selections of r objects from n distinct objects is P(n,r)=n!/(n-r)!.</div>
+  <div class="section"><strong>한글 번역</strong><br>서로 다른 n개 중 r개를 순서 있게 고르는 방법 수는 n!/(n-r)!이다.</div>
+  <div class="ex"><b>실생활 예시 1: 발표 순서</b><br>10명 중 3명을 발표자 1·2·3번으로 세우면 10×9×8=720가지이다. 순서가 중요하므로 순열이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 친구 추천</b><br>A가 B를 알고 B가 C를 알면 A에서 C까지 도달 가능하다는 관계를 추이폐포로 표시한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm010">
+  <div class="num">정리 010</div>
+  <h2>Combination Formula <span class="ko-title">/ 조합 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of unordered selections of r objects from n distinct objects is C(n,r)=n!/(r!(n-r)!).</div>
+  <div class="section"><strong>한글 번역</strong><br>서로 다른 n개 중 r개를 순서 없이 고르는 방법 수는 n!/(r!(n-r)!)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 대표 선발</b><br>10명 중 3명을 순서 없이 대표로 뽑으면 C(10,3)=120가지이다. 직책 구분이 없으므로 조합이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 자기 자신 포함</b><br>회원 추천 관계에 각 회원이 자기 자신과 연결된 쌍을 추가하면 반사폐포가 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm011">
+  <div class="num">정리 011</div>
+  <h2>Binomial Theorem <span class="ko-title">/ 이항정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For a nonnegative integer n, (x+y)^n equals the sum of C(n,k)x^(n-k)y^k for k from 0 to n.</div>
+  <div class="section"><strong>한글 번역</strong><br>음이 아닌 정수 n에 대해 (x+y)^n은 C(n,k)x^(n-k)y^k의 합으로 전개된다.</div>
+  <div class="ex"><b>실생활 예시 1: 간식 조합</b><br>쿠키와 음료 선택을 다항식으로 나타내면 전개 계수가 선택 수를 의미한다. 예를 들어 5개 선택 중 특정 종류가 2개인 경우는 C(5,2)로 계산한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 맞팔 관계</b><br>한쪽 팔로우만 있는 관계에 반대 방향도 추가하면 대칭적 관계가 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm012">
+  <div class="num">정리 012</div>
+  <h2>Pascal Identity <span class="ko-title">/ 파스칼 항등식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For integers n and k, C(n,k)=C(n-1,k-1)+C(n-1,k).</div>
+  <div class="section"><strong>한글 번역</strong><br>조합 수는 C(n,k)=C(n-1,k-1)+C(n-1,k)를 만족한다.</div>
+  <div class="ex"><b>실생활 예시 1: 토너먼트 경로</b><br>격자에서 오른쪽 4번, 위 3번 이동하는 경로 수는 C(7,3)=35이다. 7번 이동 중 위 이동 위치를 고르면 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 같은 반</b><br>학생들이 같은 반인지의 관계는 자기 자신, 서로 대칭, 연쇄성이 있어 동치관계이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm013">
+  <div class="num">정리 013</div>
+  <h2>Vandermonde Identity <span class="ko-title">/ 반데르몬드 항등식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The sum of C(r,k)C(s,n-k) over k equals C(r+s,n).</div>
+  <div class="section"><strong>한글 번역</strong><br>두 집단에서 합쳐 n개를 고르는 수는 각 집단에서 나누어 고르는 경우들의 합과 같다.</div>
+  <div class="ex"><b>실생활 예시 1: 두 반에서 팀 구성</b><br>A반 5명, B반 6명 중 총 4명을 뽑는 수는 k명을 A반에서 뽑는 경우를 모두 더한 값이며 C(11,4)와 같다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 동아리 분류</b><br>같은 동아리 소속이라는 동치류는 학생 전체를 겹치지 않는 여러 묶음으로 나눈다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm014">
+  <div class="num">정리 014</div>
+  <h2>Stars and Bars <span class="ko-title">/ 별과 막대 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of nonnegative integer solutions to x1+...+xk=n is C(n+k-1,k-1).</div>
+  <div class="section"><strong>한글 번역</strong><br>x1+...+xk=n의 음이 아닌 정수해 개수는 C(n+k-1,k-1)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 사탕 배분</b><br>사탕 12개를 4명에게 0개도 가능하게 나누면 C(15,3)=455가지이다. 사탕 별 12개와 칸막이 3개를 배열한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 좌석 구역</b><br>좌석을 VIP·일반·대기 구역으로 분할하면 같은 구역이라는 동치관계를 만들 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm015">
+  <div class="num">정리 015</div>
+  <h2>Derangement Formula <span class="ko-title">/ 완전순열 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of permutations of n objects with no fixed points is n! times the alternating sum of 1/k! from k=0 to n.</div>
+  <div class="section"><strong>한글 번역</strong><br>n개 모두가 원래 자리에 있지 않는 순열 수는 n!에 교대합을 곱한 값이다.</div>
+  <div class="ex"><b>실생활 예시 1: 선물 교환</b><br>5명이 자기 선물을 받지 않게 교환하는 경우는 완전순열로 계산한다. 대략 44가지가 되어 무작위 교환의 위험을 수치화할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 파일 포함</b><br>폴더 포함 관계는 반사·반대칭·추이적이어서 부분순서로 볼 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm016">
+  <div class="num">정리 016</div>
+  <h2>Handshake Lemma <span class="ko-title">/ 악수 보조정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>In any finite undirected graph, the sum of all vertex degrees equals twice the number of edges.</div>
+  <div class="section"><strong>한글 번역</strong><br>유한 무방향 그래프에서 모든 꼭짓점 차수의 합은 간선 수의 두 배이다.</div>
+  <div class="ex"><b>실생활 예시 1: 회의 악수</b><br>참석자별 악수 횟수를 모두 더하면 실제 악수 한 번이 두 사람에게 세어지므로 전체 합은 악수 수의 2배이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 대기번호</b><br>모든 고객의 순번이 서로 비교 가능하면 전순서이다. 누가 먼저인지 항상 결정된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm017">
+  <div class="num">정리 017</div>
+  <h2>Odd Degree Theorem <span class="ko-title">/ 홀수 차수 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every finite undirected graph has an even number of vertices of odd degree.</div>
+  <div class="section"><strong>한글 번역</strong><br>유한 무방향 그래프에서 홀수 차수를 가진 꼭짓점의 수는 항상 짝수이다.</div>
+  <div class="ex"><b>실생활 예시 1: SNS 친구 수</b><br>친구 수가 홀수인 사용자의 수는 항상 짝수다. 친구 관계 한 개가 두 사람의 차수를 동시에 1씩 바꾸기 때문이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 최저 가격</b><br>비어 있지 않은 자연수 가격 후보 목록에는 반드시 가장 싼 가격이 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm018">
+  <div class="num">정리 018</div>
+  <h2>Euler Path Criterion <span class="ko-title">/ 오일러 경로 판정</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A connected graph has an Euler path exactly when it has zero or two vertices of odd degree.</div>
+  <div class="section"><strong>한글 번역</strong><br>연결 그래프가 오일러 경로를 가지려면 홀수 차수 꼭짓점이 0개 또는 2개이어야 한다.</div>
+  <div class="ex"><b>실생활 예시 1: 배달 경로</b><br>도로망에서 모든 도로를 한 번씩만 지나려면 홀수 차수 교차로가 0개 또는 2개여야 한다. 시작과 끝만 홀수일 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 저축 증명</b><br>첫 달 저축액이 양수이고 매달 증가함을 보이면 모든 달에 저축액이 양수임을 귀납적으로 증명할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm019">
+  <div class="num">정리 019</div>
+  <h2>Euler Circuit Criterion <span class="ko-title">/ 오일러 회로 판정</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A connected graph has an Euler circuit exactly when every vertex has even degree.</div>
+  <div class="section"><strong>한글 번역</strong><br>연결 그래프가 오일러 회로를 가지려면 모든 꼭짓점의 차수가 짝수이어야 한다.</div>
+  <div class="ex"><b>실생활 예시 1: 청소 로봇</b><br>복도 그래프의 모든 통로를 한 번씩 지나 출발점으로 돌아오려면 모든 방의 연결 통로 수가 짝수여야 한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 우표 금액</b><br>여러 이전 금액을 이용해 다음 금액을 만들 수 있음을 보이면 강한 귀납법이 적합하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm020">
+  <div class="num">정리 020</div>
+  <h2>Tree Edge Theorem <span class="ko-title">/ 트리 간선 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every tree with n vertices has exactly n-1 edges.</div>
+  <div class="section"><strong>한글 번역</strong><br>꼭짓점이 n개인 트리의 간선 수는 정확히 n-1개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 네트워크 케이블</b><br>컴퓨터 20대를 끊김 없이 최소로 연결하려면 트리 구조가 필요하고 케이블은 19개면 충분하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 수식 트리</b><br>숫자 하나와 연산자 결합 규칙으로 만든 모든 수식에 대해 성질을 구조적 귀납법으로 증명한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm021">
+  <div class="num">정리 021</div>
+  <h2>Tree Connectivity Theorem <span class="ko-title">/ 트리 연결성 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A tree is a connected graph with no cycles.</div>
+  <div class="section"><strong>한글 번역</strong><br>트리는 연결되어 있으면서 사이클이 없는 그래프이다.</div>
+  <div class="ex"><b>실생활 예시 1: 가계도 구조</b><br>상하 관계를 사이클 없이 연결하면 트리처럼 볼 수 있다. 한 사람에서 다른 사람으로 가는 경로가 중복되지 않는다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 할부 잔액</b><br>첫 잔액과 매달 이자·상환 규칙이 주어지면 다음 달 잔액이 유일하게 정해진다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm022">
+  <div class="num">정리 022</div>
+  <h2>Unique Path in a Tree <span class="ko-title">/ 트리의 유일 경로 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Between any two vertices of a tree there is exactly one simple path.</div>
+  <div class="section"><strong>한글 번역</strong><br>트리의 임의의 두 꼭짓점 사이에는 단순 경로가 정확히 하나 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 파일 폴더</b><br>폴더 구조에서 한 파일까지 가는 경로는 하나뿐이다. 같은 파일로 가는 두 경로가 있으면 트리 구조가 깨진다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 구독자 증가</b><br>매달 1.1배 증가하고 50명씩 추가되면 반복 대입으로 n개월 뒤 구독자를 계산한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm023">
+  <div class="num">정리 023</div>
+  <h2>Forest Edge Theorem <span class="ko-title">/ 포리스트 간선 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A forest with n vertices and c components has n-c edges.</div>
+  <div class="section"><strong>한글 번역</strong><br>꼭짓점 n개와 연결 성분 c개를 가진 포리스트의 간선 수는 n-c개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 섬 여러 묶음</b><br>서로 떨어진 3개 지역에 총 15개 마을을 각각 트리로 연결하면 도로 수는 15-3=12개이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 계단 오르기</b><br>한 번에 1칸 또는 2칸 오르면 방법 수가 이전 두 항의 합이 되어 2차 점화식으로 풀린다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm024">
+  <div class="num">정리 024</div>
+  <h2>Complete Graph Edge Count <span class="ko-title">/ 완전그래프 간선 수</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The complete graph K_n has n(n-1)/2 edges.</div>
+  <div class="section"><strong>한글 번역</strong><br>완전그래프 K_n의 간선 수는 n(n-1)/2개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 모두와 채팅</b><br>6명이 모두 서로 1:1 채팅방을 만들면 C(6,2)=15개이다. 완전그래프 간선 수와 같다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 쿠폰 조합</b><br>생성함수의 계수는 특정 금액을 만드는 쿠폰 조합 수로 해석할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm025">
+  <div class="num">정리 025</div>
+  <h2>Complete Bipartite Edge Count <span class="ko-title">/ 완전이분그래프 간선 수</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The complete bipartite graph K_m,n has mn edges.</div>
+  <div class="section"><strong>한글 번역</strong><br>완전이분그래프 K_m,n의 간선 수는 mn개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 교사-학생 상담</b><br>교사 4명과 학생 30명이 모두 상담 연결 가능하면 가능한 연결은 4×30=120개이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 번식 모델</b><br>피보나치 닫힌식으로 n개월 뒤 개체 수를 빠르게 근사 계산할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm026">
+  <div class="num">정리 026</div>
+  <h2>Bipartite Graph Characterization <span class="ko-title">/ 이분그래프 판정 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A graph is bipartite if and only if it has no cycle of odd length.</div>
+  <div class="section"><strong>한글 번역</strong><br>그래프가 이분그래프일 필요충분조건은 홀수 길이 사이클이 없는 것이다.</div>
+  <div class="ex"><b>실생활 예시 1: 시간표 충돌</b><br>시험 과목을 두 그룹으로 나누어 충돌 없는 시간대를 배정할 수 있으면 이분그래프이다. 홀수 사이클이 있으면 두 그룹 배정이 불가능하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 괄호 문자열</b><br>올바른 괄호쌍 n개의 개수는 카탈란 수로 계산되어 코드 파서 설계에 쓰인다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm027">
+  <div class="num">정리 027</div>
+  <h2>Planar Euler Formula <span class="ko-title">/ 평면그래프 오일러 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For a connected planar graph, v-e+f=2.</div>
+  <div class="section"><strong>한글 번역</strong><br>연결 평면그래프에서 꼭짓점 수 v, 간선 수 e, 면 수 f는 v-e+f=2를 만족한다.</div>
+  <div class="ex"><b>실생활 예시 1: 지도 구역</b><br>도시 지도를 점·선·면으로 단순화하면 v-e+f=2를 확인해 누락된 구역 수를 계산할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 스위치 회로</b><br>AND와 OR, 0과 1을 바꾸면 쌍대 회로 법칙이 만들어져 회로 단순화에 활용된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm028">
+  <div class="num">정리 028</div>
+  <h2>Planar Edge Bound <span class="ko-title">/ 평면그래프 간선 상한</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A simple connected planar graph with v at least 3 has e &lt;= 3v-6.</div>
+  <div class="section"><strong>한글 번역</strong><br>꼭짓점이 3개 이상인 단순 연결 평면그래프는 e ≤ 3v-6을 만족한다.</div>
+  <div class="ex"><b>실생활 예시 1: 도로 설계</b><br>평면에 교차 없이 도로를 그릴 때 간선 수가 3v-6을 넘으면 반드시 교차가 필요하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 검색 조건</b><br>‘무료가 아니거나 배송이 빠르지 않다’는 ‘무료이고 배송이 빠르다’의 부정으로 바꿔 조건을 정리한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm029">
+  <div class="num">정리 029</div>
+  <h2>Kuratowski Theorem <span class="ko-title">/ 쿠라토프스키 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A finite graph is planar if and only if it contains no subdivision of K5 or K3,3.</div>
+  <div class="section"><strong>한글 번역</strong><br>유한 그래프가 평면그래프일 필요충분조건은 K5 또는 K3,3의 세분 그래프를 포함하지 않는 것이다.</div>
+  <div class="ex"><b>실생활 예시 1: 회로 배선</b><br>K3,3 구조가 포함되면 평면 기판에 교차 없이 배선하기 어렵다. 비평면성 판정에 사용된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 필터 단순화</b><br>x이거나 x와 y라는 조건은 그냥 x로 줄일 수 있다. 이미 x가 참이면 뒤 조건은 불필요하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm030">
+  <div class="num">정리 030</div>
+  <h2>Four Color Theorem <span class="ko-title">/ 4색 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every planar map can be colored with at most four colors so that adjacent regions have different colors.</div>
+  <div class="section"><strong>한글 번역</strong><br>모든 평면 지도는 인접 영역이 다른 색이 되도록 최대 4색으로 칠할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 지도 색칠</b><br>전국 행정구역 지도를 인접 지역끼리 다른 색으로 칠할 때 4색이면 충분하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 권한 검사</b><br>관리자 AND (쓰기 OR 읽기)는 (관리자 AND 쓰기) OR (관리자 AND 읽기)로 분해할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm031">
+  <div class="num">정리 031</div>
+  <h2>Chromatic Number Bound <span class="ko-title">/ 색칠 수 상한 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For every graph G, the chromatic number is at most Delta(G)+1.</div>
+  <div class="section"><strong>한글 번역</strong><br>그래프 G의 색칠 수는 최대 차수 Δ(G)+1 이하이다.</div>
+  <div class="ex"><b>실생활 예시 1: 시험 시간 배정</b><br>한 학생이 동시에 듣는 과목들을 간선으로 연결하면 최대 충돌 수+1개의 시간대면 색칠 가능하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 경보 시스템</b><br>센서 A,B의 모든 참거짓 조합을 표로 만들면 경보 조건을 완전히 검증할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm032">
+  <div class="num">정리 032</div>
+  <h2>Brooks&#x27; Theorem <span class="ko-title">/ 브룩스 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Except for complete graphs and odd cycles, a connected graph has chromatic number at most its maximum degree.</div>
+  <div class="section"><strong>한글 번역</strong><br>완전그래프와 홀수 사이클을 제외한 연결 그래프의 색칠 수는 최대 차수 이하이다.</div>
+  <div class="ex"><b>실생활 예시 1: 프로젝트 자원</b><br>특수한 경우를 제외하면 필요한 색 수가 최대 차수를 넘지 않는다는 사실로 자원 수를 줄일 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 조건문 비교</b><br>두 보안 규칙이 모든 입력 조합에서 같은 결과를 내면 논리적으로 같은 규칙이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm033">
+  <div class="num">정리 033</div>
+  <h2>Hall Marriage Theorem <span class="ko-title">/ 홀의 결혼 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A bipartite graph has a matching covering the left part iff every subset of the left part has at least as many neighbors as its size.</div>
+  <div class="section"><strong>한글 번역</strong><br>이분그래프에서 왼쪽 전체를 매칭하려면 왼쪽 임의 부분집합의 이웃 수가 그 부분집합 크기 이상이어야 한다.</div>
+  <div class="ex"><b>실생활 예시 1: 멘토 매칭</b><br>학생 집합마다 가능한 멘토 수가 학생 수 이상이면 모든 학생에게 서로 다른 멘토를 배정할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 입장 조건</b><br>‘학생이면 할인’은 ‘할인 대상이 아니면 학생이 아니다’와 논리적으로 같다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm034">
+  <div class="num">정리 034</div>
+  <h2>Konig&#x27;s Theorem <span class="ko-title">/ 쾨니그 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>In a bipartite graph, the size of a maximum matching equals the size of a minimum vertex cover.</div>
+  <div class="section"><strong>한글 번역</strong><br>이분그래프에서 최대 매칭 크기는 최소 꼭짓점 덮개 크기와 같다.</div>
+  <div class="ex"><b>실생활 예시 1: 작업 배정</b><br>이분그래프에서 최대 배정 수와 최소로 막아야 하는 사람·작업 수가 같아 최적성을 확인할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 추론 엔진</b><br>규칙 p∨q, ¬p∨r가 있으면 q∨r를 얻어 가능한 결론을 줄일 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm035">
+  <div class="num">정리 035</div>
+  <h2>Menger&#x27;s Theorem <span class="ko-title">/ 멩거 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The minimum number of vertices separating two nonadjacent vertices equals the maximum number of internally vertex-disjoint paths between them.</div>
+  <div class="section"><strong>한글 번역</strong><br>두 비인접 꼭짓점을 분리하는 최소 꼭짓점 수는 내부 꼭짓점이 서로 다른 경로의 최대 개수와 같다.</div>
+  <div class="ex"><b>실생활 예시 1: 통신 장애</b><br>두 서버 사이를 끊기 위해 제거해야 하는 최소 중계기 수는 서로 내부가 겹치지 않는 경로 수와 같다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 증명 검증</b><br>올바른 추론 규칙만 사용한 보안 정책 증명은 실제 논리에서도 참이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm036">
+  <div class="num">정리 036</div>
+  <h2>Max-Flow Min-Cut Theorem <span class="ko-title">/ 최대유량 최소절단 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>In a flow network, the maximum flow value equals the minimum cut capacity.</div>
+  <div class="section"><strong>한글 번역</strong><br>흐름 네트워크에서 최대 유량 값은 최소 절단 용량과 같다.</div>
+  <div class="ex"><b>실생활 예시 1: 물류 수송</b><br>창고에서 매장까지 보낼 수 있는 최대 물량은 병목 절단의 총 용량과 같다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 자동 증명</b><br>항상 참인 명제식은 충분한 증명 체계 안에서 기계적으로 증명될 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm037">
+  <div class="num">정리 037</div>
+  <h2>Dijkstra Correctness Theorem <span class="ko-title">/ 다익스트라 알고리즘 정당성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>With nonnegative edge weights, Dijkstra&#x27;s algorithm returns shortest path distances from the source.</div>
+  <div class="section"><strong>한글 번역</strong><br>간선 가중치가 음이 아니면 다익스트라 알고리즘은 시작점에서의 최단거리를 올바르게 구한다.</div>
+  <div class="ex"><b>실생활 예시 1: 길찾기 앱</b><br>모든 도로 시간이 음수가 아니면 다익스트라 알고리즘으로 출발지에서 각 지점까지 최단시간을 구한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 설문 부분집합</b><br>관심사 8개 중 사용자가 고를 수 있는 관심사 묶음은 2^8=256가지이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm038">
+  <div class="num">정리 038</div>
+  <h2>Bellman-Ford Theorem <span class="ko-title">/ 벨만-포드 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Bellman-Ford computes shortest paths with negative edges if no reachable negative cycle exists.</div>
+  <div class="section"><strong>한글 번역</strong><br>도달 가능한 음수 사이클이 없으면 벨만-포드 알고리즘은 음수 간선이 있어도 최단거리를 구한다.</div>
+  <div class="ex"><b>실생활 예시 1: 할인 쿠폰 경로</b><br>음수 비용 간선이 있어도 음수 사이클이 없으면 벨만-포드로 최저 비용 경로를 찾을 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 데이터 라벨</b><br>라벨 집합보다 가능한 라벨 조합의 집합이 항상 더 커서 모든 조합을 원래 라벨로 대응시킬 수 없다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm039">
+  <div class="num">정리 039</div>
+  <h2>Floyd-Warshall Theorem <span class="ko-title">/ 플로이드-워셜 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Floyd-Warshall computes all-pairs shortest paths by dynamic programming over allowed intermediate vertices.</div>
+  <div class="section"><strong>한글 번역</strong><br>플로이드-워셜은 허용 중간 정점을 단계적으로 늘리는 동적 계획법으로 모든 쌍 최단거리를 구한다.</div>
+  <div class="ex"><b>실생활 예시 1: 도시 간 거리표</b><br>모든 도시 쌍의 최단거리를 한 번에 계산할 때 플로이드-워셜을 사용한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 좌표 선택</b><br>행 5개와 열 7개에서 좌석 좌표는 5×7=35개이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm040">
+  <div class="num">정리 040</div>
+  <h2>Minimum Spanning Tree Cut Property <span class="ko-title">/ 최소신장트리 컷 성질</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For any cut, a lightest edge crossing the cut belongs to some minimum spanning tree.</div>
+  <div class="section"><strong>한글 번역</strong><br>임의의 컷을 가로지르는 가장 가벼운 간선은 어떤 최소신장트리에 포함될 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 전기선 연결</b><br>마을을 두 그룹으로 나누는 경계에서 가장 싼 전선은 어떤 최소 비용 연결망에 포함될 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 설정 함수</b><br>사용자 4명에게 3개 테마 중 하나를 배정하는 함수 수는 3^4=81개이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm041">
+  <div class="num">정리 041</div>
+  <h2>Minimum Spanning Tree Cycle Property <span class="ko-title">/ 최소신장트리 사이클 성질</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For any cycle, a heaviest edge on the cycle is in no minimum spanning tree if it is uniquely heaviest.</div>
+  <div class="section"><strong>한글 번역</strong><br>사이클에서 유일하게 가장 무거운 간선은 최소신장트리에 포함되지 않는다.</div>
+  <div class="ex"><b>실생활 예시 1: 불필요한 고가 간선</b><br>사이클 안에서 유일하게 가장 비싼 도로는 최소 연결망에서 제외해도 연결성이 유지된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 서로 다른 자리 배정</b><br>학생 5명을 좌석 8개에 중복 없이 앉히는 방법은 8×7×6×5×4이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm042">
+  <div class="num">정리 042</div>
+  <h2>Kruskal Correctness Theorem <span class="ko-title">/ 크루스칼 알고리즘 정당성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Kruskal&#x27;s algorithm builds a minimum spanning tree by repeatedly adding the lightest edge that does not form a cycle.</div>
+  <div class="section"><strong>한글 번역</strong><br>크루스칼 알고리즘은 사이클을 만들지 않는 가장 가벼운 간선을 반복 선택하여 최소신장트리를 만든다.</div>
+  <div class="ex"><b>실생활 예시 1: 인터넷 망 구축</b><br>가장 싼 연결부터 고르되 사이클이 생기면 버리면 전체 최소 비용 연결망을 얻는다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 서버 배정</b><br>작업 6개를 서버 3대에 모두 최소 하나씩 배정하려면 전사함수 개수를 사용한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm043">
+  <div class="num">정리 043</div>
+  <h2>Prim Correctness Theorem <span class="ko-title">/ 프림 알고리즘 정당성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Prim&#x27;s algorithm builds a minimum spanning tree by repeatedly adding the lightest edge leaving the current tree.</div>
+  <div class="section"><strong>한글 번역</strong><br>프림 알고리즘은 현재 트리에서 바깥으로 나가는 가장 가벼운 간선을 반복 선택하여 최소신장트리를 만든다.</div>
+  <div class="ex"><b>실생활 예시 1: 새 건물 연결</b><br>이미 연결된 건물 집합에서 바깥으로 나가는 가장 싼 간선을 반복 추가하면 최소 연결망이 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 크기 비교</b><br>두 데이터 집합이 서로 단사로 들어갈 수 있으면 실제 크기가 같다고 결론낼 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm044">
+  <div class="num">정리 044</div>
+  <h2>Topological Ordering Theorem <span class="ko-title">/ 위상정렬 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A directed graph has a topological ordering if and only if it is acyclic.</div>
+  <div class="section"><strong>한글 번역</strong><br>방향 그래프가 위상정렬을 가지는 필요충분조건은 사이클이 없는 것이다.</div>
+  <div class="ex"><b>실생활 예시 1: 수강 선수과목</b><br>선수과목 관계가 사이클 없을 때만 학습 순서를 위상정렬로 정할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 시계 계산</b><br>3시에서 10시간 뒤는 13≡1 (mod 12)이므로 1시이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm045">
+  <div class="num">정리 045</div>
+  <h2>Strong Component Condensation Theorem <span class="ko-title">/ 강연결성분 축약 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Contracting each strongly connected component of a directed graph produces a directed acyclic graph.</div>
+  <div class="section"><strong>한글 번역</strong><br>방향 그래프의 각 강연결성분을 하나로 줄이면 방향 비순환 그래프가 된다.</div>
+  <div class="ex"><b>실생활 예시 1: 웹페이지 그룹</b><br>서로 링크로 왕복 가능한 페이지 묶음을 하나로 줄이면 큰 흐름은 사이클 없는 방향 그래프가 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 주기 알림</b><br>4일 주기와 6일 주기의 겹침은 모듈러 곱셈과 합동 계산으로 찾는다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm046">
+  <div class="num">정리 046</div>
+  <h2>Reachability Transitive Closure <span class="ko-title">/ 도달가능성 추이폐포 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The transitive closure of a relation records exactly all pairs connected by paths of length at least one.</div>
+  <div class="section"><strong>한글 번역</strong><br>관계의 추이폐포는 길이 1 이상의 경로로 연결되는 모든 순서쌍을 나타낸다.</div>
+  <div class="ex"><b>실생활 예시 1: 친구 추천</b><br>A가 B를 알고 B가 C를 알면 A에서 C까지 도달 가능하다는 관계를 추이폐포로 표시한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 최대공약수</b><br>타일 48cm와 18cm를 같은 크기 정사각형으로 자를 때 최대 한 변은 gcd(48,18)=6cm이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm047">
+  <div class="num">정리 047</div>
+  <h2>Reflexive Closure <span class="ko-title">/ 반사폐포 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The reflexive closure of a relation is obtained by adding all pairs (a,a).</div>
+  <div class="section"><strong>한글 번역</strong><br>관계의 반사폐포는 모든 원소 a에 대해 (a,a)를 추가하여 얻는다.</div>
+  <div class="ex"><b>실생활 예시 1: 자기 자신 포함</b><br>회원 추천 관계에 각 회원이 자기 자신과 연결된 쌍을 추가하면 반사폐포가 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 거스름돈 조합</b><br>gcd(6,9)=3은 6x+9y로 표현되므로 3원 단위 차이를 조합할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm048">
+  <div class="num">정리 048</div>
+  <h2>Symmetric Closure <span class="ko-title">/ 대칭폐포 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The symmetric closure of a relation is obtained by adding each reversed pair.</div>
+  <div class="section"><strong>한글 번역</strong><br>관계의 대칭폐포는 각 순서쌍의 반대 순서쌍을 추가하여 얻는다.</div>
+  <div class="ex"><b>실생활 예시 1: 맞팔 관계</b><br>한쪽 팔로우만 있는 관계에 반대 방향도 추가하면 대칭적 관계가 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 소인수분해</b><br>360=2^3×3^2×5처럼 유일하게 분해되어 약수 개수나 최소공배수 계산에 쓰인다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm049">
+  <div class="num">정리 049</div>
+  <h2>Equivalence Relation Theorem <span class="ko-title">/ 동치관계 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A relation is an equivalence relation iff it is reflexive, symmetric, and transitive.</div>
+  <div class="section"><strong>한글 번역</strong><br>관계가 반사적·대칭적·추이적일 때 그리고 그때만 동치관계이다.</div>
+  <div class="ex"><b>실생활 예시 1: 같은 반</b><br>학생들이 같은 반인지의 관계는 자기 자신, 서로 대칭, 연쇄성이 있어 동치관계이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 소수 목록</b><br>새 암호 소수를 찾을 때 소수가 끝없이 존재한다는 사실이 이론적 배경이 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm050">
+  <div class="num">정리 050</div>
+  <h2>Equivalence Classes Partition <span class="ko-title">/ 동치류 분할 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Equivalence classes of an equivalence relation form a partition of the underlying set.</div>
+  <div class="section"><strong>한글 번역</strong><br>동치관계의 동치류들은 전체 집합을 서로 겹치지 않게 분할한다.</div>
+  <div class="ex"><b>실생활 예시 1: 동아리 분류</b><br>같은 동아리 소속이라는 동치류는 학생 전체를 겹치지 않는 여러 묶음으로 나눈다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 암호 검산</b><br>소수 p를 법으로 할 때 빠른 거듭제곱 나머지 계산을 페르마의 소정리로 줄일 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm051">
+  <div class="num">정리 051</div>
+  <h2>Partition Defines Equivalence <span class="ko-title">/ 분할과 동치관계 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every partition of a set determines an equivalence relation whose classes are the blocks of the partition.</div>
+  <div class="section"><strong>한글 번역</strong><br>집합의 모든 분할은 각 블록을 동치류로 하는 동치관계를 만든다.</div>
+  <div class="ex"><b>실생활 예시 1: 좌석 구역</b><br>좌석을 VIP·일반·대기 구역으로 분할하면 같은 구역이라는 동치관계를 만들 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: RSA 원리</b><br>서로소 조건에서 a^phi(n)≡1을 이용해 암호화와 복호화가 맞물리도록 설계한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm052">
+  <div class="num">정리 052</div>
+  <h2>Partial Order Theorem <span class="ko-title">/ 부분순서 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A relation is a partial order iff it is reflexive, antisymmetric, and transitive.</div>
+  <div class="section"><strong>한글 번역</strong><br>관계가 반사적·반대칭적·추이적일 때 부분순서이다.</div>
+  <div class="ex"><b>실생활 예시 1: 파일 포함</b><br>폴더 포함 관계는 반사·반대칭·추이적이어서 부분순서로 볼 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 근무표 주기</b><br>3일마다 야간, 5일마다 회의라면 두 조건을 만족하는 날짜는 CRT로 찾는다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm053">
+  <div class="num">정리 053</div>
+  <h2>Total Order Theorem <span class="ko-title">/ 전순서 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A partial order is total if every two elements are comparable.</div>
+  <div class="section"><strong>한글 번역</strong><br>부분순서에서 임의의 두 원소가 비교 가능하면 전순서이다.</div>
+  <div class="ex"><b>실생활 예시 1: 대기번호</b><br>모든 고객의 순번이 서로 비교 가능하면 전순서이다. 누가 먼저인지 항상 결정된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 소수 판정</b><br>p가 작을 때 (p-1)! mod p가 -1인지 확인하면 소수 여부를 검증할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm054">
+  <div class="num">정리 054</div>
+  <h2>Well-Ordering Principle <span class="ko-title">/ 정렬성 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every nonempty set of nonnegative integers has a least element.</div>
+  <div class="section"><strong>한글 번역</strong><br>음이 아닌 정수의 공집합이 아닌 부분집합은 항상 최소 원소를 가진다.</div>
+  <div class="ex"><b>실생활 예시 1: 최저 가격</b><br>비어 있지 않은 자연수 가격 후보 목록에는 반드시 가장 싼 가격이 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 서로소 개수</b><br>1부터 12까지 12와 서로소인 수는 phi(12)=12(1-1/2)(1-1/3)=4개이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm055">
+  <div class="num">정리 055</div>
+  <h2>Mathematical Induction <span class="ko-title">/ 수학적 귀납법</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If P(0) is true and P(k) implies P(k+1), then P(n) is true for all nonnegative integers n.</div>
+  <div class="section"><strong>한글 번역</strong><br>기초 단계와 귀납 단계를 보이면 모든 음이 아닌 정수 n에 대해 명제가 참이다.</div>
+  <div class="ex"><b>실생활 예시 1: 저축 증명</b><br>첫 달 저축액이 양수이고 매달 증가함을 보이면 모든 달에 저축액이 양수임을 귀납적으로 증명할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 나머지 분류</b><br>어떤 정수도 7로 나눈 나머지는 0~6 중 하나이므로 요일 계산에 사용된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm056">
+  <div class="num">정리 056</div>
+  <h2>Strong Induction <span class="ko-title">/ 강한 귀납법</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If P(0) is true and P(0),...,P(k) imply P(k+1), then P(n) is true for all nonnegative integers n.</div>
+  <div class="section"><strong>한글 번역</strong><br>앞의 모든 경우가 참이라는 가정으로 다음 경우를 보이면 모든 자연수 범위에서 명제가 참이다.</div>
+  <div class="ex"><b>실생활 예시 1: 우표 금액</b><br>여러 이전 금액을 이용해 다음 금액을 만들 수 있음을 보이면 강한 귀납법이 적합하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 복잡도 비교</b><br>O(n) 알고리즘이 O(n^2)보다 빠른지 판단할 때 추이성을 이용해 상한을 비교한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm057">
+  <div class="num">정리 057</div>
+  <h2>Structural Induction <span class="ko-title">/ 구조적 귀납법</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A property holds for all recursively defined objects if it holds for basic objects and is preserved by construction rules.</div>
+  <div class="section"><strong>한글 번역</strong><br>재귀적으로 정의된 대상은 기본 대상에서 성립하고 생성 규칙에서 보존되면 전체에서 성립한다.</div>
+  <div class="ex"><b>실생활 예시 1: 수식 트리</b><br>숫자 하나와 연산자 결합 규칙으로 만든 모든 수식에 대해 성질을 구조적 귀납법으로 증명한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 실행시간 합</b><br>전처리 O(n)과 정렬 O(n log n)을 합치면 전체는 O(n log n)이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm058">
+  <div class="num">정리 058</div>
+  <h2>Recursive Definition Principle <span class="ko-title">/ 재귀정의 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A sequence can be uniquely defined by initial values and a rule determining later terms from earlier terms.</div>
+  <div class="section"><strong>한글 번역</strong><br>초깃값과 이전 항으로 다음 항을 정하는 규칙이 있으면 수열을 유일하게 정의할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 할부 잔액</b><br>첫 잔액과 매달 이자·상환 규칙이 주어지면 다음 달 잔액이 유일하게 정해진다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 분할정복</b><br>T(n)=2T(n/2)+n이면 병합정렬처럼 O(n log n)으로 판단한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm059">
+  <div class="num">정리 059</div>
+  <h2>First-Order Linear Recurrence <span class="ko-title">/ 1차 선형 점화식 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A recurrence a_n = ca_(n-1)+d has solutions determined by repeated substitution and geometric sums.</div>
+  <div class="section"><strong>한글 번역</strong><br>a_n=ca_(n-1)+d 꼴 점화식은 반복 대입과 등비합으로 해를 구할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 구독자 증가</b><br>매달 1.1배 증가하고 50명씩 추가되면 반복 대입으로 n개월 뒤 구독자를 계산한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 정렬 선택</b><br>비교 정렬만 쓴다면 아무리 최적화해도 최악 Ω(n log n) 장벽이 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm060">
+  <div class="num">정리 060</div>
+  <h2>Second-Order Linear Recurrence <span class="ko-title">/ 2차 선형 점화식 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A homogeneous recurrence a_n=pa_(n-1)+qa_(n-2) is solved using the roots of r^2-pr-q=0.</div>
+  <div class="section"><strong>한글 번역</strong><br>동차 2차 점화식은 특성방정식 r^2-pr-q=0의 근으로 해를 구한다.</div>
+  <div class="ex"><b>실생활 예시 1: 계단 오르기</b><br>한 번에 1칸 또는 2칸 오르면 방법 수가 이전 두 항의 합이 되어 2차 점화식으로 풀린다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 전화번호 검색</b><br>정렬된 명단 1024명에서 이진 탐색은 약 10번 비교면 충분하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm061">
+  <div class="num">정리 061</div>
+  <h2>Generating Function Principle <span class="ko-title">/ 생성함수 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A sequence can be studied by encoding its terms as coefficients of a formal power series.</div>
+  <div class="section"><strong>한글 번역</strong><br>수열은 각 항을 형식적 거듭제곱급수의 계수로 담아 분석할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 쿠폰 조합</b><br>생성함수의 계수는 특정 금액을 만드는 쿠폰 조합 수로 해석할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 로그인 세션</b><br>해시 테이블에 세션 ID를 저장하면 평균적으로 거의 상수 시간에 찾을 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm062">
+  <div class="num">정리 062</div>
+  <h2>Fibonacci Closed Form <span class="ko-title">/ 피보나치 닫힌식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The nth Fibonacci number equals (phi^n - psi^n)/sqrt(5).</div>
+  <div class="section"><strong>한글 번역</strong><br>n번째 피보나치 수는 황금비와 그 켤레를 이용한 식으로 표현된다.</div>
+  <div class="ex"><b>실생활 예시 1: 번식 모델</b><br>피보나치 닫힌식으로 n개월 뒤 개체 수를 빠르게 근사 계산할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 배낭 문제</b><br>큰 문제의 최적 선택이 작은 용량·앞 물건들의 최적해에서 만들어지면 동적 계획법을 쓴다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm063">
+  <div class="num">정리 063</div>
+  <h2>Catalan Number Formula <span class="ko-title">/ 카탈란 수 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The nth Catalan number is C(2n,n)/(n+1).</div>
+  <div class="section"><strong>한글 번역</strong><br>n번째 카탈란 수는 C(2n,n)/(n+1)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 괄호 문자열</b><br>올바른 괄호쌍 n개의 개수는 카탈란 수로 계산되어 코드 파서 설계에 쓰인다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 동전 거스름돈</b><br>항상 큰 동전을 먼저 고르는 전략이 최적인 화폐 체계에서는 탐욕법이 맞다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm064">
+  <div class="num">정리 064</div>
+  <h2>Boolean Algebra Duality <span class="ko-title">/ 불 대수 쌍대성 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every theorem in Boolean algebra has a dual obtained by interchanging AND with OR and 0 with 1.</div>
+  <div class="section"><strong>한글 번역</strong><br>불 대수의 모든 정리는 AND와 OR, 0과 1을 서로 바꾼 쌍대 정리를 가진다.</div>
+  <div class="ex"><b>실생활 예시 1: 스위치 회로</b><br>AND와 OR, 0과 1을 바꾸면 쌍대 회로 법칙이 만들어져 회로 단순화에 활용된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 정렬 루프</b><br>반복이 끝날 때마다 앞부분이 정렬되어 있다는 불변식을 유지하면 알고리즘 정당성을 설명할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm065">
+  <div class="num">정리 065</div>
+  <h2>De Morgan&#x27;s Laws <span class="ko-title">/ 드모르간 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The complement of a conjunction is the disjunction of complements, and the complement of a disjunction is the conjunction of complements.</div>
+  <div class="section"><strong>한글 번역</strong><br>AND의 부정은 부정들의 OR이고, OR의 부정은 부정들의 AND이다.</div>
+  <div class="ex"><b>실생활 예시 1: 검색 조건</b><br>‘무료가 아니거나 배송이 빠르지 않다’는 ‘무료이고 배송이 빠르다’의 부정으로 바꿔 조건을 정리한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 카운트다운</b><br>남은 횟수가 매번 1씩 줄고 0보다 작아지지 않으면 반복문은 반드시 끝난다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm066">
+  <div class="num">정리 066</div>
+  <h2>Absorption Laws <span class="ko-title">/ 흡수 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>In Boolean algebra, x OR (x AND y)=x and x AND (x OR y)=x.</div>
+  <div class="section"><strong>한글 번역</strong><br>불 대수에서 x∨(x∧y)=x, x∧(x∨y)=x가 성립한다.</div>
+  <div class="ex"><b>실생활 예시 1: 필터 단순화</b><br>x이거나 x와 y라는 조건은 그냥 x로 줄일 수 있다. 이미 x가 참이면 뒤 조건은 불필요하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 문제 난이도 증명</b><br>이미 어려운 문제를 새 문제로 빠르게 바꿀 수 있으면 새 문제도 어렵다고 볼 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm067">
+  <div class="num">정리 067</div>
+  <h2>Distributive Laws <span class="ko-title">/ 분배 법칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>AND distributes over OR, and OR distributes over AND.</div>
+  <div class="section"><strong>한글 번역</strong><br>불 대수에서 AND는 OR에 대해, OR는 AND에 대해 분배된다.</div>
+  <div class="ex"><b>실생활 예시 1: 권한 검사</b><br>관리자 AND (쓰기 OR 읽기)는 (관리자 AND 쓰기) OR (관리자 AND 읽기)로 분해할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: SAT 응용</b><br>일정표 가능 여부를 논리식 만족 문제로 바꾸면 NP-완전성 이론과 연결된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm068">
+  <div class="num">정리 068</div>
+  <h2>Truth Table Completeness <span class="ko-title">/ 진리표 완전성 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A compound proposition is completely determined by its truth table.</div>
+  <div class="section"><strong>한글 번역</strong><br>복합명제의 참거짓은 진리표로 완전히 결정된다.</div>
+  <div class="ex"><b>실생활 예시 1: 경보 시스템</b><br>센서 A,B의 모든 참거짓 조합을 표로 만들면 경보 조건을 완전히 검증할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 문자열 패턴</b><br>정규언어라면 충분히 긴 문자열의 일부를 반복해도 언어 안에 남는 구조가 있어야 한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm069">
+  <div class="num">정리 069</div>
+  <h2>Logical Equivalence Criterion <span class="ko-title">/ 논리적 동치 판정</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Two propositions are logically equivalent iff they have identical truth values in every assignment.</div>
+  <div class="section"><strong>한글 번역</strong><br>두 명제는 모든 진리값 배정에서 같은 값을 가질 때 논리적으로 동치이다.</div>
+  <div class="ex"><b>실생활 예시 1: 조건문 비교</b><br>두 보안 규칙이 모든 입력 조합에서 같은 결과를 내면 논리적으로 같은 규칙이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 동아리 선택</b><br>학생이 과학 동아리 4개 또는 예술 동아리 3개 중 하나만 가입한다면 총 선택지는 4+3=7개이다. 두 종류를 동시에 선택하지 않으므로 합의 법칙을 쓴다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm070">
+  <div class="num">정리 070</div>
+  <h2>Contrapositive Equivalence <span class="ko-title">/ 대우 동치 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>An implication p implies q is logically equivalent to not q implies not p.</div>
+  <div class="section"><strong>한글 번역</strong><br>명제 p→q는 그 대우 ¬q→¬p와 논리적으로 동치이다.</div>
+  <div class="ex"><b>실생활 예시 1: 입장 조건</b><br>‘학생이면 할인’은 ‘할인 대상이 아니면 학생이 아니다’와 논리적으로 같다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 급식 메뉴</b><br>밥 종류 2개와 반찬 종류 5개를 차례로 고르면 2×5=10가지 식단이 가능하다. 단계가 연속되므로 곱의 법칙을 적용한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm071">
+  <div class="num">정리 071</div>
+  <h2>Resolution Principle <span class="ko-title">/ 해결 원리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>From p OR q and not p OR r, one may infer q OR r.</div>
+  <div class="section"><strong>한글 번역</strong><br>p∨q와 ¬p∨r에서 q∨r을 추론할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 추론 엔진</b><br>규칙 p∨q, ¬p∨r가 있으면 q∨r를 얻어 가능한 결론을 줄일 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 비밀번호 금지 조건</b><br>0000~9999의 10000개 비밀번호 중 생일 365개를 금지하면 남는 후보는 9635개이다. 전체에서 금지 경우를 빼면 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm072">
+  <div class="num">정리 072</div>
+  <h2>Soundness of Propositional Logic <span class="ko-title">/ 명제논리 건전성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every formula provable by valid inference rules is logically valid.</div>
+  <div class="section"><strong>한글 번역</strong><br>타당한 추론 규칙으로 증명된 모든 공식은 논리적으로 타당하다.</div>
+  <div class="ex"><b>실생활 예시 1: 증명 검증</b><br>올바른 추론 규칙만 사용한 보안 정책 증명은 실제 논리에서도 참이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 중복 좌석 배치</b><br>원탁에 6명을 배치할 때 회전이 같은 배치를 6번씩 세면 6!/6=120가지이다. 같은 결과가 6번 중복되므로 나눈다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm073">
+  <div class="num">정리 073</div>
+  <h2>Completeness of Propositional Logic <span class="ko-title">/ 명제논리 완전성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every logically valid propositional formula is provable in a sound proof system.</div>
+  <div class="section"><strong>한글 번역</strong><br>논리적으로 타당한 모든 명제 공식은 적절한 증명 체계에서 증명 가능하다.</div>
+  <div class="ex"><b>실생활 예시 1: 자동 증명</b><br>항상 참인 명제식은 충분한 증명 체계 안에서 기계적으로 증명될 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 생일 같은 학생</b><br>31명 학급에서 생일의 날짜가 30일인 달만 생각하면 적어도 같은 날짜 생일 두 명이 있다. 31명을 30칸에 넣기 때문이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm074">
+  <div class="num">정리 074</div>
+  <h2>Cardinality of Power Set <span class="ko-title">/ 멱집합 크기 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A finite set with n elements has 2^n subsets.</div>
+  <div class="section"><strong>한글 번역</strong><br>원소가 n개인 유한집합의 부분집합 수는 2^n개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 설문 부분집합</b><br>관심사 8개 중 사용자가 고를 수 있는 관심사 묶음은 2^8=256가지이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 사물함 배정</b><br>73개의 물건을 10개 사물함에 넣으면 어떤 사물함에는 적어도 ceil(73/10)=8개가 들어간다. 평균보다 작게 모두 넣을 수 없다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm075">
+  <div class="num">정리 075</div>
+  <h2>Cantor&#x27;s Theorem <span class="ko-title">/ 칸토어 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For every set A, the power set of A has strictly greater cardinality than A.</div>
+  <div class="section"><strong>한글 번역</strong><br>어떤 집합 A에 대해서도 A의 멱집합은 A보다 더 큰 크기를 가진다.</div>
+  <div class="ex"><b>실생활 예시 1: 데이터 라벨</b><br>라벨 집합보다 가능한 라벨 조합의 집합이 항상 더 커서 모든 조합을 원래 라벨로 대응시킬 수 없다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 앱 사용자 집계</b><br>음악앱 120명, 영상앱 90명, 둘 다 40명이면 적어도 하나 이용자는 120+90-40=170명이다. 중복 이용자를 한 번 빼야 한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm076">
+  <div class="num">정리 076</div>
+  <h2>Cartesian Product Cardinality <span class="ko-title">/ 데카르트 곱 크기 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For finite sets A and B, |A x B| = |A||B|.</div>
+  <div class="section"><strong>한글 번역</strong><br>유한집합 A, B에 대해 A×B의 크기는 |A||B|이다.</div>
+  <div class="ex"><b>실생활 예시 1: 좌표 선택</b><br>행 5개와 열 7개에서 좌석 좌표는 5×7=35개이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 세 과목 신청</b><br>수학 40명, 정보 35명, 과학 30명, 두 과목 중복 10·8·7명, 세 과목 모두 3명이면 전체는 40+35+30-10-8-7+3=83명이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm077">
+  <div class="num">정리 077</div>
+  <h2>Function Count <span class="ko-title">/ 함수 개수 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of functions from an m-element set to an n-element set is n^m.</div>
+  <div class="section"><strong>한글 번역</strong><br>m개 원소 집합에서 n개 원소 집합으로 가는 함수의 개수는 n^m개이다.</div>
+  <div class="ex"><b>실생활 예시 1: 설정 함수</b><br>사용자 4명에게 3개 테마 중 하나를 배정하는 함수 수는 3^4=81개이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 발표 순서</b><br>10명 중 3명을 발표자 1·2·3번으로 세우면 10×9×8=720가지이다. 순서가 중요하므로 순열이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm078">
+  <div class="num">정리 078</div>
+  <h2>Injection Count <span class="ko-title">/ 단사함수 개수 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of injective functions from an m-element set to an n-element set is n!/(n-m)! when m &lt;= n.</div>
+  <div class="section"><strong>한글 번역</strong><br>m≤n일 때 m개 집합에서 n개 집합으로 가는 단사함수 수는 n!/(n-m)!이다.</div>
+  <div class="ex"><b>실생활 예시 1: 서로 다른 자리 배정</b><br>학생 5명을 좌석 8개에 중복 없이 앉히는 방법은 8×7×6×5×4이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 대표 선발</b><br>10명 중 3명을 순서 없이 대표로 뽑으면 C(10,3)=120가지이다. 직책 구분이 없으므로 조합이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm079">
+  <div class="num">정리 079</div>
+  <h2>Surjection Count <span class="ko-title">/ 전사함수 개수 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>The number of onto functions from an m-element set to an n-element set is n! S(m,n), where S(m,n) is a Stirling number of the second kind.</div>
+  <div class="section"><strong>한글 번역</strong><br>m개 집합에서 n개 집합으로 가는 전사함수 수는 n!S(m,n)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 서버 배정</b><br>작업 6개를 서버 3대에 모두 최소 하나씩 배정하려면 전사함수 개수를 사용한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 간식 조합</b><br>쿠키와 음료 선택을 다항식으로 나타내면 전개 계수가 선택 수를 의미한다. 예를 들어 5개 선택 중 특정 종류가 2개인 경우는 C(5,2)로 계산한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm080">
+  <div class="num">정리 080</div>
+  <h2>Schroder-Bernstein Theorem <span class="ko-title">/ 슈뢰더-베른슈타인 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If there are injections from A to B and from B to A, then A and B have the same cardinality.</div>
+  <div class="section"><strong>한글 번역</strong><br>A에서 B로, B에서 A로 단사함수가 모두 있으면 두 집합의 크기는 같다.</div>
+  <div class="ex"><b>실생활 예시 1: 크기 비교</b><br>두 데이터 집합이 서로 단사로 들어갈 수 있으면 실제 크기가 같다고 결론낼 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 토너먼트 경로</b><br>격자에서 오른쪽 4번, 위 3번 이동하는 경로 수는 C(7,3)=35이다. 7번 이동 중 위 이동 위치를 고르면 된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm081">
+  <div class="num">정리 081</div>
+  <h2>Modular Addition <span class="ko-title">/ 모듈러 덧셈 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If a congruent b mod m and c congruent d mod m, then a+c congruent b+d mod m.</div>
+  <div class="section"><strong>한글 번역</strong><br>a≡b, c≡d (mod m)이면 a+c≡b+d (mod m)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 시계 계산</b><br>3시에서 10시간 뒤는 13≡1 (mod 12)이므로 1시이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 두 반에서 팀 구성</b><br>A반 5명, B반 6명 중 총 4명을 뽑는 수는 k명을 A반에서 뽑는 경우를 모두 더한 값이며 C(11,4)와 같다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm082">
+  <div class="num">정리 082</div>
+  <h2>Modular Multiplication <span class="ko-title">/ 모듈러 곱셈 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If a congruent b mod m and c congruent d mod m, then ac congruent bd mod m.</div>
+  <div class="section"><strong>한글 번역</strong><br>a≡b, c≡d (mod m)이면 ac≡bd (mod m)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 주기 알림</b><br>4일 주기와 6일 주기의 겹침은 모듈러 곱셈과 합동 계산으로 찾는다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 사탕 배분</b><br>사탕 12개를 4명에게 0개도 가능하게 나누면 C(15,3)=455가지이다. 사탕 별 12개와 칸막이 3개를 배열한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm083">
+  <div class="num">정리 083</div>
+  <h2>Euclidean Algorithm <span class="ko-title">/ 유클리드 알고리즘</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Repeated division with remainder computes the greatest common divisor of two integers.</div>
+  <div class="section"><strong>한글 번역</strong><br>나머지를 이용한 반복 나눗셈으로 두 정수의 최대공약수를 구할 수 있다.</div>
+  <div class="ex"><b>실생활 예시 1: 최대공약수</b><br>타일 48cm와 18cm를 같은 크기 정사각형으로 자를 때 최대 한 변은 gcd(48,18)=6cm이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 선물 교환</b><br>5명이 자기 선물을 받지 않게 교환하는 경우는 완전순열로 계산한다. 대략 44가지가 되어 무작위 교환의 위험을 수치화할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm084">
+  <div class="num">정리 084</div>
+  <h2>Bezout&#x27;s Identity <span class="ko-title">/ 베주 항등식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For integers a and b, gcd(a,b) can be written as ax+by for some integers x and y.</div>
+  <div class="section"><strong>한글 번역</strong><br>정수 a,b의 최대공약수는 어떤 정수 x,y에 대해 ax+by로 표현된다.</div>
+  <div class="ex"><b>실생활 예시 1: 거스름돈 조합</b><br>gcd(6,9)=3은 6x+9y로 표현되므로 3원 단위 차이를 조합할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 회의 악수</b><br>참석자별 악수 횟수를 모두 더하면 실제 악수 한 번이 두 사람에게 세어지므로 전체 합은 악수 수의 2배이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm085">
+  <div class="num">정리 085</div>
+  <h2>Fundamental Theorem of Arithmetic <span class="ko-title">/ 산술의 기본정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every integer greater than 1 has a unique prime factorization up to order.</div>
+  <div class="section"><strong>한글 번역</strong><br>1보다 큰 모든 정수는 순서를 제외하면 유일한 소인수분해를 가진다.</div>
+  <div class="ex"><b>실생활 예시 1: 소인수분해</b><br>360=2^3×3^2×5처럼 유일하게 분해되어 약수 개수나 최소공배수 계산에 쓰인다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: SNS 친구 수</b><br>친구 수가 홀수인 사용자의 수는 항상 짝수다. 친구 관계 한 개가 두 사람의 차수를 동시에 1씩 바꾸기 때문이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm086">
+  <div class="num">정리 086</div>
+  <h2>Euclid&#x27;s Infinitude of Primes <span class="ko-title">/ 소수 무한성 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>There are infinitely many prime numbers.</div>
+  <div class="section"><strong>한글 번역</strong><br>소수는 무한히 많다.</div>
+  <div class="ex"><b>실생활 예시 1: 소수 목록</b><br>새 암호 소수를 찾을 때 소수가 끝없이 존재한다는 사실이 이론적 배경이 된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 배달 경로</b><br>도로망에서 모든 도로를 한 번씩만 지나려면 홀수 차수 교차로가 0개 또는 2개여야 한다. 시작과 끝만 홀수일 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm087">
+  <div class="num">정리 087</div>
+  <h2>Fermat&#x27;s Little Theorem <span class="ko-title">/ 페르마의 소정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If p is prime and p does not divide a, then a^(p-1) congruent 1 mod p.</div>
+  <div class="section"><strong>한글 번역</strong><br>p가 소수이고 p가 a를 나누지 않으면 a^(p-1)≡1 (mod p)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 암호 검산</b><br>소수 p를 법으로 할 때 빠른 거듭제곱 나머지 계산을 페르마의 소정리로 줄일 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 청소 로봇</b><br>복도 그래프의 모든 통로를 한 번씩 지나 출발점으로 돌아오려면 모든 방의 연결 통로 수가 짝수여야 한다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm088">
+  <div class="num">정리 088</div>
+  <h2>Euler&#x27;s Theorem <span class="ko-title">/ 오일러 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If gcd(a,n)=1, then a^phi(n) congruent 1 mod n.</div>
+  <div class="section"><strong>한글 번역</strong><br>gcd(a,n)=1이면 a^phi(n)≡1 (mod n)이다.</div>
+  <div class="ex"><b>실생활 예시 1: RSA 원리</b><br>서로소 조건에서 a^phi(n)≡1을 이용해 암호화와 복호화가 맞물리도록 설계한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 네트워크 케이블</b><br>컴퓨터 20대를 끊김 없이 최소로 연결하려면 트리 구조가 필요하고 케이블은 19개면 충분하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm089">
+  <div class="num">정리 089</div>
+  <h2>Chinese Remainder Theorem <span class="ko-title">/ 중국인의 나머지 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Pairwise coprime moduli give a unique solution modulo their product for a system of congruences.</div>
+  <div class="section"><strong>한글 번역</strong><br>서로소인 법들에 대한 합동식 체계는 법들의 곱을 법으로 하여 유일한 해를 가진다.</div>
+  <div class="ex"><b>실생활 예시 1: 근무표 주기</b><br>3일마다 야간, 5일마다 회의라면 두 조건을 만족하는 날짜는 CRT로 찾는다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 가계도 구조</b><br>상하 관계를 사이클 없이 연결하면 트리처럼 볼 수 있다. 한 사람에서 다른 사람으로 가는 경로가 중복되지 않는다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm090">
+  <div class="num">정리 090</div>
+  <h2>Wilson&#x27;s Theorem <span class="ko-title">/ 윌슨 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>An integer p greater than 1 is prime iff (p-1)! congruent -1 mod p.</div>
+  <div class="section"><strong>한글 번역</strong><br>1보다 큰 정수 p가 소수일 필요충분조건은 (p-1)!≡-1 (mod p)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 소수 판정</b><br>p가 작을 때 (p-1)! mod p가 -1인지 확인하면 소수 여부를 검증할 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 파일 폴더</b><br>폴더 구조에서 한 파일까지 가는 경로는 하나뿐이다. 같은 파일로 가는 두 경로가 있으면 트리 구조가 깨진다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm091">
+  <div class="num">정리 091</div>
+  <h2>Euler Phi Product Formula <span class="ko-title">/ 오일러 피 함수 곱 공식</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If n has prime factorization product p_i^a_i, then phi(n)=n times product over p_i of (1-1/p_i).</div>
+  <div class="section"><strong>한글 번역</strong><br>n의 소인수가 p_i이면 phi(n)=n∏(1-1/p_i)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 서로소 개수</b><br>1부터 12까지 12와 서로소인 수는 phi(12)=12(1-1/2)(1-1/3)=4개이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 섬 여러 묶음</b><br>서로 떨어진 3개 지역에 총 15개 마을을 각각 트리로 연결하면 도로 수는 15-3=12개이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm092">
+  <div class="num">정리 092</div>
+  <h2>Principle of Least Residues <span class="ko-title">/ 최소 잉여계 정리</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every integer is congruent modulo m to exactly one of 0,1,...,m-1.</div>
+  <div class="section"><strong>한글 번역</strong><br>모든 정수는 mod m에서 0부터 m-1 중 정확히 하나와 합동이다.</div>
+  <div class="ex"><b>실생활 예시 1: 나머지 분류</b><br>어떤 정수도 7로 나눈 나머지는 0~6 중 하나이므로 요일 계산에 사용된다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 모두와 채팅</b><br>6명이 모두 서로 1:1 채팅방을 만들면 C(6,2)=15개이다. 완전그래프 간선 수와 같다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm093">
+  <div class="num">정리 093</div>
+  <h2>Big-O Transitivity <span class="ko-title">/ 빅오 추이성</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If f is O(g) and g is O(h), then f is O(h).</div>
+  <div class="section"><strong>한글 번역</strong><br>f가 O(g)이고 g가 O(h)이면 f는 O(h)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 복잡도 비교</b><br>O(n) 알고리즘이 O(n^2)보다 빠른지 판단할 때 추이성을 이용해 상한을 비교한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 교사-학생 상담</b><br>교사 4명과 학생 30명이 모두 상담 연결 가능하면 가능한 연결은 4×30=120개이다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm094">
+  <div class="num">정리 094</div>
+  <h2>Big-O Sum Rule <span class="ko-title">/ 빅오 합 규칙</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>If f1 is O(g1) and f2 is O(g2), then f1+f2 is O(max(g1,g2)).</div>
+  <div class="section"><strong>한글 번역</strong><br>두 함수의 합의 성장률은 더 큰 성장률 항에 의해 지배된다.</div>
+  <div class="ex"><b>실생활 예시 1: 실행시간 합</b><br>전처리 O(n)과 정렬 O(n log n)을 합치면 전체는 O(n log n)이다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 시간표 충돌</b><br>시험 과목을 두 그룹으로 나누어 충돌 없는 시간대를 배정할 수 있으면 이분그래프이다. 홀수 사이클이 있으면 두 그룹 배정이 불가능하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm095">
+  <div class="num">정리 095</div>
+  <h2>Master Theorem Basic Case <span class="ko-title">/ 마스터 정리 기본형</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>For T(n)=aT(n/b)+f(n), the asymptotic form is determined by comparing f(n) with n^(log_b a).</div>
+  <div class="section"><strong>한글 번역</strong><br>T(n)=aT(n/b)+f(n)은 f(n)과 n^(log_b a)의 크기 비교로 점근식을 결정한다.</div>
+  <div class="ex"><b>실생활 예시 1: 분할정복</b><br>T(n)=2T(n/2)+n이면 병합정렬처럼 O(n log n)으로 판단한다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 지도 구역</b><br>도시 지도를 점·선·면으로 단순화하면 v-e+f=2를 확인해 누락된 구역 수를 계산할 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm096">
+  <div class="num">정리 096</div>
+  <h2>Lower Bound for Comparison Sorting <span class="ko-title">/ 비교 정렬 하한</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Every comparison sort requires Omega(n log n) comparisons in the worst case.</div>
+  <div class="section"><strong>한글 번역</strong><br>비교 기반 정렬은 최악의 경우 Ω(n log n)번의 비교가 필요하다.</div>
+  <div class="ex"><b>실생활 예시 1: 정렬 선택</b><br>비교 정렬만 쓴다면 아무리 최적화해도 최악 Ω(n log n) 장벽이 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 도로 설계</b><br>평면에 교차 없이 도로를 그릴 때 간선 수가 3v-6을 넘으면 반드시 교차가 필요하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm097">
+  <div class="num">정리 097</div>
+  <h2>Binary Search Complexity <span class="ko-title">/ 이진 탐색 복잡도</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Binary search on a sorted list of n elements uses O(log n) comparisons.</div>
+  <div class="section"><strong>한글 번역</strong><br>정렬된 n개 리스트에서 이진 탐색은 O(log n)번 비교로 찾는다.</div>
+  <div class="ex"><b>실생활 예시 1: 전화번호 검색</b><br>정렬된 명단 1024명에서 이진 탐색은 약 10번 비교면 충분하다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 회로 배선</b><br>K3,3 구조가 포함되면 평면 기판에 교차 없이 배선하기 어렵다. 비평면성 판정에 사용된다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm098">
+  <div class="num">정리 098</div>
+  <h2>Hash Table Average Search <span class="ko-title">/ 해시 테이블 평균 탐색</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>With a good hash function and controlled load factor, average search time in a hash table is O(1).</div>
+  <div class="section"><strong>한글 번역</strong><br>좋은 해시 함수와 적절한 부하율이 있으면 해시 테이블 평균 탐색 시간은 O(1)이다.</div>
+  <div class="ex"><b>실생활 예시 1: 로그인 세션</b><br>해시 테이블에 세션 ID를 저장하면 평균적으로 거의 상수 시간에 찾을 수 있다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 지도 색칠</b><br>전국 행정구역 지도를 인접 지역끼리 다른 색으로 칠할 때 4색이면 충분하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm099">
+  <div class="num">정리 099</div>
+  <h2>Dynamic Programming Optimal Substructure <span class="ko-title">/ 동적 계획법 최적 부분 구조</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>Dynamic programming applies when optimal solutions can be built from optimal solutions of overlapping subproblems.</div>
+  <div class="section"><strong>한글 번역</strong><br>겹치는 부분문제의 최적해로 전체 최적해를 만들 수 있을 때 동적 계획법을 적용한다.</div>
+  <div class="ex"><b>실생활 예시 1: 배낭 문제</b><br>큰 문제의 최적 선택이 작은 용량·앞 물건들의 최적해에서 만들어지면 동적 계획법을 쓴다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 시험 시간 배정</b><br>한 학생이 동시에 듣는 과목들을 간선으로 연결하면 최대 충돌 수+1개의 시간대면 색칠 가능하다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<section class="card" id="thm100">
+  <div class="num">정리 100</div>
+  <h2>Greedy Choice Property <span class="ko-title">/ 탐욕 선택 성질</span></h2>
+  <div class="section"><strong>English original theorem</strong><br>A greedy algorithm is correct when a locally optimal choice can be extended to a globally optimal solution.</div>
+  <div class="section"><strong>한글 번역</strong><br>지역적으로 최적인 선택이 전체 최적해로 확장될 수 있으면 탐욕 알고리즘이 정당하다.</div>
+  <div class="ex"><b>실생활 예시 1: 동전 거스름돈</b><br>항상 큰 동전을 먼저 고르는 전략이 최적인 화폐 체계에서는 탐욕법이 맞다.<br><b>풀이 핵심:</b> 문제에서 구해야 하는 대상을 정리의 조건과 대응시킨 뒤, 공식이나 판정 조건을 적용한다. 계산 결과는 실제 선택 수, 연결 가능성, 최단 경로, 배정 가능성처럼 해석한다.</div>
+  <div class="ex"><b>실생활 예시 2: 프로젝트 자원</b><br>특수한 경우를 제외하면 필요한 색 수가 최대 차수를 넘지 않는다는 사실로 자원 수를 줄일 수 있다.<br><b>풀이 핵심:</b> 먼저 대상의 개수·관계·순서·제약을 정리의 기호로 바꾼다. 그다음 중복 여부, 순서 여부, 연결 조건, 나머지 조건 등을 확인하여 결론을 얻는다.</div>
+</section>
+
+<div class="footer">이산수학 학습용 HTML · 표 없이 카드형 구성</div>
+</main></body></html>

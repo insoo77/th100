@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배터리 전극 물질 성장 주요 원리 개념 100개</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Malgun Gothic", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.75;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #10233f;
+    color: white;
+    padding: 12px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.18);
+  }
+  header h1 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+  }
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  select, input, button {
+    padding: 7px 9px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+  }
+  input { min-width: 260px; }
+  button {
+    background: #e0edff;
+    cursor: pointer;
+  }
+  main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px 40px;
+  }
+  .intro {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-left: 8px solid #2563eb;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 18px 0;
+    box-shadow: 0 4px 14px rgba(15,23,42,.08);
+  }
+  .num {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+  }
+  h2 {
+    margin: 10px 0 12px;
+    color: #0f172a;
+  }
+  h3 {
+    margin: 8px 0 4px;
+    color: #334155;
+    font-size: 16px;
+  }
+  .block {
+    border-left: 4px solid #93c5fd;
+    padding-left: 12px;
+    margin: 12px 0;
+  }
+  .en {
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+  .ko {
+    color: #c2410c;
+    font-weight: 600;
+  }
+  .examples {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 12px;
+  }
+  .hidden { display: none; }
+  footer {
+    text-align: center;
+    color: #64748b;
+    padding: 24px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>배터리 전극 물질 성장 주요 원리 개념 100개</h1>
+  <div class="toolbar">
+    <select id="jump" onchange="jumpToConcept()">
+      <option value="">개념 선택</option>
+      <option value="c001">001. Nucleation</option>
+<option value="c002">002. Crystal Growth</option>
+<option value="c003">003. Diffusion</option>
+<option value="c004">004. Surface Energy</option>
+<option value="c005">005. Supersaturation</option>
+<option value="c006">006. Phase Transformation</option>
+<option value="c007">007. Grain Growth</option>
+<option value="c008">008. Ostwald Ripening</option>
+<option value="c009">009. Intercalation</option>
+<option value="c010">010. Deintercalation</option>
+<option value="c011">011. Electrochemical Potential</option>
+<option value="c012">012. Charge Transfer</option>
+<option value="c013">013. Solid-State Diffusion</option>
+<option value="c014">014. Lattice Structure</option>
+<option value="c015">015. Defect Formation</option>
+<option value="c016">016. SEI Formation</option>
+<option value="c017">017. Conductivity</option>
+<option value="c018">018. Porosity</option>
+<option value="c019">019. Particle Size Distribution</option>
+<option value="c020">020. Thermal Stability</option>
+<option value="c021">021. Electrodeposition</option>
+<option value="c022">022. Dendrite Growth</option>
+<option value="c023">023. Phase Separation</option>
+<option value="c024">024. Redox Reaction</option>
+<option value="c025">025. Capacity Fade</option>
+<option value="c026">026. Coulombic Efficiency</option>
+<option value="c027">027. Activation Energy</option>
+<option value="c028">028. Arrhenius Law</option>
+<option value="c029">029. Stress Evolution</option>
+<option value="c030">030. Fracture Mechanics</option>
+<option value="c031">031. Solid Solution</option>
+<option value="c032">032. Spinodal Decomposition</option>
+<option value="c033">033. Ion Mobility</option>
+<option value="c034">034. Vacancy Diffusion</option>
+<option value="c035">035. Surface Diffusion</option>
+<option value="c036">036. Grain Boundary Diffusion</option>
+<option value="c037">037. Epitaxial Growth</option>
+<option value="c038">038. Coating Technology</option>
+<option value="c039">039. Sol-Gel Process</option>
+<option value="c040">040. Hydrothermal Synthesis</option>
+<option value="c041">041. Chemical Vapor Deposition</option>
+<option value="c042">042. Atomic Layer Deposition</option>
+<option value="c043">043. Binder Interaction</option>
+<option value="c044">044. Current Density</option>
+<option value="c045">045. Overpotential</option>
+<option value="c046">046. Reaction Kinetics</option>
+<option value="c047">047. Butler-Volmer Equation</option>
+<option value="c048">048. Fick&#x27;s Laws</option>
+<option value="c049">049. Thermal Runaway</option>
+<option value="c050">050. Lithium Plating</option>
+<option value="c051">051. Cathode Degradation</option>
+<option value="c052">052. Anode Expansion</option>
+<option value="c053">053. Silicon Anode Growth</option>
+<option value="c054">054. Fast Charging Effects</option>
+<option value="c055">055. Recycling Processes</option>
+<option value="c056">056. Battery Aging</option>
+<option value="c057">057. Nanostructure Engineering</option>
+<option value="c058">058. Interface Engineering</option>
+<option value="c059">059. Solid-State Batteries</option>
+<option value="c060">060. Next-Generation Electrode Materials</option>
+<option value="c061">061. Precursor Chemistry</option>
+<option value="c062">062. Co-precipitation</option>
+<option value="c063">063. Calcination</option>
+<option value="c064">064. Sintering</option>
+<option value="c065">065. Stoichiometry</option>
+<option value="c066">066. Doping</option>
+<option value="c067">067. Substitution</option>
+<option value="c068">068. Vacancy</option>
+<option value="c069">069. Interstitial Site</option>
+<option value="c070">070. Lattice Strain</option>
+<option value="c071">071. Crystallinity</option>
+<option value="c072">072. Amorphous Structure</option>
+<option value="c073">073. Layered Structure</option>
+<option value="c074">074. Spinel Structure</option>
+<option value="c075">075. Olivine Structure</option>
+<option value="c076">076. Tunnel Structure</option>
+<option value="c077">077. Rate Capability</option>
+<option value="c078">078. Energy Density</option>
+<option value="c079">079. Power Density</option>
+<option value="c080">080. Cycle Life</option>
+<option value="c081">081. Calendar Life</option>
+<option value="c082">082. Electrolyte Wetting</option>
+<option value="c083">083. Wettability</option>
+<option value="c084">084. Contact Angle</option>
+<option value="c085">085. Current Collector</option>
+<option value="c086">086. Electrode Slurry</option>
+<option value="c087">087. Calendering</option>
+<option value="c088">088. Drying</option>
+<option value="c089">089. Adhesion</option>
+<option value="c090">090. Mechanical Integrity</option>
+<option value="c091">091. Volume Expansion</option>
+<option value="c092">092. Pulverization</option>
+<option value="c093">093. Electrolyte Decomposition</option>
+<option value="c094">094. Gas Evolution</option>
+<option value="c095">095. Side Reaction</option>
+<option value="c096">096. Impedance Growth</option>
+<option value="c097">097. Equivalent Circuit Model</option>
+<option value="c098">098. Open-Circuit Voltage</option>
+<option value="c099">099. State of Charge</option>
+<option value="c100">100. State of Health</option>
+    </select>
+    <input id="search" type="text" placeholder="검색: diffusion, 전극, 리튬..." oninput="filterCards()">
+    <button onclick="showAll()">전체 보기</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h2>학습 주제</h2>
+    <p>
+      이 자료는 <b>배터리 전극 물질 성장</b>을 이해하는 데 필요한 핵생성, 결정 성장,
+      확산, 계면, 전기화학 반응, 열역학, 공정, 열화, 안전성 관련 개념 100개를
+      영어 원문과 한글 번역, 실생활 예시 2개로 정리한 학습용 HTML입니다.
+    </p>
+  </section>
+
+  
+<section class="card" id="c001" data-title="nucleation 핵생성은 안정한 입자나 결정이 처음 형성되는 과정이다.">
+  <div class="num">001</div>
+  <h2>Nucleation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Nucleation is the initial formation of a stable particle or crystal.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">핵생성은 안정한 입자나 결정이 처음 형성되는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬이온 배터리 충전 시 전극 표면에 작은 결정핵이 생긴다.</p>
+    <p><b>예시 2.</b> 물병을 흔든 뒤 갑자기 얼음 결정이 생기는 과냉각 현상.</p>
+  </div>
+</section>
+
+<section class="card" id="c002" data-title="crystal growth 결정 성장은 핵생성 이후 결정이 커지는 과정이다.">
+  <div class="num">002</div>
+  <h2>Crystal Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Crystal growth is the enlargement of a crystal after nucleation.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">결정 성장은 핵생성 이후 결정이 커지는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극재 입자가 합성 과정에서 점점 커진다.</p>
+    <p><b>예시 2.</b> 소금물에서 소금 결정이 시간이 지나며 커진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c003" data-title="diffusion 확산은 원자나 이온이 높은 농도에서 낮은 농도로 이동하는 현상이다.">
+  <div class="num">003</div>
+  <h2>Diffusion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Diffusion is the movement of atoms or ions from high concentration to low concentration.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">확산은 원자나 이온이 높은 농도에서 낮은 농도로 이동하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 충전 중 리튬 이온이 전극 내부로 퍼져 들어간다.</p>
+    <p><b>예시 2.</b> 방 안에 향수 냄새가 퍼진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c004" data-title="surface energy 표면 에너지는 작은 입자의 안정성과 모양에 영향을 준다.">
+  <div class="num">004</div>
+  <h2>Surface Energy</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Surface energy affects the stability and shape of small particles.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">표면 에너지는 작은 입자의 안정성과 모양에 영향을 준다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 나노 양극재 입자의 크기와 형태를 조절한다.</p>
+    <p><b>예시 2.</b> 물방울이 둥근 모양을 이루려 한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c005" data-title="supersaturation 과포화는 핵생성의 원동력을 제공한다.">
+  <div class="num">005</div>
+  <h2>Supersaturation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Supersaturation provides the driving force for nucleation.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">과포화는 핵생성의 원동력을 제공한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전구체 용액이 과포화되면 양극재 입자가 침전된다.</p>
+    <p><b>예시 2.</b> 진한 설탕물이 식으면 설탕 결정이 생긴다.</p>
+  </div>
+</section>
+
+<section class="card" id="c006" data-title="phase transformation 상변태는 물질의 상이나 구조가 다른 상태로 바뀌는 과정이다.">
+  <div class="num">006</div>
+  <h2>Phase Transformation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Phase transformation changes one material phase into another.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">상변태는 물질의 상이나 구조가 다른 상태로 바뀌는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 충전과 방전 중 전극 결정구조가 변한다.</p>
+    <p><b>예시 2.</b> 물이 얼음으로 변한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c007" data-title="grain growth 결정립 성장은 결정 입자의 크기가 증가하는 현상이다.">
+  <div class="num">007</div>
+  <h2>Grain Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Grain growth increases the size of crystal grains.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">결정립 성장은 결정 입자의 크기가 증가하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 소결 과정에서 양극재 결정립이 커진다.</p>
+    <p><b>예시 2.</b> 금속 열처리 중 금속 결정립이 성장한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c008" data-title="ostwald ripening 오스트발트 숙성은 작은 입자가 녹고 큰 입자가 더 커지는 현상이다.">
+  <div class="num">008</div>
+  <h2>Ostwald Ripening</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Ostwald ripening makes larger particles grow while smaller particles dissolve.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">오스트발트 숙성은 작은 입자가 녹고 큰 입자가 더 커지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극재 슬러리나 침전물에서 큰 입자가 성장한다.</p>
+    <p><b>예시 2.</b> 아이스크림을 오래 두면 얼음 결정이 커져 식감이 나빠진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c009" data-title="intercalation 삽입 반응은 이온이 결정 구조 내부로 들어가는 현상이다.">
+  <div class="num">009</div>
+  <h2>Intercalation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Intercalation inserts ions into a host structure.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">삽입 반응은 이온이 결정 구조 내부로 들어가는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 흑연 음극에 리튬 이온이 들어간다.</p>
+    <p><b>예시 2.</b> 책장 사이에 종이를 끼워 넣는 것처럼 층상 구조에 이온이 들어간다.</p>
+  </div>
+</section>
+
+<section class="card" id="c010" data-title="deintercalation 탈삽입은 이온이 결정 구조에서 빠져나오는 현상이다.">
+  <div class="num">010</div>
+  <h2>Deintercalation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Deintercalation removes ions from a host structure.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">탈삽입은 이온이 결정 구조에서 빠져나오는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 방전 중 음극에서 리튬 이온이 빠져나온다.</p>
+    <p><b>예시 2.</b> 서랍 속 물건을 꺼내는 것처럼 이온이 구조 밖으로 나온다.</p>
+  </div>
+</section>
+
+<section class="card" id="c011" data-title="electrochemical potential 전기화학 퍼텐셜은 배터리 안에서 이온과 전자 이동을 일으키는 원동력이다.">
+  <div class="num">011</div>
+  <h2>Electrochemical Potential</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Electrochemical potential drives ion and electron movement in a battery.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전기화학 퍼텐셜은 배터리 안에서 이온과 전자 이동을 일으키는 원동력이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전압 차이 때문에 전자가 외부 회로로 흐른다.</p>
+    <p><b>예시 2.</b> 언덕 위 물이 아래로 흐르는 것처럼 퍼텐셜 차이가 이동을 만든다.</p>
+  </div>
+</section>
+
+<section class="card" id="c012" data-title="charge transfer 전하 이동은 전극과 전해질의 경계면에서 일어난다.">
+  <div class="num">012</div>
+  <h2>Charge Transfer</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Charge transfer occurs at the electrode-electrolyte interface.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전하 이동은 전극과 전해질의 경계면에서 일어난다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 이온이 전극 표면에서 전자를 주고받는다.</p>
+    <p><b>예시 2.</b> 전기 도금에서 금속 이온이 전자를 받아 금속으로 붙는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c013" data-title="solid-state diffusion 고체 확산은 고체 내부에서 원자나 이온이 이동하는 현상이다.">
+  <div class="num">013</div>
+  <h2>Solid-State Diffusion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Solid-state diffusion is the migration of atoms or ions through a solid material.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">고체 확산은 고체 내부에서 원자나 이온이 이동하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 이온이 양극재 결정 내부를 이동한다.</p>
+    <p><b>예시 2.</b> 철과 탄소가 고체 상태에서 확산되어 강철 특성이 바뀐다.</p>
+  </div>
+</section>
+
+<section class="card" id="c014" data-title="lattice structure 격자 구조는 이온 이동 경로와 물질 안정성을 결정한다.">
+  <div class="num">014</div>
+  <h2>Lattice Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Lattice structure determines ion pathways and material stability.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">격자 구조는 이온 이동 경로와 물질 안정성을 결정한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> LFP 양극재의 올리빈 구조가 리튬 이동 통로를 만든다.</p>
+    <p><b>예시 2.</b> 다이아몬드의 단단함은 탄소 격자 구조에서 나온다.</p>
+  </div>
+</section>
+
+<section class="card" id="c015" data-title="defect formation 결정 결함 형성은 결정의 성질을 변화시킨다.">
+  <div class="num">015</div>
+  <h2>Defect Formation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Defect formation changes the properties of a crystal.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">결정 결함 형성은 결정의 성질을 변화시킨다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 결함이 많으면 용량과 수명이 달라진다.</p>
+    <p><b>예시 2.</b> 반도체에 불순물을 넣어 전기적 성질을 조절한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c016" data-title="sei formation 고체전해질계면층(SEI)은 배터리 작동 중 전극 표면에 형성되는 보호층이다.">
+  <div class="num">016</div>
+  <h2>SEI Formation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Solid electrolyte interphase forms on electrode surfaces during battery operation.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">고체전해질계면층(SEI)은 배터리 작동 중 전극 표면에 형성되는 보호층이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 흑연 음극 표면에 SEI가 생겨 전해질 분해를 줄인다.</p>
+    <p><b>예시 2.</b> 프라이팬 코팅처럼 표면을 보호하는 층 역할을 한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c017" data-title="conductivity 전도도는 전자나 이온이 얼마나 잘 이동하는지를 결정한다.">
+  <div class="num">017</div>
+  <h2>Conductivity</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Conductivity determines how efficiently electrons or ions move.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전도도는 전자나 이온이 얼마나 잘 이동하는지를 결정한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 도전재를 넣어 전극의 전자 이동을 돕는다.</p>
+    <p><b>예시 2.</b> 구리선이 플라스틱보다 전기를 잘 통한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c018" data-title="porosity 기공률은 전해질 침투와 반응 면적에 영향을 준다.">
+  <div class="num">018</div>
+  <h2>Porosity</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Porosity influences electrolyte penetration and reaction area.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">기공률은 전해질 침투와 반응 면적에 영향을 준다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 다공성 전극은 전해질이 잘 스며들어 반응이 쉬워진다.</p>
+    <p><b>예시 2.</b> 스펀지가 물을 잘 흡수한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c019" data-title="particle size distribution 입도 분포는 균일성과 배터리 성능에 영향을 준다.">
+  <div class="num">019</div>
+  <h2>Particle Size Distribution</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Particle size distribution affects uniformity and battery performance.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">입도 분포는 균일성과 배터리 성능에 영향을 준다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극재 입자 크기가 고르면 코팅 품질이 좋아진다.</p>
+    <p><b>예시 2.</b> 밀가루 입자가 고르면 반죽 품질이 일정하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c020" data-title="thermal stability 열적 안정성은 높은 온도에서의 안전성을 결정한다.">
+  <div class="num">020</div>
+  <h2>Thermal Stability</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Thermal stability determines safety at elevated temperatures.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">열적 안정성은 높은 온도에서의 안전성을 결정한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전기차 배터리는 고온에서도 구조가 안정해야 한다.</p>
+    <p><b>예시 2.</b> 내열 용기는 뜨거운 음식을 담아도 변형이 적다.</p>
+  </div>
+</section>
+
+<section class="card" id="c021" data-title="electrodeposition 전착은 전기화학 반응으로 물질을 전극 위에 쌓는 과정이다.">
+  <div class="num">021</div>
+  <h2>Electrodeposition</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Electrodeposition deposits material on an electrode by electrochemical reaction.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전착은 전기화학 반응으로 물질을 전극 위에 쌓는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 금속이 음극 표면에 석출될 수 있다.</p>
+    <p><b>예시 2.</b> 금속 도금으로 액세서리 표면을 코팅한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c022" data-title="dendrite growth 덴드라이트 성장은 석출 중 바늘 모양 금속 구조가 자라는 현상이다.">
+  <div class="num">022</div>
+  <h2>Dendrite Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Dendrite growth forms needle-like metal structures during deposition.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">덴드라이트 성장은 석출 중 바늘 모양 금속 구조가 자라는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 덴드라이트가 분리막을 뚫으면 단락 위험이 있다.</p>
+    <p><b>예시 2.</b> 겨울 유리창에 나뭇가지 모양 성에가 생긴다.</p>
+  </div>
+</section>
+
+<section class="card" id="c023" data-title="phase separation 상분리는 물질이 서로 다른 조성이나 구조의 영역으로 나뉘는 현상이다.">
+  <div class="num">023</div>
+  <h2>Phase Separation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Phase separation divides a material into regions of different composition or structure.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">상분리는 물질이 서로 다른 조성이나 구조의 영역으로 나뉘는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 내부에서 리튬 농도가 높은 영역과 낮은 영역이 생긴다.</p>
+    <p><b>예시 2.</b> 기름과 물이 섞이지 않고 층을 이룬다.</p>
+  </div>
+</section>
+
+<section class="card" id="c024" data-title="redox reaction 산화환원 반응은 물질 사이에 전자가 이동하는 반응이다.">
+  <div class="num">024</div>
+  <h2>Redox Reaction</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A redox reaction transfers electrons between chemical species.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">산화환원 반응은 물질 사이에 전자가 이동하는 반응이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 충전·방전 중 양극과 음극에서 산화환원이 일어난다.</p>
+    <p><b>예시 2.</b> 철이 녹슬 때 산화 반응이 일어난다.</p>
+  </div>
+</section>
+
+<section class="card" id="c025" data-title="capacity fade 용량 감소는 배터리가 저장할 수 있는 전하량이 점차 줄어드는 현상이다.">
+  <div class="num">025</div>
+  <h2>Capacity Fade</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Capacity fade is the gradual loss of battery storage ability.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">용량 감소는 배터리가 저장할 수 있는 전하량이 점차 줄어드는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 스마트폰을 오래 쓰면 완충 후 사용 시간이 짧아진다.</p>
+    <p><b>예시 2.</b> 노트북 배터리가 오래되면 충전 유지 시간이 줄어든다.</p>
+  </div>
+</section>
+
+<section class="card" id="c026" data-title="coulombic efficiency 쿨롱 효율은 넣은 전하량에 대해 다시 꺼낼 수 있는 전하량의 비율이다.">
+  <div class="num">026</div>
+  <h2>Coulombic Efficiency</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Coulombic efficiency is the ratio of charge output to charge input.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">쿨롱 효율은 넣은 전하량에 대해 다시 꺼낼 수 있는 전하량의 비율이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 부반응이 적은 배터리는 쿨롱 효율이 높다.</p>
+    <p><b>예시 2.</b> 저금통에 넣은 돈 대부분을 다시 꺼낼 수 있는 정도와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c027" data-title="activation energy 활성화 에너지는 반응이 일어나기 위해 필요한 최소 에너지이다.">
+  <div class="num">027</div>
+  <h2>Activation Energy</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Activation energy is the minimum energy needed for a reaction to occur.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">활성화 에너지는 반응이 일어나기 위해 필요한 최소 에너지이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 고온에서 전극 반응이 빨라지는 이유와 관련된다.</p>
+    <p><b>예시 2.</b> 성냥을 긋기 위해 처음 마찰 열이 필요하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c028" data-title="arrhenius law 아레니우스 법칙은 반응 속도가 온도에 따라 어떻게 변하는지 설명한다.">
+  <div class="num">028</div>
+  <h2>Arrhenius Law</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">The Arrhenius law describes how reaction rate depends on temperature.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">아레니우스 법칙은 반응 속도가 온도에 따라 어떻게 변하는지 설명한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리는 온도가 높으면 반응이 빨라질 수 있다.</p>
+    <p><b>예시 2.</b> 음식은 온도가 높으면 더 빨리 상한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c029" data-title="stress evolution 응력 변화는 물질 성장이나 충방전 중 기계적 힘이 변하는 현상이다.">
+  <div class="num">029</div>
+  <h2>Stress Evolution</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Stress evolution describes how mechanical stress changes during material growth or cycling.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">응력 변화는 물질 성장이나 충방전 중 기계적 힘이 변하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 실리콘 음극은 부피 팽창으로 내부 응력이 커진다.</p>
+    <p><b>예시 2.</b> 풍선을 반복해서 부풀리면 고무에 힘이 쌓인다.</p>
+  </div>
+</section>
+
+<section class="card" id="c030" data-title="fracture mechanics 파괴역학은 재료의 균열 발생과 성장을 연구한다.">
+  <div class="num">030</div>
+  <h2>Fracture Mechanics</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Fracture mechanics studies crack initiation and growth in materials.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">파괴역학은 재료의 균열 발생과 성장을 연구한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 입자가 반복 팽창으로 갈라질 수 있다.</p>
+    <p><b>예시 2.</b> 유리컵에 작은 금이 가면 충격에 쉽게 깨진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c031" data-title="solid solution 고용체는 여러 원자나 이온이 하나의 고체 상 안에 섞인 상태이다.">
+  <div class="num">031</div>
+  <h2>Solid Solution</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A solid solution is a single solid phase containing mixed atoms or ions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">고용체는 여러 원자나 이온이 하나의 고체 상 안에 섞인 상태이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬이 전극 격자 안에 균일하게 들어간다.</p>
+    <p><b>예시 2.</b> 소금이 물에 녹듯 금속 안에 다른 원자가 섞일 수 있다.</p>
+  </div>
+</section>
+
+<section class="card" id="c032" data-title="spinodal decomposition 스피노달 분해는 조성이 다른 영역으로 자발적으로 분리되는 현상이다.">
+  <div class="num">032</div>
+  <h2>Spinodal Decomposition</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Spinodal decomposition is spontaneous separation into compositionally different regions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">스피노달 분해는 조성이 다른 영역으로 자발적으로 분리되는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 일부 전극 재료에서 충전 중 농도 분리가 생긴다.</p>
+    <p><b>예시 2.</b> 합금이 식으면서 미세한 무늬 구조로 나뉜다.</p>
+  </div>
+</section>
+
+<section class="card" id="c033" data-title="ion mobility 이온 이동도는 이온이 구동력에 의해 얼마나 쉽게 움직이는지 나타낸다.">
+  <div class="num">033</div>
+  <h2>Ion Mobility</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Ion mobility measures how easily ions move under a driving force.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">이온 이동도는 이온이 구동력에 의해 얼마나 쉽게 움직이는지 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 이온 이동도가 높으면 빠른 충전이 유리하다.</p>
+    <p><b>예시 2.</b> 도로가 넓으면 자동차가 더 쉽게 이동한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c034" data-title="vacancy diffusion 공공 확산은 원자나 이온이 빈 격자 자리를 통해 이동하는 현상이다.">
+  <div class="num">034</div>
+  <h2>Vacancy Diffusion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Vacancy diffusion occurs when atoms or ions move through empty lattice sites.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">공공 확산은 원자나 이온이 빈 격자 자리를 통해 이동하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 결정의 빈자리로 리튬 이온이 이동한다.</p>
+    <p><b>예시 2.</b> 자리 하나가 비어 있어 사람들이 좌석을 옮기는 모습과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c035" data-title="surface diffusion 표면 확산은 원자나 이온이 표면을 따라 이동하는 현상이다.">
+  <div class="num">035</div>
+  <h2>Surface Diffusion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Surface diffusion is movement of atoms or ions along a surface.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">표면 확산은 원자나 이온이 표면을 따라 이동하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 표면에서 금속 원자가 이동해 입자 모양을 바꾼다.</p>
+    <p><b>예시 2.</b> 물방울이 유리 표면을 따라 퍼진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c036" data-title="grain boundary diffusion 입계 확산은 결정립 사이 경계를 따라 이동하는 확산이다.">
+  <div class="num">036</div>
+  <h2>Grain Boundary Diffusion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Grain boundary diffusion occurs along boundaries between crystal grains.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">입계 확산은 결정립 사이 경계를 따라 이동하는 확산이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 입계가 리튬 이동의 빠른 통로가 될 수 있다.</p>
+    <p><b>예시 2.</b> 도시 골목길이 큰 도로 사이의 빠른 지름길이 되기도 한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c037" data-title="epitaxial growth 에피택셜 성장은 아래 결정과 방향이 맞는 결정층을 성장시키는 과정이다.">
+  <div class="num">037</div>
+  <h2>Epitaxial Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Epitaxial growth forms a crystal layer aligned with an underlying crystal.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">에피택셜 성장은 아래 결정과 방향이 맞는 결정층을 성장시키는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 박막 전극 소재를 기판 위에 정렬 성장시킨다.</p>
+    <p><b>예시 2.</b> 타일을 기존 줄에 맞춰 가지런히 붙인다.</p>
+  </div>
+</section>
+
+<section class="card" id="c038" data-title="coating technology 코팅 기술은 안정성이나 성능을 높이기 위해 얇은 층을 입히는 기술이다.">
+  <div class="num">038</div>
+  <h2>Coating Technology</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Coating technology adds a thin layer to improve stability or performance.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">코팅 기술은 안정성이나 성능을 높이기 위해 얇은 층을 입히는 기술이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극재 표면 코팅으로 전해질 부반응을 줄인다.</p>
+    <p><b>예시 2.</b> 휴대폰 보호필름이 화면을 보호한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c039" data-title="sol-gel process 졸-겔 공정은 용액이 젤과 고체로 변하며 재료를 만드는 방법이다.">
+  <div class="num">039</div>
+  <h2>Sol-Gel Process</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">The sol-gel process makes materials from a solution that turns into a gel and solid.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">졸-겔 공정은 용액이 젤과 고체로 변하며 재료를 만드는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 균일한 전극 산화물 분말을 합성한다.</p>
+    <p><b>예시 2.</b> 젤라틴 디저트가 액체에서 젤로 굳는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c040" data-title="hydrothermal synthesis 수열 합성은 고온·고압 물속에서 물질을 성장시키는 방법이다.">
+  <div class="num">040</div>
+  <h2>Hydrothermal Synthesis</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Hydrothermal synthesis grows materials in hot water under pressure.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">수열 합성은 고온·고압 물속에서 물질을 성장시키는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 나노 전극 소재를 균일한 모양으로 합성한다.</p>
+    <p><b>예시 2.</b> 압력솥에서 높은 온도로 재료를 익히는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c041" data-title="chemical vapor deposition 화학기상증착은 기체 화학물질로부터 고체 박막을 형성하는 방법이다.">
+  <div class="num">041</div>
+  <h2>Chemical Vapor Deposition</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Chemical vapor deposition forms solid films from vapor-phase chemicals.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">화학기상증착은 기체 화학물질로부터 고체 박막을 형성하는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 보호막이나 탄소 코팅을 만들 수 있다.</p>
+    <p><b>예시 2.</b> 욕실 거울에 수증기가 얇은 막처럼 맺힌다.</p>
+  </div>
+</section>
+
+<section class="card" id="c042" data-title="atomic layer deposition 원자층증착은 원자층 단위로 매우 얇은 막을 쌓는 방법이다.">
+  <div class="num">042</div>
+  <h2>Atomic Layer Deposition</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Atomic layer deposition deposits films one atomic layer at a time.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">원자층증착은 원자층 단위로 매우 얇은 막을 쌓는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리 전극에 매우 균일한 보호막을 만든다.</p>
+    <p><b>예시 2.</b> 벽돌을 한 층씩 정교하게 쌓는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c043" data-title="binder interaction 바인더 상호작용은 활물질과 집전체 사이의 접착을 조절한다.">
+  <div class="num">043</div>
+  <h2>Binder Interaction</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Binder interaction controls adhesion between active materials and current collectors.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">바인더 상호작용은 활물질과 집전체 사이의 접착을 조절한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> PVDF나 CMC 바인더가 전극 입자를 붙잡아 준다.</p>
+    <p><b>예시 2.</b> 풀이나 접착제가 종이를 붙이는 역할과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c044" data-title="current density 전류 밀도는 단위 면적당 흐르는 전류의 크기이다.">
+  <div class="num">044</div>
+  <h2>Current Density</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Current density is electric current per unit area.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전류 밀도는 단위 면적당 흐르는 전류의 크기이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 급속 충전에서는 전극에 높은 전류 밀도가 걸린다.</p>
+    <p><b>예시 2.</b> 좁은 문으로 많은 사람이 지나가면 밀도가 높아진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c045" data-title="overpotential 과전압은 평형 전압보다 추가로 필요한 전압이다.">
+  <div class="num">045</div>
+  <h2>Overpotential</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Overpotential is extra voltage needed beyond the equilibrium voltage.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">과전압은 평형 전압보다 추가로 필요한 전압이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 반응 저항이 크면 충전 전압이 더 필요하다.</p>
+    <p><b>예시 2.</b> 무거운 문을 열 때 추가 힘이 필요한 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c046" data-title="reaction kinetics 반응 속도론은 화학 또는 전기화학 반응의 빠르기를 설명한다.">
+  <div class="num">046</div>
+  <h2>Reaction Kinetics</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Reaction kinetics describes the rate of chemical or electrochemical reactions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">반응 속도론은 화학 또는 전기화학 반응의 빠르기를 설명한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 반응 속도가 빠르면 고출력 배터리에 유리하다.</p>
+    <p><b>예시 2.</b> 라면이 뜨거운 물에서 더 빨리 익는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c047" data-title="butler-volmer equation 버틀러-볼머 방정식은 전극 전류와 과전압의 관계를 나타낸다.">
+  <div class="num">047</div>
+  <h2>Butler-Volmer Equation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">The Butler-Volmer equation relates electrode current to overpotential.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">버틀러-볼머 방정식은 전극 전류와 과전압의 관계를 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 계면 반응 속도 분석에 사용된다.</p>
+    <p><b>예시 2.</b> 가속 페달을 더 밟으면 자동차 속도가 변하는 관계와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c048" data-title="fick&#x27;s laws 픽의 법칙은 농도 기울기에 의해 일어나는 확산을 설명한다.">
+  <div class="num">048</div>
+  <h2>Fick&#x27;s Laws</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Fick&#x27;s laws describe diffusion driven by concentration gradients.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">픽의 법칙은 농도 기울기에 의해 일어나는 확산을 설명한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 농도 차이로 전극 내부 확산이 일어난다.</p>
+    <p><b>예시 2.</b> 잉크 한 방울이 물속에서 퍼진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c049" data-title="thermal runaway 열폭주는 자기 가속 반응으로 온도가 통제 불가능하게 올라가는 현상이다.">
+  <div class="num">049</div>
+  <h2>Thermal Runaway</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Thermal runaway is uncontrolled heating caused by self-accelerating reactions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">열폭주는 자기 가속 반응으로 온도가 통제 불가능하게 올라가는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리 내부 단락이 화재로 이어질 수 있다.</p>
+    <p><b>예시 2.</b> 작은 불씨가 주변 연료를 태우며 급격히 커진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c050" data-title="lithium plating 리튬 도금은 음극 표면에 금속 리튬이 석출되는 현상이다.">
+  <div class="num">050</div>
+  <h2>Lithium Plating</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Lithium plating deposits metallic lithium on the anode surface.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">리튬 도금은 음극 표면에 금속 리튬이 석출되는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 저온 급속 충전에서 리튬 도금 위험이 커진다.</p>
+    <p><b>예시 2.</b> 물이 너무 빨리 얼어 표면에 얼음층이 생기는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c051" data-title="cathode degradation 양극 열화는 양극의 구조와 화학적 성질이 나빠지는 현상이다.">
+  <div class="num">051</div>
+  <h2>Cathode Degradation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Cathode degradation is the deterioration of cathode structure and chemistry.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">양극 열화는 양극의 구조와 화학적 성질이 나빠지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 고전압 충전이 양극 구조 손상을 일으킬 수 있다.</p>
+    <p><b>예시 2.</b> 반복 사용한 신발 밑창이 닳는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c052" data-title="anode expansion 음극 팽창은 이온 삽입 중 음극 부피가 증가하는 현상이다.">
+  <div class="num">052</div>
+  <h2>Anode Expansion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Anode expansion is volume increase of the anode during ion insertion.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">음극 팽창은 이온 삽입 중 음극 부피가 증가하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 실리콘 음극은 리튬 삽입 시 크게 팽창한다.</p>
+    <p><b>예시 2.</b> 스펀지가 물을 빨아들여 부푸는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c053" data-title="silicon anode growth 실리콘 음극 성장은 실리콘 기반 음극의 구조 변화와 성장 과정을 다룬다.">
+  <div class="num">053</div>
+  <h2>Silicon Anode Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Silicon anode growth concerns structural evolution of silicon-based anodes.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">실리콘 음극 성장은 실리콘 기반 음극의 구조 변화와 성장 과정을 다룬다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 실리콘 나노입자 설계로 팽창 손상을 줄인다.</p>
+    <p><b>예시 2.</b> 고무공처럼 부풀어도 깨지지 않게 구조를 설계한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c054" data-title="fast charging effects 급속 충전 효과는 발열, 도금, 응력, 불균일 이온 분포 등을 포함한다.">
+  <div class="num">054</div>
+  <h2>Fast Charging Effects</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Fast charging effects include heat, plating, stress, and uneven ion distribution.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">급속 충전 효과는 발열, 도금, 응력, 불균일 이온 분포 등을 포함한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전기차 급속 충전 시 배터리 수명 관리가 중요하다.</p>
+    <p><b>예시 2.</b> 음식을 너무 센 불로 익히면 겉만 타고 속은 덜 익는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c055" data-title="recycling processes 재활용 공정은 폐배터리에서 가치 있는 물질을 회수하는 과정이다.">
+  <div class="num">055</div>
+  <h2>Recycling Processes</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Recycling processes recover valuable materials from used batteries.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">재활용 공정은 폐배터리에서 가치 있는 물질을 회수하는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 니켈, 코발트, 리튬을 회수해 새 배터리에 활용한다.</p>
+    <p><b>예시 2.</b> 헌 종이를 모아 재생 종이를 만든다.</p>
+  </div>
+</section>
+
+<section class="card" id="c056" data-title="battery aging 배터리 노화는 시간과 충방전 반복으로 성능이 감소하는 현상이다.">
+  <div class="num">056</div>
+  <h2>Battery Aging</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Battery aging is performance loss caused by time and cycling.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">배터리 노화는 시간과 충방전 반복으로 성능이 감소하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 오래 쓴 스마트폰 배터리가 빨리 닳는다.</p>
+    <p><b>예시 2.</b> 고무줄이 오래되면 탄성이 약해진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c057" data-title="nanostructure engineering 나노구조 공학은 성능 향상을 위해 나노 크기에서 재료 구조를 설계하는 기술이다.">
+  <div class="num">057</div>
+  <h2>Nanostructure Engineering</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Nanostructure engineering designs materials at the nanoscale for better performance.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">나노구조 공학은 성능 향상을 위해 나노 크기에서 재료 구조를 설계하는 기술이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 나노입자 전극은 짧은 이온 이동 거리로 출력이 좋아진다.</p>
+    <p><b>예시 2.</b> 잘게 썬 채소가 빨리 익는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c058" data-title="interface engineering 계면 공학은 서로 다른 물질 사이의 경계를 개선하는 기술이다.">
+  <div class="num">058</div>
+  <h2>Interface Engineering</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Interface engineering improves the boundary between materials.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">계면 공학은 서로 다른 물질 사이의 경계를 개선하는 기술이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극-전해질 계면 안정화로 수명을 늘린다.</p>
+    <p><b>예시 2.</b> 문틈에 고무 패킹을 넣어 바람을 막는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c059" data-title="solid-state batteries 전고체 배터리는 액체 전해질 대신 고체 전해질을 사용하는 배터리이다.">
+  <div class="num">059</div>
+  <h2>Solid-State Batteries</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Solid-state batteries use solid electrolytes instead of liquid electrolytes.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전고체 배터리는 액체 전해질 대신 고체 전해질을 사용하는 배터리이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전고체 배터리는 안전성과 에너지밀도 향상이 기대된다.</p>
+    <p><b>예시 2.</b> 젤 대신 단단한 막으로 내용물을 분리하는 구조와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c060" data-title="next-generation electrode materials 차세대 전극 재료는 더 높은 용량, 안전성, 지속가능성을 목표로 한다.">
+  <div class="num">060</div>
+  <h2>Next-Generation Electrode Materials</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Next-generation electrode materials aim for higher capacity, safety, and sustainability.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">차세대 전극 재료는 더 높은 용량, 안전성, 지속가능성을 목표로 한다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬황, 나트륨이온, 실리콘 음극 등이 연구된다.</p>
+    <p><b>예시 2.</b> 기존 연료차에서 전기차로 바뀌듯 더 나은 재료를 찾는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c061" data-title="precursor chemistry 전구체 화학은 전극 물질 합성에 쓰이는 출발 물질을 조절하는 분야이다.">
+  <div class="num">061</div>
+  <h2>Precursor Chemistry</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Precursor chemistry controls the starting compounds used to make electrode materials.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전구체 화학은 전극 물질 합성에 쓰이는 출발 물질을 조절하는 분야이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> NCM 양극재 전구체 조성이 최종 성능을 좌우한다.</p>
+    <p><b>예시 2.</b> 좋은 재료로 요리해야 맛있는 음식이 나온다.</p>
+  </div>
+</section>
+
+<section class="card" id="c062" data-title="co-precipitation 공침법은 여러 이온을 함께 침전시켜 혼합 입자를 만드는 방법이다.">
+  <div class="num">062</div>
+  <h2>Co-precipitation</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Co-precipitation forms mixed particles by precipitating multiple ions together.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">공침법은 여러 이온을 함께 침전시켜 혼합 입자를 만드는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 니켈·코발트·망간 전구체를 균일하게 만든다.</p>
+    <p><b>예시 2.</b> 여러 색 물감을 고르게 섞어 새 색을 만든다.</p>
+  </div>
+</section>
+
+<section class="card" id="c063" data-title="calcination 하소는 물질을 가열하여 분해, 결정화, 상 형성을 일으키는 과정이다.">
+  <div class="num">063</div>
+  <h2>Calcination</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Calcination heats materials to induce decomposition, crystallization, or phase formation.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">하소는 물질을 가열하여 분해, 결정화, 상 형성을 일으키는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극 전구체를 리튬염과 함께 가열해 결정성 양극재를 만든다.</p>
+    <p><b>예시 2.</b> 도자기를 굽는 과정에서 단단해진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c064" data-title="sintering 소결은 녹는점보다 낮은 온도에서 분말 입자를 치밀하게 만드는 과정이다.">
+  <div class="num">064</div>
+  <h2>Sintering</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Sintering densifies powder particles by heating below the melting point.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">소결은 녹는점보다 낮은 온도에서 분말 입자를 치밀하게 만드는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 세라믹 입자의 밀도와 강도를 높인다.</p>
+    <p><b>예시 2.</b> 눈을 눌러 단단한 눈덩이를 만드는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c065" data-title="stoichiometry 화학양론은 화합물 안 원소들의 양적 비율이다.">
+  <div class="num">065</div>
+  <h2>Stoichiometry</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Stoichiometry is the quantitative ratio of elements in a compound.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">화학양론은 화합물 안 원소들의 양적 비율이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> LiFePO4에서 리튬, 철, 인, 산소 비율이 중요하다.</p>
+    <p><b>예시 2.</b> 케이크를 만들 때 밀가루와 설탕 비율이 중요하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c066" data-title="doping 도핑은 소량의 원소를 넣어 물질 성질을 바꾸는 방법이다.">
+  <div class="num">066</div>
+  <h2>Doping</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Doping introduces small amounts of elements to modify material properties.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">도핑은 소량의 원소를 넣어 물질 성질을 바꾸는 방법이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극재에 알루미늄을 도핑해 구조 안정성을 높인다.</p>
+    <p><b>예시 2.</b> 국물에 소금을 조금 넣어 맛을 조절한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c067" data-title="substitution 치환은 격자 안의 원자나 이온을 다른 것으로 바꾸는 현상이다.">
+  <div class="num">067</div>
+  <h2>Substitution</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Substitution replaces one atom or ion in a lattice with another.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">치환은 격자 안의 원자나 이온을 다른 것으로 바꾸는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전이금속 일부를 다른 금속으로 바꿔 성능을 조절한다.</p>
+    <p><b>예시 2.</b> 축구 경기에서 선수를 교체한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c068" data-title="vacancy 공공은 결정 격자에서 원자가 있어야 할 자리가 비어 있는 결함이다.">
+  <div class="num">068</div>
+  <h2>Vacancy</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A vacancy is an empty site in a crystal lattice.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">공공은 결정 격자에서 원자가 있어야 할 자리가 비어 있는 결함이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 빈자리가 이온 이동 경로가 될 수 있다.</p>
+    <p><b>예시 2.</b> 주차장 빈자리가 차 이동을 쉽게 만든다.</p>
+  </div>
+</section>
+
+<section class="card" id="c069" data-title="interstitial site 침입 자리는 규칙적인 격자 자리 사이의 빈 공간이다.">
+  <div class="num">069</div>
+  <h2>Interstitial Site</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">An interstitial site is a space between regular lattice positions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">침입 자리는 규칙적인 격자 자리 사이의 빈 공간이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 작은 이온이 결정의 틈 사이에 들어갈 수 있다.</p>
+    <p><b>예시 2.</b> 책장 사이 빈틈에 작은 메모지를 끼운다.</p>
+  </div>
+</section>
+
+<section class="card" id="c070" data-title="lattice strain 격자 변형은 응력이나 조성 변화로 결정 격자가 뒤틀리는 현상이다.">
+  <div class="num">070</div>
+  <h2>Lattice Strain</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Lattice strain is distortion of a crystal lattice under stress or compositional change.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">격자 변형은 응력이나 조성 변화로 결정 격자가 뒤틀리는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬 삽입으로 전극 격자가 늘어나거나 줄어든다.</p>
+    <p><b>예시 2.</b> 꽉 찬 가방에 물건을 더 넣으면 모양이 변한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c071" data-title="crystallinity 결정성은 물질의 원자 배열이 얼마나 규칙적인지를 나타낸다.">
+  <div class="num">071</div>
+  <h2>Crystallinity</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Crystallinity describes how ordered a material&#x27;s atomic structure is.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">결정성은 물질의 원자 배열이 얼마나 규칙적인지를 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 높은 결정성 양극재는 안정적인 전압 특성을 보일 수 있다.</p>
+    <p><b>예시 2.</b> 잘 정리된 책장은 물건을 찾기 쉽다.</p>
+  </div>
+</section>
+
+<section class="card" id="c072" data-title="amorphous structure 비정질 구조는 장거리 원자 배열 질서가 없는 구조이다.">
+  <div class="num">072</div>
+  <h2>Amorphous Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">An amorphous structure lacks long-range atomic order.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">비정질 구조는 장거리 원자 배열 질서가 없는 구조이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 비정질 실리콘은 팽창을 더 유연하게 흡수할 수 있다.</p>
+    <p><b>예시 2.</b> 액체가 얼어 유리처럼 불규칙하게 굳은 상태.</p>
+  </div>
+</section>
+
+<section class="card" id="c073" data-title="layered structure 층상 구조는 원자들이 층을 이루어 쌓인 구조이다.">
+  <div class="num">073</div>
+  <h2>Layered Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A layered structure has atoms arranged in stacked planes.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">층상 구조는 원자들이 층을 이루어 쌓인 구조이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> NCM 양극재는 층 사이로 리튬이 이동한다.</p>
+    <p><b>예시 2.</b> 책을 여러 권 쌓아 둔 모습과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c074" data-title="spinel structure 스피넬 구조는 이온 이동이 가능한 3차원 결정 골격이다.">
+  <div class="num">074</div>
+  <h2>Spinel Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A spinel structure is a three-dimensional crystal framework for ion movement.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">스피넬 구조는 이온 이동이 가능한 3차원 결정 골격이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 리튬망간산화물은 스피넬 구조를 가진다.</p>
+    <p><b>예시 2.</b> 입체 격자형 놀이터 통로처럼 여러 방향 이동이 가능하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c075" data-title="olivine structure 올리빈 구조는 LiFePO4 같은 물질에서 나타나는 안정한 골격 구조이다.">
+  <div class="num">075</div>
+  <h2>Olivine Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">An olivine structure is a stable framework found in materials such as LiFePO4.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">올리빈 구조는 LiFePO4 같은 물질에서 나타나는 안정한 골격 구조이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> LFP 배터리는 안정성과 수명이 좋다.</p>
+    <p><b>예시 2.</b> 튼튼한 철골 구조 건물처럼 안정적이다.</p>
+  </div>
+</section>
+
+<section class="card" id="c076" data-title="tunnel structure 터널 구조는 이온이 이동할 수 있는 통로를 제공하는 구조이다.">
+  <div class="num">076</div>
+  <h2>Tunnel Structure</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A tunnel structure provides channels for ion movement.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">터널 구조는 이온이 이동할 수 있는 통로를 제공하는 구조이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 일부 망간산화물 전극에서 이온 통로 역할을 한다.</p>
+    <p><b>예시 2.</b> 지하철 터널이 사람 이동 경로가 된다.</p>
+  </div>
+</section>
+
+<section class="card" id="c077" data-title="rate capability 율속 특성은 배터리가 빠르게 충전·방전할 수 있는 능력이다.">
+  <div class="num">077</div>
+  <h2>Rate Capability</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Rate capability is the ability of a battery to charge or discharge quickly.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">율속 특성은 배터리가 빠르게 충전·방전할 수 있는 능력이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전동공구는 순간적으로 큰 전류를 낼 수 있어야 한다.</p>
+    <p><b>예시 2.</b> 운동선수가 단거리 달리기를 빠르게 하는 능력과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c078" data-title="energy density 에너지 밀도는 질량 또는 부피당 저장되는 에너지 양이다.">
+  <div class="num">078</div>
+  <h2>Energy Density</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Energy density is the amount of energy stored per mass or volume.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">에너지 밀도는 질량 또는 부피당 저장되는 에너지 양이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전기차 주행거리를 늘리려면 높은 에너지 밀도가 필요하다.</p>
+    <p><b>예시 2.</b> 작은 보조배터리가 오래 가면 에너지 밀도가 높은 것이다.</p>
+  </div>
+</section>
+
+<section class="card" id="c079" data-title="power density 출력 밀도는 질량 또는 부피당 에너지를 빠르게 내보내는 능력이다.">
+  <div class="num">079</div>
+  <h2>Power Density</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Power density is the rate of energy delivery per mass or volume.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">출력 밀도는 질량 또는 부피당 에너지를 빠르게 내보내는 능력이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전기차가 빠르게 가속하려면 높은 출력 밀도가 필요하다.</p>
+    <p><b>예시 2.</b> 짧은 시간에 강한 빛을 내는 플래시와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c080" data-title="cycle life 사이클 수명은 배터리가 견딜 수 있는 충방전 반복 횟수이다.">
+  <div class="num">080</div>
+  <h2>Cycle Life</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Cycle life is the number of charge-discharge cycles a battery can endure.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">사이클 수명은 배터리가 견딜 수 있는 충방전 반복 횟수이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전기차 배터리는 수천 회 충방전을 견뎌야 한다.</p>
+    <p><b>예시 2.</b> 운동화가 몇 번의 달리기를 견디는지와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c081" data-title="calendar life 보관 수명은 충방전 횟수와 별개로 시간이 지나도 사용할 수 있는 기간이다.">
+  <div class="num">081</div>
+  <h2>Calendar Life</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Calendar life is the time a battery remains useful regardless of cycling.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">보관 수명은 충방전 횟수와 별개로 시간이 지나도 사용할 수 있는 기간이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 사용하지 않은 배터리도 시간이 지나면 성능이 줄어든다.</p>
+    <p><b>예시 2.</b> 식품 유통기한처럼 보관 시간의 영향을 받는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c082" data-title="electrolyte wetting 전해질 젖음은 전해질이 전극 안으로 스며들고 퍼지는 현상이다.">
+  <div class="num">082</div>
+  <h2>Electrolyte Wetting</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Electrolyte wetting is the spreading and penetration of electrolyte into electrodes.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전해질 젖음은 전해질이 전극 안으로 스며들고 퍼지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 기공에 전해질이 잘 들어가야 반응이 균일하다.</p>
+    <p><b>예시 2.</b> 종이타월이 물을 흡수한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c083" data-title="wettability 젖음성은 액체가 고체 표면에 얼마나 잘 퍼지는지를 나타낸다.">
+  <div class="num">083</div>
+  <h2>Wettability</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Wettability describes how well a liquid spreads on a solid surface.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">젖음성은 액체가 고체 표면에 얼마나 잘 퍼지는지를 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 표면 젖음성이 좋으면 전해질 접촉이 좋아진다.</p>
+    <p><b>예시 2.</b> 방수 코팅된 옷에서는 물방울이 잘 퍼지지 않는다.</p>
+  </div>
+</section>
+
+<section class="card" id="c084" data-title="contact angle 접촉각은 표면 위 액체 방울의 모양을 각도로 나타낸 값이다.">
+  <div class="num">084</div>
+  <h2>Contact Angle</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Contact angle measures the shape of a liquid droplet on a surface.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">접촉각은 표면 위 액체 방울의 모양을 각도로 나타낸 값이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 접촉각이 작으면 전해질이 전극에 잘 퍼진다.</p>
+    <p><b>예시 2.</b> 연잎 위 물방울은 접촉각이 커서 둥글게 맺힌다.</p>
+  </div>
+</section>
+
+<section class="card" id="c085" data-title="current collector 집전체는 전극과 외부 회로 사이에서 전자를 전달하는 금속 기판이다.">
+  <div class="num">085</div>
+  <h2>Current Collector</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A current collector conducts electrons between the electrode and external circuit.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">집전체는 전극과 외부 회로 사이에서 전자를 전달하는 금속 기판이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 양극에는 알루미늄박, 음극에는 구리박을 많이 쓴다.</p>
+    <p><b>예시 2.</b> 도로가 자동차 흐름을 모아 큰길로 보내는 역할과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c086" data-title="electrode slurry 전극 슬러리는 활물질, 바인더, 도전재, 용매를 섞은 반죽 상태 혼합물이다.">
+  <div class="num">086</div>
+  <h2>Electrode Slurry</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Electrode slurry is a mixture of active material, binder, conductive additive, and solvent.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전극 슬러리는 활물질, 바인더, 도전재, 용매를 섞은 반죽 상태 혼합물이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 슬러리를 금속박에 코팅해 전극을 만든다.</p>
+    <p><b>예시 2.</b> 밀가루 반죽을 판 위에 펴 바르는 것과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c087" data-title="calendering 캘린더링은 코팅된 전극을 눌러 두께와 밀도를 조절하는 공정이다.">
+  <div class="num">087</div>
+  <h2>Calendering</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Calendering compresses coated electrodes to control thickness and density.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">캘린더링은 코팅된 전극을 눌러 두께와 밀도를 조절하는 공정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 압축으로 에너지 밀도와 기공률을 조절한다.</p>
+    <p><b>예시 2.</b> 밀대로 반죽을 얇게 미는 과정과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c088" data-title="drying 건조는 코팅된 전극층에서 용매를 제거하는 과정이다.">
+  <div class="num">088</div>
+  <h2>Drying</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Drying removes solvent from coated electrode layers.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">건조는 코팅된 전극층에서 용매를 제거하는 과정이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 코팅 후 용매를 말려 고체층을 만든다.</p>
+    <p><b>예시 2.</b> 페인트를 칠한 뒤 마르게 하는 과정이다.</p>
+  </div>
+</section>
+
+<section class="card" id="c089" data-title="adhesion 접착력은 서로 다른 물질이 붙어 있는 힘이다.">
+  <div class="num">089</div>
+  <h2>Adhesion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Adhesion is the sticking strength between materials.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">접착력은 서로 다른 물질이 붙어 있는 힘이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전극 코팅층이 집전체에서 떨어지지 않아야 한다.</p>
+    <p><b>예시 2.</b> 스티커가 벽에 잘 붙어 있는 정도와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c090" data-title="mechanical integrity 기계적 완전성은 힘을 받아도 구조를 유지하는 능력이다.">
+  <div class="num">090</div>
+  <h2>Mechanical Integrity</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Mechanical integrity is the ability to maintain structure under stress.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">기계적 완전성은 힘을 받아도 구조를 유지하는 능력이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 충방전 중 전극이 부서지지 않아야 수명이 길다.</p>
+    <p><b>예시 2.</b> 가방 끈이 무거운 짐에도 끊어지지 않아야 한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c091" data-title="volume expansion 부피 팽창은 이온 삽입이나 반응 중 물질 부피가 증가하는 현상이다.">
+  <div class="num">091</div>
+  <h2>Volume Expansion</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Volume expansion is an increase in material volume during ion insertion or reaction.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">부피 팽창은 이온 삽입이나 반응 중 물질 부피가 증가하는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 실리콘 음극은 충전 중 크게 팽창한다.</p>
+    <p><b>예시 2.</b> 쌀이 물을 흡수하면 부피가 커진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c092" data-title="pulverization 분쇄화는 입자가 작은 조각으로 깨지는 현상이다.">
+  <div class="num">092</div>
+  <h2>Pulverization</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Pulverization is the breaking of particles into smaller fragments.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">분쇄화는 입자가 작은 조각으로 깨지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 실리콘 입자가 반복 팽창·수축으로 잘게 부서질 수 있다.</p>
+    <p><b>예시 2.</b> 마른 흙덩이가 밟히면 가루처럼 부서진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c093" data-title="electrolyte decomposition 전해질 분해는 작동 중 전해질이 화학적으로 깨지는 현상이다.">
+  <div class="num">093</div>
+  <h2>Electrolyte Decomposition</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Electrolyte decomposition is chemical breakdown of electrolyte during operation.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">전해질 분해는 작동 중 전해질이 화학적으로 깨지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 고전압에서 전해질이 분해되어 가스나 계면층을 만들 수 있다.</p>
+    <p><b>예시 2.</b> 우유가 오래되면 성분이 변해 상한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c094" data-title="gas evolution 가스 발생은 부반응 중 기체가 생기는 현상이다.">
+  <div class="num">094</div>
+  <h2>Gas Evolution</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Gas evolution is the formation of gas during side reactions.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">가스 발생은 부반응 중 기체가 생기는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리 내부 가스가 셀 팽창을 일으킬 수 있다.</p>
+    <p><b>예시 2.</b> 탄산음료를 열면 이산화탄소 기포가 나온다.</p>
+  </div>
+</section>
+
+<section class="card" id="c095" data-title="side reaction 부반응은 재료나 전하를 소모하는 원하지 않는 반응이다.">
+  <div class="num">095</div>
+  <h2>Side Reaction</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">A side reaction is an unwanted reaction that consumes materials or charge.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">부반응은 재료나 전하를 소모하는 원하지 않는 반응이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 전해질 분해가 리튬을 소모해 용량을 줄인다.</p>
+    <p><b>예시 2.</b> 요리 중 음식이 타는 것은 원치 않는 부반응과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c096" data-title="impedance growth 임피던스 증가는 이온과 전자 이동에 대한 저항이 커지는 현상이다.">
+  <div class="num">096</div>
+  <h2>Impedance Growth</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Impedance growth is the increase of resistance to ion and electron movement.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">임피던스 증가는 이온과 전자 이동에 대한 저항이 커지는 현상이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 오래된 배터리는 내부 저항이 커져 출력이 낮아진다.</p>
+    <p><b>예시 2.</b> 수도관에 찌꺼기가 쌓이면 물 흐름이 약해진다.</p>
+  </div>
+</section>
+
+<section class="card" id="c097" data-title="equivalent circuit model 등가회로 모델은 배터리 거동을 전기 회로 요소로 나타내는 모델이다.">
+  <div class="num">097</div>
+  <h2>Equivalent Circuit Model</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">An equivalent circuit model represents battery behavior with electrical components.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">등가회로 모델은 배터리 거동을 전기 회로 요소로 나타내는 모델이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 저항과 커패시터로 충전 응답을 설명한다.</p>
+    <p><b>예시 2.</b> 복잡한 도로망을 간단한 지도 기호로 표현한다.</p>
+  </div>
+</section>
+
+<section class="card" id="c098" data-title="open-circuit voltage 개방회로전압은 전류가 흐르지 않을 때의 배터리 전압이다.">
+  <div class="num">098</div>
+  <h2>Open-Circuit Voltage</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">Open-circuit voltage is the battery voltage when no current flows.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">개방회로전압은 전류가 흐르지 않을 때의 배터리 전압이다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리 잔량 추정에 OCV를 활용한다.</p>
+    <p><b>예시 2.</b> 수도꼭지를 잠근 상태의 물 압력과 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c099" data-title="state of charge 충전 상태는 배터리에 남아 있는 사용 가능한 전하량을 나타낸다.">
+  <div class="num">099</div>
+  <h2>State of Charge</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">State of charge indicates the remaining usable charge in a battery.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">충전 상태는 배터리에 남아 있는 사용 가능한 전하량을 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 휴대폰 배터리 80퍼센트 표시가 SOC이다.</p>
+    <p><b>예시 2.</b> 자동차 연료 게이지와 비슷하다.</p>
+  </div>
+</section>
+
+<section class="card" id="c100" data-title="state of health 건강 상태는 새 배터리와 비교한 배터리 노화 정도를 나타낸다.">
+  <div class="num">100</div>
+  <h2>State of Health</h2>
+  <div class="block">
+    <h3>English Original</h3>
+    <p class="en">State of health describes the aging condition of a battery compared with a new one.</p>
+  </div>
+  <div class="block">
+    <h3>한글 번역</h3>
+    <p class="ko">건강 상태는 새 배터리와 비교한 배터리 노화 정도를 나타낸다.</p>
+  </div>
+  <div class="examples">
+    <h3>실생활 예시</h3>
+    <p><b>예시 1.</b> 배터리 최대 용량이 90퍼센트로 줄면 SOH가 낮아진 것이다.</p>
+    <p><b>예시 2.</b> 사람의 체력검사 결과와 비슷하다.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Battery Electrode Material Growth · English / Korean · 100 Concepts
+</footer>
+
+<script>
+function jumpToConcept() {
+  const id = document.getElementById("jump").value;
+  if (id) {
+    document.getElementById(id).scrollIntoView({behavior:"smooth", block:"start"});
+  }
+}
+function filterCards() {
+  const q = document.getElementById("search").value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase() + " " + card.dataset.title;
+    card.classList.toggle("hidden", q && !text.includes(q));
+  });
+}
+function showAll() {
+  document.getElementById("search").value = "";
+  document.querySelectorAll(".card").forEach(card => card.classList.remove("hidden"));
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Nucleation 관련 논문 5편 초록 요약</title>
+<style>
+body {
+  margin:0;
+  font-family:"Malgun Gothic", Arial, sans-serif;
+  background:#f3f6fb;
+  color:#1f2937;
+  line-height:1.75;
+}
+header {
+  position:sticky;
+  top:0;
+  background:#0f2440;
+  color:white;
+  padding:14px 20px;
+  box-shadow:0 3px 12px rgba(0,0,0,.18);
+}
+h1 { margin:0; font-size:24px; }
+.toolbar {
+  margin-top:10px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+select, button {
+  padding:7px 10px;
+  border-radius:8px;
+  border:1px solid #cbd5e1;
+}
+button { cursor:pointer; background:#e0edff; }
+main {
+  max-width:1100px;
+  margin:22px auto;
+  padding:0 16px 40px;
+}
+.intro, .paper {
+  background:white;
+  border-radius:16px;
+  padding:22px;
+  margin:18px 0;
+  box-shadow:0 4px 14px rgba(15,23,42,.08);
+}
+.intro {
+  border-left:8px solid #2563eb;
+}
+.badge {
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  padding:4px 11px;
+  border-radius:999px;
+  font-weight:bold;
+}
+h2 { color:#0f172a; margin:12px 0 6px; }
+h3 { color:#334155; margin:6px 0; }
+.meta { color:#475569; }
+.box {
+  border-left:4px solid #93c5fd;
+  padding:10px 14px;
+  margin:14px 0;
+  background:#f8fafc;
+  border-radius:10px;
+}
+.en { color:#1d4ed8; font-weight:600; }
+.ko { color:#c2410c; font-weight:600; }
+a { color:#0b63ce; font-weight:bold; }
+.note {
+  background:#fff7ed;
+  border-left:6px solid #f97316;
+  padding:12px 16px;
+  border-radius:12px;
+}
+footer {
+  text-align:center;
+  color:#64748b;
+  padding:24px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Nucleation 관련 논문 5편 초록 영어 요약 · 한글 번역</h1>
+  <div class="toolbar">
+    <select id="jump" onchange="goPaper()">
+      <option value="">논문 선택</option>
+      <option value="paper1">1. Nanoscale phenomena in electrodeposition</option>
+      <option value="paper2">2. Real-time visualizing electrodes</option>
+      <option value="paper3">3. Zinc dendrite nucleation</option>
+      <option value="paper4">4. Lithium metal nucleation</option>
+      <option value="paper5">5. Real-time metal nucleation tracking</option>
+    </select>
+    <button onclick="window.scrollTo({top:0, behavior:'smooth'})">맨 위로</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h2>Nucleation 핵생성</h2>
+    <p><b>English Original:</b> Nucleation is the initial formation of a stable particle or crystal.</p>
+    <p><b>한글 번역:</b> 핵생성은 안정한 입자나 결정이 처음 형성되는 과정이다.</p>
+    <p><b>실생활 예시 1:</b> 리튬이온 배터리 충전 시 전극 표면에 작은 결정핵이 생긴다.</p>
+    <p><b>실생활 예시 2:</b> 물병을 흔든 뒤 갑자기 얼음 결정이 생기는 과냉각 현상.</p>
+    <div class="note">
+      저작권 보호를 위해 논문 초록 전체 원문을 그대로 복제하지 않고,
+      <b>영어 초록 요약</b>과 <b>한글 번역 요약</b>으로 정리했습니다.
+    </div>
+  </section>
+
+  
+<section class="paper" id="paper1">
+  <div class="badge">Paper 1</div>
+  <h2>Understanding the Nanoscale Phenomena of Nucleation and Crystal Growth in Electrodeposition</h2>
+  <p class="meta"><b>Year:</b> 2024 · <b>Source:</b> Nanoscale / Royal Society of Chemistry</p>
+  <p><a href="https://pubs.rsc.org/en/content/articlelanding/2024/nr/d4nr02389g" target="_blank">논문 출처 열기</a></p>
+  <div class="box">
+    <h3>English Abstract Summary</h3>
+    <p class="en">This review summarizes recent findings on nucleation and crystal growth at the nanoscale in electrodeposition systems. It emphasizes phenomena that deviate from classical nucleation theories and explains why electrocrystallization is useful both for studying surface nucleation and for scalable manufacturing of advanced materials and devices.</p>
+  </div>
+  <div class="box">
+    <h3>한글 번역 요약</h3>
+    <p class="ko">이 리뷰 논문은 전착 시스템에서 나타나는 나노스케일 핵생성과 결정 성장의 최신 연구를 정리한다. 특히 고전 핵생성 이론에서 벗어나는 현상을 강조하며, 전기결정화가 표면 핵생성 연구와 첨단 재료·소자 제조에 모두 유용하다는 점을 설명한다.</p>
+  </div>
+</section>
+
+<section class="paper" id="paper2">
+  <div class="badge">Paper 2</div>
+  <h2>Real-Time Visualizing Nucleation and Growth of Electrodes for Post-Lithium-Ion Batteries</h2>
+  <p class="meta"><b>Year:</b> 2023 · <b>Source:</b> Accounts of Chemical Research / ACS</p>
+  <p><a href="https://pubmed.ncbi.nlm.nih.gov/36689689/" target="_blank">논문 출처 열기</a></p>
+  <div class="box">
+    <h3>English Abstract Summary</h3>
+    <p class="en">This Account discusses nucleation and growth behaviors of metal anodes such as lithium, sodium, and magnesium, as well as chalcogen cathodes such as sulfur and selenium. It highlights in situ and operando visualization methods that reveal how electrode surfaces and interfaces evolve during battery operation.</p>
+  </div>
+  <div class="box">
+    <h3>한글 번역 요약</h3>
+    <p class="ko">이 논문은 리튬, 나트륨, 마그네슘 금속 음극과 황, 셀레늄 계열 양극의 핵생성 및 성장 거동을 다룬다. 배터리 작동 중 전극 표면과 계면이 어떻게 변하는지 보여 주는 실시간·작동 중 관찰 방법의 중요성을 강조한다.</p>
+  </div>
+</section>
+
+<section class="paper" id="paper3">
+  <div class="badge">Paper 3</div>
+  <h2>Unveiling the Mechanism of the Dendrite Nucleation and Growth in Aqueous Zinc-Ion Batteries</h2>
+  <p class="meta"><b>Year:</b> 2024 · <b>Source:</b> Advanced Energy Materials / Wiley</p>
+  <p><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202303737" target="_blank">논문 출처 열기</a></p>
+  <div class="box">
+    <h3>English Abstract Summary</h3>
+    <p class="en">This study investigates why zinc dendrites nucleate and grow in aqueous zinc-ion batteries. It reports that unintentionally adsorbed oxygen-containing species can act as inducing factors for dendrite formation and suggests that understanding surface chemistry is essential for safer zinc metal batteries.</p>
+  </div>
+  <div class="box">
+    <h3>한글 번역 요약</h3>
+    <p class="ko">이 연구는 수계 아연이온 배터리에서 아연 덴드라이트가 왜 핵생성되고 성장하는지 분석한다. 의도치 않게 흡착된 산소 함유 종이 덴드라이트 형성의 유도 요인이 될 수 있음을 제시하며, 안전한 아연 금속 배터리를 위해 표면 화학 이해가 중요하다고 설명한다.</p>
+  </div>
+</section>
+
+<section class="paper" id="paper4">
+  <div class="badge">Paper 4</div>
+  <h2>Nanoscale Nucleation and Growth of Electrodeposited Lithium Metal</h2>
+  <p class="meta"><b>Year:</b> 2017 · <b>Source:</b> Nano Letters / ACS</p>
+  <p><a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.6b04755" target="_blank">논문 출처 열기</a></p>
+  <div class="box">
+    <h3>English Abstract Summary</h3>
+    <p class="en">This paper experimentally studies the early-stage morphology of electrodeposited lithium metal on planar copper electrodes in organic electrolyte. It connects lithium nucleation and growth with lithium metal anode performance, dendrite risk, and the design of high-energy rechargeable batteries.</p>
+  </div>
+  <div class="box">
+    <h3>한글 번역 요약</h3>
+    <p class="ko">이 논문은 유기 전해질 속 평평한 구리 전극 위에 전착되는 리튬 금속의 초기 형태 변화를 실험적으로 연구한다. 리튬 핵생성과 성장을 리튬 금속 음극의 성능, 덴드라이트 위험, 고에너지 충전식 배터리 설계와 연결한다.</p>
+  </div>
+</section>
+
+<section class="paper" id="paper5">
+  <div class="badge">Paper 5</div>
+  <h2>Real-Time Tracking of Metal Nucleation via Local Perturbation of Surface Plasmon Resonance</h2>
+  <p class="meta"><b>Year:</b> 2017 · <b>Source:</b> Nature Communications</p>
+  <p><a href="https://www.nature.com/articles/s41467-017-01087-1" target="_blank">논문 출처 열기</a></p>
+  <div class="box">
+    <h3>English Abstract Summary</h3>
+    <p class="en">This article presents a method for tracking stochastic metal nucleation events at electrode surfaces in real time. It describes how nanoparticles can nucleate and dissolve before reaching a critical size, providing insight into the earliest stages of electrochemical phase formation.</p>
+  </div>
+  <div class="box">
+    <h3>한글 번역 요약</h3>
+    <p class="ko">이 논문은 전극 표면에서 일어나는 확률적 금속 핵생성 사건을 실시간으로 추적하는 방법을 제시한다. 나노입자가 임계 크기에 도달하기 전 생성과 용해를 반복할 수 있음을 보여 주며, 전기화학적 상 형성의 초기 단계를 이해하는 데 도움을 준다.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Nucleation · Battery Electrode Materials · Abstract Summary HTML
+</footer>
+
+<script>
+function goPaper() {
+  const id = document.getElementById("jump").value;
+  if(id) document.getElementById(id).scrollIntoView({behavior:"smooth", block:"start"});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>계산물리학 주요 정리 100개</title>
+<style>
+body{margin:0;font-family:'Malgun Gothic',Arial,sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.75}
+header{position:sticky;top:0;background:#102a43;color:white;padding:16px 22px;z-index:10;box-shadow:0 2px 8px #0003}
+header h1{margin:0;font-size:24px} header p{margin:4px 0 0;color:#d9e8f5}
+.wrap{max-width:1100px;margin:24px auto;padding:0 18px}
+.toc{background:white;border-radius:16px;padding:18px;margin-bottom:22px;box-shadow:0 3px 14px #0001}
+.toc a{display:inline-block;margin:4px 6px;padding:4px 9px;border-radius:999px;background:#eaf2f8;color:#102a43;text-decoration:none;font-size:13px}
+.card{background:white;border-radius:18px;margin:18px 0;padding:24px;box-shadow:0 4px 16px #00000012;border-left:8px solid #247ba0}
+.num{font-weight:bold;color:#247ba0}
+h2{margin:4px 0 0;font-size:24px;color:#102a43} h3{margin:0 0 14px;color:#486581;font-size:18px}
+.theorem,.translation{padding:12px 14px;border-radius:12px;margin:10px 0}
+.theorem{background:#edf7ff} .translation{background:#fff7e6}
+.example{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:14px 16px;margin:12px 0}
+.example h4{margin:0 0 8px;color:#334e68} b{color:#102a43}
+footer{text-align:center;color:#64748b;padding:30px}
+@media print{header{position:static} .card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><h1>계산물리학 주요 정리 100개</h1><p>각 정리: 영어 원문 · 한글 번역 · 실생활 예시 2개 · 상세 풀이</p></header>
+<div class='wrap'>
+<div class='toc'><b>목차 바로가기</b><br><a href='#t001'>001</a><a href='#t002'>002</a><a href='#t003'>003</a><a href='#t004'>004</a><a href='#t005'>005</a><a href='#t006'>006</a><a href='#t007'>007</a><a href='#t008'>008</a><a href='#t009'>009</a><a href='#t010'>010</a><a href='#t011'>011</a><a href='#t012'>012</a><a href='#t013'>013</a><a href='#t014'>014</a><a href='#t015'>015</a><a href='#t016'>016</a><a href='#t017'>017</a><a href='#t018'>018</a><a href='#t019'>019</a><a href='#t020'>020</a><a href='#t021'>021</a><a href='#t022'>022</a><a href='#t023'>023</a><a href='#t024'>024</a><a href='#t025'>025</a><a href='#t026'>026</a><a href='#t027'>027</a><a href='#t028'>028</a><a href='#t029'>029</a><a href='#t030'>030</a><a href='#t031'>031</a><a href='#t032'>032</a><a href='#t033'>033</a><a href='#t034'>034</a><a href='#t035'>035</a><a href='#t036'>036</a><a href='#t037'>037</a><a href='#t038'>038</a><a href='#t039'>039</a><a href='#t040'>040</a><a href='#t041'>041</a><a href='#t042'>042</a><a href='#t043'>043</a><a href='#t044'>044</a><a href='#t045'>045</a><a href='#t046'>046</a><a href='#t047'>047</a><a href='#t048'>048</a><a href='#t049'>049</a><a href='#t050'>050</a><a href='#t051'>051</a><a href='#t052'>052</a><a href='#t053'>053</a><a href='#t054'>054</a><a href='#t055'>055</a><a href='#t056'>056</a><a href='#t057'>057</a><a href='#t058'>058</a><a href='#t059'>059</a><a href='#t060'>060</a><a href='#t061'>061</a><a href='#t062'>062</a><a href='#t063'>063</a><a href='#t064'>064</a><a href='#t065'>065</a><a href='#t066'>066</a><a href='#t067'>067</a><a href='#t068'>068</a><a href='#t069'>069</a><a href='#t070'>070</a><a href='#t071'>071</a><a href='#t072'>072</a><a href='#t073'>073</a><a href='#t074'>074</a><a href='#t075'>075</a><a href='#t076'>076</a><a href='#t077'>077</a><a href='#t078'>078</a><a href='#t079'>079</a><a href='#t080'>080</a><a href='#t081'>081</a><a href='#t082'>082</a><a href='#t083'>083</a><a href='#t084'>084</a><a href='#t085'>085</a><a href='#t086'>086</a><a href='#t087'>087</a><a href='#t088'>088</a><a href='#t089'>089</a><a href='#t090'>090</a><a href='#t091'>091</a><a href='#t092'>092</a><a href='#t093'>093</a><a href='#t094'>094</a><a href='#t095'>095</a><a href='#t096'>096</a><a href='#t097'>097</a><a href='#t098'>098</a><a href='#t099'>099</a><a href='#t100'>100</a></div>
+
+<section class='card' id='t001'>
+  <div class='num'>#001</div>
+  <h2>Finite Difference Approximation</h2>
+  <h3>유한차분 근사</h3>
+  <div class='theorem'><b>English original:</b> The derivative of a smooth function can be approximated by differences of nearby function values.</div>
+  <div class='translation'><b>한글 번역:</b> 매끄러운 함수의 도함수는 가까운 함수값들의 차이로 근사할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Temperature Sensor / 온도 센서</h4>
+        <p><b>Situation:</b> A student models temperature sensor with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 유한차분 근사의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 온도 센서 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Estimate Speed</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: estimate speed.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. estimate speed에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t002'>
+  <div class='num'>#002</div>
+  <h2>Central Difference Accuracy</h2>
+  <h3>중앙차분 정확도</h3>
+  <div class='theorem'><b>English original:</b> The central difference formula for the first derivative has second-order accuracy.</div>
+  <div class='translation'><b>한글 번역:</b> 1계 도함수의 중앙차분 공식은 2차 정확도를 가진다.</div>
+  
+        <div class='example'><h4>Example 1 · Car Velocity / 자동차 속도</h4>
+        <p><b>Situation:</b> A student models car velocity with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 중앙차분 정확도의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 자동차 속도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Stock Trend Slope</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: stock trend slope.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. stock trend slope에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t003'>
+  <div class='num'>#003</div>
+  <h2>Forward Difference Accuracy</h2>
+  <h3>전진차분 정확도</h3>
+  <div class='theorem'><b>English original:</b> The forward difference formula for the first derivative has first-order accuracy.</div>
+  <div class='translation'><b>한글 번역:</b> 1계 도함수의 전진차분 공식은 1차 정확도를 가진다.</div>
+  
+        <div class='example'><h4>Example 1 · Rainfall Change / 강수량 변화</h4>
+        <p><b>Situation:</b> A student models rainfall change with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 전진차분 정확도의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 강수량 변화 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Battery Drain</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: battery drain.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. battery drain에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t004'>
+  <div class='num'>#004</div>
+  <h2>Backward Difference Approximation</h2>
+  <h3>후진차분 근사</h3>
+  <div class='theorem'><b>English original:</b> The backward difference estimates a derivative using the current and previous values.</div>
+  <div class='translation'><b>한글 번역:</b> 후진차분은 현재값과 이전값을 이용하여 도함수를 추정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Step Counter / 걸음 수 변화</h4>
+        <p><b>Situation:</b> A student models step counter with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 후진차분 근사의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 걸음 수 변화 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Daily Sales</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: daily sales.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. daily sales에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t005'>
+  <div class='num'>#005</div>
+  <h2>Second Derivative Difference</h2>
+  <h3>2계 도함수 차분</h3>
+  <div class='theorem'><b>English original:</b> The second derivative is approximated by the centered difference of three neighboring points.</div>
+  <div class='translation'><b>한글 번역:</b> 2계 도함수는 이웃한 세 점의 중앙차분으로 근사할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Road Curvature / 도로 곡률</h4>
+        <p><b>Situation:</b> A student models road curvature with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 2계 도함수 차분의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 도로 곡률 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Temperature Curvature</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: temperature curvature.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. temperature curvature에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t006'>
+  <div class='num'>#006</div>
+  <h2>Taylor Expansion Error</h2>
+  <h3>테일러 전개 오차</h3>
+  <div class='theorem'><b>English original:</b> Finite difference errors can be derived by expanding the function in a Taylor series.</div>
+  <div class='translation'><b>한글 번역:</b> 유한차분 오차는 함수를 테일러 급수로 전개하여 구할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Prediction Error / 예측 오차</h4>
+        <p><b>Situation:</b> A student models prediction error with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 테일러 전개 오차의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 예측 오차 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Sensor Calibration</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: sensor calibration.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. sensor calibration에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t007'>
+  <div class='num'>#007</div>
+  <h2>Euler Method</h2>
+  <h3>오일러 방법</h3>
+  <div class='theorem'><b>English original:</b> Euler&#x27;s method advances an ordinary differential equation by using the current slope.</div>
+  <div class='translation'><b>한글 번역:</b> 오일러 방법은 현재 기울기를 이용하여 상미분방정식의 값을 전진시킨다.</div>
+  
+        <div class='example'><h4>Example 1 · Population Growth / 인구 증가</h4>
+        <p><b>Situation:</b> A student models population growth with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 오일러 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 인구 증가 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Cooling Coffee</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: cooling coffee.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. cooling coffee에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t008'>
+  <div class='num'>#008</div>
+  <h2>Improved Euler Method</h2>
+  <h3>개선 오일러 방법</h3>
+  <div class='theorem'><b>English original:</b> The improved Euler method averages slopes to reduce numerical error.</div>
+  <div class='translation'><b>한글 번역:</b> 개선 오일러 방법은 기울기를 평균내어 수치 오차를 줄인다.</div>
+  
+        <div class='example'><h4>Example 1 · Traffic Speed / 교통 속도</h4>
+        <p><b>Situation:</b> A student models traffic speed with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 개선 오일러 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교통 속도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Water Tank Level</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: water tank level.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. water tank level에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t009'>
+  <div class='num'>#009</div>
+  <h2>Runge Kutta Fourth Order</h2>
+  <h3>4차 룽게-쿠타 방법</h3>
+  <div class='theorem'><b>English original:</b> The fourth-order Runge-Kutta method combines four slope estimates to obtain high accuracy.</div>
+  <div class='translation'><b>한글 번역:</b> 4차 룽게-쿠타 방법은 네 개의 기울기 추정값을 결합하여 높은 정확도를 얻는다.</div>
+  
+        <div class='example'><h4>Example 1 · Projectile Motion / 포물선 운동</h4>
+        <p><b>Situation:</b> A student models projectile motion with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 4차 룽게-쿠타 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 포물선 운동 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Epidemic Model</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: epidemic model.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. epidemic model에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t010'>
+  <div class='num'>#010</div>
+  <h2>Local Truncation Error</h2>
+  <h3>국소 절단 오차</h3>
+  <div class='theorem'><b>English original:</b> Local truncation error measures the error made in one numerical step.</div>
+  <div class='translation'><b>한글 번역:</b> 국소 절단 오차는 한 번의 수치 계산 단계에서 생기는 오차를 측정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Gps Update / GPS 갱신</h4>
+        <p><b>Situation:</b> A student models GPS update with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 국소 절단 오차의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 GPS 갱신 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Weather Time Step</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: weather time step.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. weather time step에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t011'>
+  <div class='num'>#011</div>
+  <h2>Global Error Accumulation</h2>
+  <h3>전역 오차 누적</h3>
+  <div class='theorem'><b>English original:</b> Global error is the accumulated effect of local errors over the full computation.</div>
+  <div class='translation'><b>한글 번역:</b> 전역 오차는 전체 계산 과정에서 국소 오차가 누적된 결과이다.</div>
+  
+        <div class='example'><h4>Example 1 · Long Drive Navigation / 장거리 내비게이션</h4>
+        <p><b>Situation:</b> A student models long drive navigation with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 전역 오차 누적의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 장거리 내비게이션 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Monthly Budget Forecast</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: monthly budget forecast.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. monthly budget forecast에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t012'>
+  <div class='num'>#012</div>
+  <h2>Stability Criterion</h2>
+  <h3>안정성 조건</h3>
+  <div class='theorem'><b>English original:</b> A numerical method is stable when small errors do not grow uncontrollably during iteration.</div>
+  <div class='translation'><b>한글 번역:</b> 수치 방법은 작은 오차가 반복 중 통제 불가능하게 커지지 않을 때 안정하다.</div>
+  
+        <div class='example'><h4>Example 1 · Bridge Vibration / 교량 진동</h4>
+        <p><b>Situation:</b> A student models bridge vibration with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 안정성 조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교량 진동 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Loan Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: loan simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. loan simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t013'>
+  <div class='num'>#013</div>
+  <h2>CFL Condition</h2>
+  <h3>CFL 조건</h3>
+  <div class='theorem'><b>English original:</b> For many wave simulations, the time step must be small enough relative to the spatial grid spacing.</div>
+  <div class='translation'><b>한글 번역:</b> 많은 파동 시뮬레이션에서 시간 간격은 공간 격자 간격에 비해 충분히 작아야 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Tsunami Model / 쓰나미 모델</h4>
+        <p><b>Situation:</b> A student models tsunami model with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> CFL 조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 쓰나미 모델 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Sound Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: sound simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. sound simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t014'>
+  <div class='num'>#014</div>
+  <h2>Explicit Time Stepping</h2>
+  <h3>명시적 시간 전진</h3>
+  <div class='theorem'><b>English original:</b> An explicit method computes the next state directly from known current values.</div>
+  <div class='translation'><b>한글 번역:</b> 명시적 방법은 알려진 현재값으로부터 다음 상태를 직접 계산한다.</div>
+  
+        <div class='example'><h4>Example 1 · Game Physics / 게임 물리</h4>
+        <p><b>Situation:</b> A student models game physics with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 명시적 시간 전진의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 게임 물리 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Queue Prediction</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: queue prediction.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. queue prediction에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t015'>
+  <div class='num'>#015</div>
+  <h2>Implicit Time Stepping</h2>
+  <h3>암시적 시간 전진</h3>
+  <div class='theorem'><b>English original:</b> An implicit method defines the next state through equations that must be solved simultaneously.</div>
+  <div class='translation'><b>한글 번역:</b> 암시적 방법은 동시에 풀어야 하는 방정식으로 다음 상태를 정의한다.</div>
+  
+        <div class='example'><h4>Example 1 · Heat Diffusion / 열 확산</h4>
+        <p><b>Situation:</b> A student models heat diffusion with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 암시적 시간 전진의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 열 확산 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Financial Risk</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: financial risk.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. financial risk에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t016'>
+  <div class='num'>#016</div>
+  <h2>Crank Nicolson Method</h2>
+  <h3>크랭크-니콜슨 방법</h3>
+  <div class='theorem'><b>English original:</b> The Crank-Nicolson method averages explicit and implicit estimates to obtain second-order time accuracy.</div>
+  <div class='translation'><b>한글 번역:</b> 크랭크-니콜슨 방법은 명시적 추정과 암시적 추정을 평균하여 시간에 대해 2차 정확도를 얻는다.</div>
+  
+        <div class='example'><h4>Example 1 · Building Heat / 건물 열</h4>
+        <p><b>Situation:</b> A student models building heat with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 크랭크-니콜슨 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 건물 열 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Battery Temperature</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: battery temperature.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. battery temperature에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t017'>
+  <div class='num'>#017</div>
+  <h2>Linear System Discretization</h2>
+  <h3>선형계 이산화</h3>
+  <div class='theorem'><b>English original:</b> Discretizing differential equations often produces a system of linear algebraic equations.</div>
+  <div class='translation'><b>한글 번역:</b> 미분방정식을 이산화하면 종종 선형대수 방정식계가 만들어진다.</div>
+  
+        <div class='example'><h4>Example 1 · Heat Plate / 가열판</h4>
+        <p><b>Situation:</b> A student models heat plate with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 선형계 이산화의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 가열판 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Water Network</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: water network.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. water network에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t018'>
+  <div class='num'>#018</div>
+  <h2>Gaussian Elimination</h2>
+  <h3>가우스 소거법</h3>
+  <div class='theorem'><b>English original:</b> A linear system can be solved by systematically eliminating unknowns.</div>
+  <div class='translation'><b>한글 번역:</b> 선형 방정식계는 미지수를 체계적으로 제거하여 풀 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Circuit Currents / 회로 전류</h4>
+        <p><b>Situation:</b> A student models circuit currents with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 가우스 소거법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 회로 전류 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Recipe Mixture</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: recipe mixture.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. recipe mixture에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t019'>
+  <div class='num'>#019</div>
+  <h2>LU Decomposition</h2>
+  <h3>LU 분해</h3>
+  <div class='theorem'><b>English original:</b> A matrix can be factored into lower and upper triangular matrices to solve repeated linear systems efficiently.</div>
+  <div class='translation'><b>한글 번역:</b> 행렬은 하삼각행렬과 상삼각행렬로 분해되어 반복적인 선형계 풀이를 효율화할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Structural Analysis / 구조 해석</h4>
+        <p><b>Situation:</b> A student models structural analysis with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> LU 분해의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 구조 해석 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Delivery Optimization</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: delivery optimization.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. delivery optimization에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t020'>
+  <div class='num'>#020</div>
+  <h2>Jacobi Iteration</h2>
+  <h3>야코비 반복법</h3>
+  <div class='theorem'><b>English original:</b> Jacobi iteration solves a linear system by updating each variable from values of the previous iteration.</div>
+  <div class='translation'><b>한글 번역:</b> 야코비 반복법은 이전 반복값을 이용하여 각 변수를 갱신함으로써 선형계를 푼다.</div>
+  
+        <div class='example'><h4>Example 1 · Room Temperatures / 방 온도</h4>
+        <p><b>Situation:</b> A student models room temperatures with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 야코비 반복법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 방 온도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Peer Ranking</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: peer ranking.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. peer ranking에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t021'>
+  <div class='num'>#021</div>
+  <h2>Gauss Seidel Iteration</h2>
+  <h3>가우스-자이델 반복법</h3>
+  <div class='theorem'><b>English original:</b> Gauss-Seidel iteration immediately uses newly updated values within the same iteration.</div>
+  <div class='translation'><b>한글 번역:</b> 가우스-자이델 반복법은 같은 반복 안에서 새로 갱신된 값을 즉시 사용한다.</div>
+  
+        <div class='example'><h4>Example 1 · Traffic Equilibrium / 교통 균형</h4>
+        <p><b>Situation:</b> A student models traffic equilibrium with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 가우스-자이델 반복법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교통 균형 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Network Pressure</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: network pressure.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. network pressure에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t022'>
+  <div class='num'>#022</div>
+  <h2>Successive Over Relaxation</h2>
+  <h3>연속 과완화법</h3>
+  <div class='theorem'><b>English original:</b> Successive over-relaxation accelerates Gauss-Seidel iteration by using a relaxation factor.</div>
+  <div class='translation'><b>한글 번역:</b> 연속 과완화법은 완화 계수를 사용하여 가우스-자이델 반복을 가속한다.</div>
+  
+        <div class='example'><h4>Example 1 · Heat Map / 열 지도</h4>
+        <p><b>Situation:</b> A student models heat map with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 연속 과완화법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 열 지도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Budget Balancing</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: budget balancing.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. budget balancing에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t023'>
+  <div class='num'>#023</div>
+  <h2>Conjugate Gradient Method</h2>
+  <h3>켤레기울기법</h3>
+  <div class='theorem'><b>English original:</b> The conjugate gradient method efficiently solves large symmetric positive definite linear systems.</div>
+  <div class='translation'><b>한글 번역:</b> 켤레기울기법은 큰 대칭 양의 정부호 선형계를 효율적으로 푼다.</div>
+  
+        <div class='example'><h4>Example 1 · Image Reconstruction / 영상 복원</h4>
+        <p><b>Situation:</b> A student models image reconstruction with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 켤레기울기법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 영상 복원 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Spring Network</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: spring network.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. spring network에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t024'>
+  <div class='num'>#024</div>
+  <h2>Eigenvalue Problem</h2>
+  <h3>고유값 문제</h3>
+  <div class='theorem'><b>English original:</b> Many physical systems reduce to finding eigenvalues and eigenvectors of an operator or matrix.</div>
+  <div class='translation'><b>한글 번역:</b> 많은 물리계는 연산자나 행렬의 고유값과 고유벡터를 찾는 문제로 환원된다.</div>
+  
+        <div class='example'><h4>Example 1 · Vibration Modes / 진동 모드</h4>
+        <p><b>Situation:</b> A student models vibration modes with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 고유값 문제의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 진동 모드 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Recommendation Ranking</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: recommendation ranking.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. recommendation ranking에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t025'>
+  <div class='num'>#025</div>
+  <h2>Power Iteration</h2>
+  <h3>거듭제곱 반복법</h3>
+  <div class='theorem'><b>English original:</b> Power iteration estimates the dominant eigenvalue and eigenvector of a matrix.</div>
+  <div class='translation'><b>한글 번역:</b> 거듭제곱 반복법은 행렬의 지배적인 고유값과 고유벡터를 추정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Web Ranking / 웹 순위</h4>
+        <p><b>Situation:</b> A student models web ranking with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 거듭제곱 반복법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 웹 순위 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Principal Vibration</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: principal vibration.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. principal vibration에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t026'>
+  <div class='num'>#026</div>
+  <h2>Fourier Transform</h2>
+  <h3>푸리에 변환</h3>
+  <div class='theorem'><b>English original:</b> A signal can be decomposed into a sum of frequency components.</div>
+  <div class='translation'><b>한글 번역:</b> 신호는 여러 주파수 성분의 합으로 분해될 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Music Equalizer / 음악 이퀄라이저</h4>
+        <p><b>Situation:</b> A student models music equalizer with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 푸리에 변환의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 음악 이퀄라이저 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Earthquake Signal</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: earthquake signal.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. earthquake signal에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t027'>
+  <div class='num'>#027</div>
+  <h2>Discrete Fourier Transform</h2>
+  <h3>이산 푸리에 변환</h3>
+  <div class='theorem'><b>English original:</b> The discrete Fourier transform converts finite sampled data into frequency-domain coefficients.</div>
+  <div class='translation'><b>한글 번역:</b> 이산 푸리에 변환은 유한한 샘플 데이터를 주파수 영역 계수로 변환한다.</div>
+  
+        <div class='example'><h4>Example 1 · Audio Samples / 오디오 샘플</h4>
+        <p><b>Situation:</b> A student models audio samples with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 이산 푸리에 변환의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 오디오 샘플 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Machine Vibration</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: machine vibration.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. machine vibration에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t028'>
+  <div class='num'>#028</div>
+  <h2>Fast Fourier Transform</h2>
+  <h3>고속 푸리에 변환</h3>
+  <div class='theorem'><b>English original:</b> The FFT computes the discrete Fourier transform much faster by exploiting symmetry and divide-and-conquer.</div>
+  <div class='translation'><b>한글 번역:</b> FFT는 대칭성과 분할정복을 이용하여 이산 푸리에 변환을 훨씬 빠르게 계산한다.</div>
+  
+        <div class='example'><h4>Example 1 · Noise Removal / 잡음 제거</h4>
+        <p><b>Situation:</b> A student models noise removal with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 고속 푸리에 변환의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 잡음 제거 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Mri Imaging</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: MRI imaging.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. MRI imaging에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t029'>
+  <div class='num'>#029</div>
+  <h2>Spectral Method</h2>
+  <h3>스펙트럴 방법</h3>
+  <div class='theorem'><b>English original:</b> Spectral methods approximate functions using global basis functions such as sines, cosines, or polynomials.</div>
+  <div class='translation'><b>한글 번역:</b> 스펙트럴 방법은 사인, 코사인, 다항식 같은 전역 기저함수로 함수를 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Climate Wave / 기후 파동</h4>
+        <p><b>Situation:</b> A student models climate wave with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 스펙트럴 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 기후 파동 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Sound Field</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: sound field.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. sound field에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t030'>
+  <div class='num'>#030</div>
+  <h2>Aliasing</h2>
+  <h3>앨리어싱</h3>
+  <div class='theorem'><b>English original:</b> Undersampling can make high-frequency signals appear as false low-frequency signals.</div>
+  <div class='translation'><b>한글 번역:</b> 샘플링이 부족하면 고주파 신호가 거짓 저주파 신호처럼 보일 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Wagon Wheel Video / 바퀴 영상</h4>
+        <p><b>Situation:</b> A student models wagon wheel video with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 앨리어싱의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 바퀴 영상 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Audio Distortion</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: audio distortion.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. audio distortion에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t031'>
+  <div class='num'>#031</div>
+  <h2>Nyquist Sampling Theorem</h2>
+  <h3>나이퀴스트 샘플링 정리</h3>
+  <div class='theorem'><b>English original:</b> A band-limited signal can be reconstructed if sampled above twice its highest frequency.</div>
+  <div class='translation'><b>한글 번역:</b> 대역 제한 신호는 최고 주파수의 두 배보다 높은 속도로 샘플링하면 복원할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Digital Audio / 디지털 오디오</h4>
+        <p><b>Situation:</b> A student models digital audio with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 나이퀴스트 샘플링 정리의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 디지털 오디오 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Heart Monitor</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: heart monitor.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. heart monitor에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t032'>
+  <div class='num'>#032</div>
+  <h2>Interpolation</h2>
+  <h3>보간</h3>
+  <div class='theorem'><b>English original:</b> Interpolation estimates unknown values between known data points.</div>
+  <div class='translation'><b>한글 번역:</b> 보간은 알려진 데이터 점 사이의 미지 값을 추정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Weather Map / 날씨 지도</h4>
+        <p><b>Situation:</b> A student models weather map with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 보간의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 날씨 지도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Animation Frames</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: animation frames.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. animation frames에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t033'>
+  <div class='num'>#033</div>
+  <h2>Linear Interpolation</h2>
+  <h3>선형 보간</h3>
+  <div class='theorem'><b>English original:</b> Linear interpolation assumes a straight-line change between two known points.</div>
+  <div class='translation'><b>한글 번역:</b> 선형 보간은 두 알려진 점 사이가 직선적으로 변한다고 가정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Fuel Gauge / 연료 게이지</h4>
+        <p><b>Situation:</b> A student models fuel gauge with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 선형 보간의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 연료 게이지 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Temperature Table</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: temperature table.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. temperature table에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t034'>
+  <div class='num'>#034</div>
+  <h2>Polynomial Interpolation</h2>
+  <h3>다항식 보간</h3>
+  <div class='theorem'><b>English original:</b> A polynomial can be constructed to pass through a given set of data points.</div>
+  <div class='translation'><b>한글 번역:</b> 주어진 데이터 점들을 지나는 다항식을 구성할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Sensor Calibration / 센서 보정</h4>
+        <p><b>Situation:</b> A student models sensor calibration with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 다항식 보간의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 센서 보정 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Robot Path</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: robot path.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. robot path에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t035'>
+  <div class='num'>#035</div>
+  <h2>Spline Interpolation</h2>
+  <h3>스플라인 보간</h3>
+  <div class='theorem'><b>English original:</b> Spline interpolation uses piecewise polynomials to create smooth curves through data.</div>
+  <div class='translation'><b>한글 번역:</b> 스플라인 보간은 구간별 다항식을 사용하여 데이터를 지나는 매끄러운 곡선을 만든다.</div>
+  
+        <div class='example'><h4>Example 1 · Road Design / 도로 설계</h4>
+        <p><b>Situation:</b> A student models road design with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 스플라인 보간의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 도로 설계 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Font Curves</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: font curves.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. font curves에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t036'>
+  <div class='num'>#036</div>
+  <h2>Least Squares Fitting</h2>
+  <h3>최소제곱 적합</h3>
+  <div class='theorem'><b>English original:</b> The least squares method chooses parameters that minimize the sum of squared residuals.</div>
+  <div class='translation'><b>한글 번역:</b> 최소제곱법은 잔차 제곱합을 최소화하는 매개변수를 선택한다.</div>
+  
+        <div class='example'><h4>Example 1 · Trend Line / 추세선</h4>
+        <p><b>Situation:</b> A student models trend line with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 최소제곱 적합의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 추세선 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Physics Lab</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: physics lab.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. physics lab에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t037'>
+  <div class='num'>#037</div>
+  <h2>Regression Model</h2>
+  <h3>회귀 모델</h3>
+  <div class='theorem'><b>English original:</b> A regression model represents the relationship between variables through fitted parameters.</div>
+  <div class='translation'><b>한글 번역:</b> 회귀 모델은 적합된 매개변수로 변수 사이의 관계를 나타낸다.</div>
+  
+        <div class='example'><h4>Example 1 · House Price / 집값</h4>
+        <p><b>Situation:</b> A student models house price with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 회귀 모델의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 집값 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Sports Performance</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: sports performance.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. sports performance에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t038'>
+  <div class='num'>#038</div>
+  <h2>Numerical Integration</h2>
+  <h3>수치 적분</h3>
+  <div class='theorem'><b>English original:</b> Numerical integration approximates an integral by combining function values at selected points.</div>
+  <div class='translation'><b>한글 번역:</b> 수치 적분은 선택된 점의 함수값들을 결합하여 적분값을 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Distance From Speed / 속도로 거리</h4>
+        <p><b>Situation:</b> A student models distance from speed with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 수치 적분의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 속도로 거리 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Electricity Use</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: electricity use.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. electricity use에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t039'>
+  <div class='num'>#039</div>
+  <h2>Rectangle Rule</h2>
+  <h3>직사각형 공식</h3>
+  <div class='theorem'><b>English original:</b> The rectangle rule approximates area using rectangles under a curve.</div>
+  <div class='translation'><b>한글 번역:</b> 직사각형 공식은 곡선 아래 영역을 직사각형으로 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Fuel Consumption / 연료 소비</h4>
+        <p><b>Situation:</b> A student models fuel consumption with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 직사각형 공식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 연료 소비 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Steps Calories</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: steps calories.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. steps calories에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t040'>
+  <div class='num'>#040</div>
+  <h2>Trapezoidal Rule</h2>
+  <h3>사다리꼴 공식</h3>
+  <div class='theorem'><b>English original:</b> The trapezoidal rule approximates area using trapezoids between neighboring points.</div>
+  <div class='translation'><b>한글 번역:</b> 사다리꼴 공식은 이웃한 점들 사이를 사다리꼴로 보아 면적을 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Water Flow / 물 흐름</h4>
+        <p><b>Situation:</b> A student models water flow with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 사다리꼴 공식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 물 흐름 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Daily Power</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: daily power.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. daily power에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t041'>
+  <div class='num'>#041</div>
+  <h2>Simpson Rule</h2>
+  <h3>심프슨 공식</h3>
+  <div class='theorem'><b>English original:</b> Simpson&#x27;s rule approximates an integral by fitting parabolas over pairs of intervals.</div>
+  <div class='translation'><b>한글 번역:</b> 심프슨 공식은 두 구간마다 포물선을 맞추어 적분을 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Road Length / 도로 길이</h4>
+        <p><b>Situation:</b> A student models road length with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 심프슨 공식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 도로 길이 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Drug Concentration</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: drug concentration.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. drug concentration에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t042'>
+  <div class='num'>#042</div>
+  <h2>Gaussian Quadrature</h2>
+  <h3>가우스 구적법</h3>
+  <div class='theorem'><b>English original:</b> Gaussian quadrature chooses optimal points and weights to integrate polynomials accurately.</div>
+  <div class='translation'><b>한글 번역:</b> 가우스 구적법은 다항식을 정확히 적분하기 위해 최적의 점과 가중치를 선택한다.</div>
+  
+        <div class='example'><h4>Example 1 · Engineering Design / 공학 설계</h4>
+        <p><b>Situation:</b> A student models engineering design with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 가우스 구적법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 공학 설계 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Light Intensity</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: light intensity.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. light intensity에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t043'>
+  <div class='num'>#043</div>
+  <h2>Monte Carlo Integration</h2>
+  <h3>몬테카를로 적분</h3>
+  <div class='theorem'><b>English original:</b> Monte Carlo integration estimates integrals using random samples.</div>
+  <div class='translation'><b>한글 번역:</b> 몬테카를로 적분은 무작위 표본을 이용하여 적분을 추정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Park Area / 공원 면적</h4>
+        <p><b>Situation:</b> A student models park area with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 몬테카를로 적분의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 공원 면적 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Risk Estimate</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: risk estimate.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. risk estimate에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t044'>
+  <div class='num'>#044</div>
+  <h2>Law of Large Numbers</h2>
+  <h3>대수의 법칙</h3>
+  <div class='theorem'><b>English original:</b> The average of many independent samples approaches the expected value.</div>
+  <div class='translation'><b>한글 번역:</b> 많은 독립 표본의 평균은 기댓값에 가까워진다.</div>
+  
+        <div class='example'><h4>Example 1 · Dice Average / 주사위 평균</h4>
+        <p><b>Situation:</b> A student models dice average with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 대수의 법칙의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 주사위 평균 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Quality Testing</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: quality testing.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. quality testing에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t045'>
+  <div class='num'>#045</div>
+  <h2>Central Limit Theorem</h2>
+  <h3>중심극한정리</h3>
+  <div class='theorem'><b>English original:</b> The sum or average of many independent random variables tends toward a normal distribution under broad conditions.</div>
+  <div class='translation'><b>한글 번역:</b> 많은 독립 확률변수의 합이나 평균은 넓은 조건에서 정규분포에 가까워진다.</div>
+  
+        <div class='example'><h4>Example 1 · Exam Average / 시험 평균</h4>
+        <p><b>Situation:</b> A student models exam average with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 중심극한정리의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 시험 평균 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Manufacturing Error</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: manufacturing error.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. manufacturing error에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t046'>
+  <div class='num'>#046</div>
+  <h2>Random Walk</h2>
+  <h3>무작위 보행</h3>
+  <div class='theorem'><b>English original:</b> A random walk describes a path formed by successive random steps.</div>
+  <div class='translation'><b>한글 번역:</b> 무작위 보행은 연속적인 임의의 걸음으로 만들어지는 경로를 설명한다.</div>
+  
+        <div class='example'><h4>Example 1 · Drunk Walk / 취객 걸음</h4>
+        <p><b>Situation:</b> A student models drunk walk with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 무작위 보행의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 취객 걸음 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Stock Fluctuation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: stock fluctuation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. stock fluctuation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t047'>
+  <div class='num'>#047</div>
+  <h2>Brownian Motion Simulation</h2>
+  <h3>브라운 운동 시뮬레이션</h3>
+  <div class='theorem'><b>English original:</b> Brownian motion can be simulated as many small random displacements over time.</div>
+  <div class='translation'><b>한글 번역:</b> 브라운 운동은 시간에 따른 많은 작은 무작위 변위로 시뮬레이션할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Pollen Motion / 꽃가루 운동</h4>
+        <p><b>Situation:</b> A student models pollen motion with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 브라운 운동 시뮬레이션의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 꽃가루 운동 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Particle Filter</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: particle filter.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. particle filter에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t048'>
+  <div class='num'>#048</div>
+  <h2>Metropolis Algorithm</h2>
+  <h3>메트로폴리스 알고리즘</h3>
+  <div class='theorem'><b>English original:</b> The Metropolis algorithm samples states by accepting or rejecting random moves based on probability ratios.</div>
+  <div class='translation'><b>한글 번역:</b> 메트로폴리스 알고리즘은 확률비에 따라 임의 이동을 수락하거나 거부하여 상태를 표본추출한다.</div>
+  
+        <div class='example'><h4>Example 1 · Material Design / 재료 설계</h4>
+        <p><b>Situation:</b> A student models material design with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 메트로폴리스 알고리즘의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 재료 설계 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Route Sampling</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: route sampling.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. route sampling에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t049'>
+  <div class='num'>#049</div>
+  <h2>Markov Chain Monte Carlo</h2>
+  <h3>마르코프 연쇄 몬테카를로</h3>
+  <div class='theorem'><b>English original:</b> MCMC samples a target distribution by constructing a Markov chain with that distribution as equilibrium.</div>
+  <div class='translation'><b>한글 번역:</b> MCMC는 목표 분포를 평형분포로 갖는 마르코프 연쇄를 구성하여 표본을 뽑는다.</div>
+  
+        <div class='example'><h4>Example 1 · Bayesian Estimate / 베이지안 추정</h4>
+        <p><b>Situation:</b> A student models Bayesian estimate with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 마르코프 연쇄 몬테카를로의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 베이지안 추정 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Protein Shape</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: protein shape.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. protein shape에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t050'>
+  <div class='num'>#050</div>
+  <h2>Detailed Balance</h2>
+  <h3>상세평형</h3>
+  <div class='theorem'><b>English original:</b> Detailed balance ensures that probability flow between pairs of states is balanced at equilibrium.</div>
+  <div class='translation'><b>한글 번역:</b> 상세평형은 평형에서 상태 쌍 사이의 확률 흐름이 균형을 이루게 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Gas Molecules / 기체 분자</h4>
+        <p><b>Situation:</b> A student models gas molecules with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 상세평형의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 기체 분자 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Queue States</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: queue states.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. queue states에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t051'>
+  <div class='num'>#051</div>
+  <h2>Importance Sampling</h2>
+  <h3>중요도 표본추출</h3>
+  <div class='theorem'><b>English original:</b> Importance sampling estimates rare or important contributions by sampling from a more useful distribution.</div>
+  <div class='translation'><b>한글 번역:</b> 중요도 표본추출은 더 유용한 분포에서 표본을 뽑아 희귀하거나 중요한 기여를 추정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Insurance Risk / 보험 위험</h4>
+        <p><b>Situation:</b> A student models insurance risk with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 중요도 표본추출의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 보험 위험 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Radiation Shielding</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: radiation shielding.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. radiation shielding에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t052'>
+  <div class='num'>#052</div>
+  <h2>Molecular Dynamics</h2>
+  <h3>분자동역학</h3>
+  <div class='theorem'><b>English original:</b> Molecular dynamics computes particle trajectories by numerically integrating Newton&#x27;s equations.</div>
+  <div class='translation'><b>한글 번역:</b> 분자동역학은 뉴턴 방정식을 수치적으로 적분하여 입자 궤적을 계산한다.</div>
+  
+        <div class='example'><h4>Example 1 · Protein Folding / 단백질 접힘</h4>
+        <p><b>Situation:</b> A student models protein folding with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 분자동역학의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 단백질 접힘 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Liquid Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: liquid simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. liquid simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t053'>
+  <div class='num'>#053</div>
+  <h2>Verlet Algorithm</h2>
+  <h3>베를레 알고리즘</h3>
+  <div class='theorem'><b>English original:</b> The Verlet algorithm updates particle positions using current and previous positions with good energy behavior.</div>
+  <div class='translation'><b>한글 번역:</b> 베를레 알고리즘은 현재와 이전 위치를 이용하여 입자 위치를 갱신하며 에너지 보존 특성이 좋다.</div>
+  
+        <div class='example'><h4>Example 1 · Planet Orbit / 행성 궤도</h4>
+        <p><b>Situation:</b> A student models planet orbit with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 베를레 알고리즘의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 행성 궤도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Molecule Motion</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: molecule motion.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. molecule motion에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t054'>
+  <div class='num'>#054</div>
+  <h2>Velocity Verlet Algorithm</h2>
+  <h3>속도 베를레 알고리즘</h3>
+  <div class='theorem'><b>English original:</b> Velocity Verlet updates both positions and velocities while maintaining time-reversal symmetry.</div>
+  <div class='translation'><b>한글 번역:</b> 속도 베를레 알고리즘은 위치와 속도를 함께 갱신하면서 시간반전 대칭을 유지한다.</div>
+  
+        <div class='example'><h4>Example 1 · Collision Game / 충돌 게임</h4>
+        <p><b>Situation:</b> A student models collision game with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 속도 베를레 알고리즘의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 충돌 게임 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Nanoparticle Motion</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: nanoparticle motion.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. nanoparticle motion에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t055'>
+  <div class='num'>#055</div>
+  <h2>Energy Conservation Check</h2>
+  <h3>에너지 보존 검사</h3>
+  <div class='theorem'><b>English original:</b> A reliable simulation of an isolated system should approximately conserve total energy.</div>
+  <div class='translation'><b>한글 번역:</b> 고립계의 신뢰할 만한 시뮬레이션은 총에너지를 대략 보존해야 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Roller Coaster / 롤러코스터</h4>
+        <p><b>Situation:</b> A student models roller coaster with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 에너지 보존 검사의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 롤러코스터 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Satellite Orbit</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: satellite orbit.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. satellite orbit에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t056'>
+  <div class='num'>#056</div>
+  <h2>Periodic Boundary Conditions</h2>
+  <h3>주기적 경계조건</h3>
+  <div class='theorem'><b>English original:</b> Periodic boundary conditions make particles leaving one side re-enter from the opposite side.</div>
+  <div class='translation'><b>한글 번역:</b> 주기적 경계조건은 한쪽 경계를 나간 입자가 반대쪽에서 다시 들어오게 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Tile Pattern / 타일 무늬</h4>
+        <p><b>Situation:</b> A student models tile pattern with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 주기적 경계조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 타일 무늬 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Bulk Material</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: bulk material.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. bulk material에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t057'>
+  <div class='num'>#057</div>
+  <h2>Lennard Jones Potential</h2>
+  <h3>레너드-존스 퍼텐셜</h3>
+  <div class='theorem'><b>English original:</b> The Lennard-Jones potential models short-range repulsion and longer-range attraction between neutral particles.</div>
+  <div class='translation'><b>한글 번역:</b> 레너드-존스 퍼텐셜은 중성 입자 사이의 단거리 반발과 장거리 인력을 모델링한다.</div>
+  
+        <div class='example'><h4>Example 1 · Argon Gas / 아르곤 기체</h4>
+        <p><b>Situation:</b> A student models argon gas with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 레너드-존스 퍼텐셜의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 아르곤 기체 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Adhesive Contact</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: adhesive contact.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. adhesive contact에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t058'>
+  <div class='num'>#058</div>
+  <h2>Cutoff Radius</h2>
+  <h3>절단 반지름</h3>
+  <div class='theorem'><b>English original:</b> A cutoff radius limits force calculations to nearby particles for efficiency.</div>
+  <div class='translation'><b>한글 번역:</b> 절단 반지름은 효율을 위해 힘 계산을 가까운 입자로 제한한다.</div>
+  
+        <div class='example'><h4>Example 1 · Crowd Simulation / 군중 시뮬레이션</h4>
+        <p><b>Situation:</b> A student models crowd simulation with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 절단 반지름의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 군중 시뮬레이션 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Molecular Fluid</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: molecular fluid.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. molecular fluid에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t059'>
+  <div class='num'>#059</div>
+  <h2>Neighbor List</h2>
+  <h3>이웃 목록</h3>
+  <div class='theorem'><b>English original:</b> A neighbor list stores nearby particle pairs to reduce repeated distance searches.</div>
+  <div class='translation'><b>한글 번역:</b> 이웃 목록은 가까운 입자 쌍을 저장하여 반복적인 거리 탐색을 줄인다.</div>
+  
+        <div class='example'><h4>Example 1 · Traffic Agents / 교통 에이전트</h4>
+        <p><b>Situation:</b> A student models traffic agents with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 이웃 목록의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교통 에이전트 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Particle Engine</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: particle engine.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. particle engine에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t060'>
+  <div class='num'>#060</div>
+  <h2>Cell List Method</h2>
+  <h3>셀 목록 방법</h3>
+  <div class='theorem'><b>English original:</b> The cell list method divides space into cells to find neighboring particles efficiently.</div>
+  <div class='translation'><b>한글 번역:</b> 셀 목록 방법은 공간을 셀로 나누어 이웃 입자를 효율적으로 찾는다.</div>
+  
+        <div class='example'><h4>Example 1 · Crowded Festival / 혼잡 행사</h4>
+        <p><b>Situation:</b> A student models crowded festival with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 셀 목록 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 혼잡 행사 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Grain Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: grain simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. grain simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t061'>
+  <div class='num'>#061</div>
+  <h2>Heat Equation Discretization</h2>
+  <h3>열방정식 이산화</h3>
+  <div class='theorem'><b>English original:</b> The heat equation can be solved numerically by discretizing time and space.</div>
+  <div class='translation'><b>한글 번역:</b> 열방정식은 시간과 공간을 이산화하여 수치적으로 풀 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Heated Room / 난방 방</h4>
+        <p><b>Situation:</b> A student models heated room with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 열방정식 이산화의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 난방 방 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Cpu Cooling</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: CPU cooling.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. CPU cooling에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t062'>
+  <div class='num'>#062</div>
+  <h2>Wave Equation Discretization</h2>
+  <h3>파동방정식 이산화</h3>
+  <div class='theorem'><b>English original:</b> The wave equation can be simulated by updating displacement from neighboring spatial values and previous times.</div>
+  <div class='translation'><b>한글 번역:</b> 파동방정식은 이웃 공간값과 이전 시간값으로 변위를 갱신하여 시뮬레이션할 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Guitar String / 기타 줄</h4>
+        <p><b>Situation:</b> A student models guitar string with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 파동방정식 이산화의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 기타 줄 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Seismic Wave</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: seismic wave.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. seismic wave에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t063'>
+  <div class='num'>#063</div>
+  <h2>Poisson Equation</h2>
+  <h3>푸아송 방정식</h3>
+  <div class='theorem'><b>English original:</b> The Poisson equation relates a potential field to a source distribution.</div>
+  <div class='translation'><b>한글 번역:</b> 푸아송 방정식은 퍼텐셜장과 원천 분포를 연결한다.</div>
+  
+        <div class='example'><h4>Example 1 · Electric Potential / 전기 퍼텐셜</h4>
+        <p><b>Situation:</b> A student models electric potential with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 푸아송 방정식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 전기 퍼텐셜 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Gravity Map</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: gravity map.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. gravity map에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t064'>
+  <div class='num'>#064</div>
+  <h2>Laplace Equation</h2>
+  <h3>라플라스 방정식</h3>
+  <div class='theorem'><b>English original:</b> The Laplace equation describes equilibrium fields without internal sources.</div>
+  <div class='translation'><b>한글 번역:</b> 라플라스 방정식은 내부 원천이 없는 평형장을 설명한다.</div>
+  
+        <div class='example'><h4>Example 1 · Steady Temperature / 정상 온도</h4>
+        <p><b>Situation:</b> A student models steady temperature with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 라플라스 방정식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 정상 온도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Soap Film</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: soap film.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. soap film에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t065'>
+  <div class='num'>#065</div>
+  <h2>Boundary Conditions</h2>
+  <h3>경계조건</h3>
+  <div class='theorem'><b>English original:</b> A differential equation simulation requires boundary conditions to determine a unique solution.</div>
+  <div class='translation'><b>한글 번역:</b> 미분방정식 시뮬레이션은 유일한 해를 정하기 위해 경계조건이 필요하다.</div>
+  
+        <div class='example'><h4>Example 1 · Room Wall / 방 벽</h4>
+        <p><b>Situation:</b> A student models room wall with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 경계조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 방 벽 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Lake Edge</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: lake edge.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. lake edge에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t066'>
+  <div class='num'>#066</div>
+  <h2>Dirichlet Boundary Condition</h2>
+  <h3>디리클레 경계조건</h3>
+  <div class='theorem'><b>English original:</b> A Dirichlet boundary condition fixes the value of the solution at the boundary.</div>
+  <div class='translation'><b>한글 번역:</b> 디리클레 경계조건은 경계에서 해의 값을 고정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Fixed Temperature Wall / 고정 온도 벽</h4>
+        <p><b>Situation:</b> A student models fixed temperature wall with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 디리클레 경계조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 고정 온도 벽 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Water Level</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: water level.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. water level에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t067'>
+  <div class='num'>#067</div>
+  <h2>Neumann Boundary Condition</h2>
+  <h3>노이만 경계조건</h3>
+  <div class='theorem'><b>English original:</b> A Neumann boundary condition fixes the derivative or flux at the boundary.</div>
+  <div class='translation'><b>한글 번역:</b> 노이만 경계조건은 경계에서 도함수 또는 흐름을 고정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Insulated Wall / 단열 벽</h4>
+        <p><b>Situation:</b> A student models insulated wall with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 노이만 경계조건의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 단열 벽 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · No-Flow Pipe</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: no-flow pipe.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. no-flow pipe에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t068'>
+  <div class='num'>#068</div>
+  <h2>Finite Element Method</h2>
+  <h3>유한요소법</h3>
+  <div class='theorem'><b>English original:</b> The finite element method approximates fields over small elements using local basis functions.</div>
+  <div class='translation'><b>한글 번역:</b> 유한요소법은 작은 요소 위에서 국소 기저함수를 사용하여 장을 근사한다.</div>
+  
+        <div class='example'><h4>Example 1 · Bridge Stress / 교량 응력</h4>
+        <p><b>Situation:</b> A student models bridge stress with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 유한요소법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교량 응력 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Car Crash Design</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: car crash design.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. car crash design에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t069'>
+  <div class='num'>#069</div>
+  <h2>Weak Formulation</h2>
+  <h3>약한 형식</h3>
+  <div class='theorem'><b>English original:</b> Weak formulation rewrites a differential equation using weighted integral equations.</div>
+  <div class='translation'><b>한글 번역:</b> 약한 형식은 미분방정식을 가중 적분 방정식으로 다시 쓴다.</div>
+  
+        <div class='example'><h4>Example 1 · Elastic Plate / 탄성판</h4>
+        <p><b>Situation:</b> A student models elastic plate with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 약한 형식의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 탄성판 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Fluid Boundary</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: fluid boundary.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. fluid boundary에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t070'>
+  <div class='num'>#070</div>
+  <h2>Mesh Refinement</h2>
+  <h3>격자 세분화</h3>
+  <div class='theorem'><b>English original:</b> Mesh refinement improves accuracy by using smaller elements where detail is needed.</div>
+  <div class='translation'><b>한글 번역:</b> 격자 세분화는 세부가 필요한 곳에 더 작은 요소를 사용하여 정확도를 높인다.</div>
+  
+        <div class='example'><h4>Example 1 · Airplane Wing / 비행기 날개</h4>
+        <p><b>Situation:</b> A student models airplane wing with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 격자 세분화의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 비행기 날개 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · City Flood Map</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: city flood map.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. city flood map에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t071'>
+  <div class='num'>#071</div>
+  <h2>Adaptive Time Step</h2>
+  <h3>적응형 시간 간격</h3>
+  <div class='theorem'><b>English original:</b> Adaptive time stepping changes the time step according to estimated error or system speed.</div>
+  <div class='translation'><b>한글 번역:</b> 적응형 시간 간격은 추정 오차나 계의 빠르기에 따라 시간 간격을 바꾼다.</div>
+  
+        <div class='example'><h4>Example 1 · Planet Close Pass / 행성 근접</h4>
+        <p><b>Situation:</b> A student models planet close pass with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 적응형 시간 간격의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 행성 근접 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Traffic Surge</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: traffic surge.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. traffic surge에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t072'>
+  <div class='num'>#072</div>
+  <h2>N Body Problem</h2>
+  <h3>N체 문제</h3>
+  <div class='theorem'><b>English original:</b> The N-body problem computes the motion of many interacting particles under mutual forces.</div>
+  <div class='translation'><b>한글 번역:</b> N체 문제는 서로 힘을 주고받는 많은 입자의 운동을 계산한다.</div>
+  
+        <div class='example'><h4>Example 1 · Star Cluster / 별무리</h4>
+        <p><b>Situation:</b> A student models star cluster with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> N체 문제의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 별무리 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Crowd Motion</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: crowd motion.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. crowd motion에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t073'>
+  <div class='num'>#073</div>
+  <h2>Barnes Hut Algorithm</h2>
+  <h3>반스-헛 알고리즘</h3>
+  <div class='theorem'><b>English original:</b> The Barnes-Hut algorithm approximates distant particle groups to reduce N-body computation cost.</div>
+  <div class='translation'><b>한글 번역:</b> 반스-헛 알고리즘은 먼 입자 무리를 근사하여 N체 계산 비용을 줄인다.</div>
+  
+        <div class='example'><h4>Example 1 · Galaxy Simulation / 은하 시뮬레이션</h4>
+        <p><b>Situation:</b> A student models galaxy simulation with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 반스-헛 알고리즘의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 은하 시뮬레이션 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Crowd Attraction</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: crowd attraction.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. crowd attraction에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t074'>
+  <div class='num'>#074</div>
+  <h2>Particle Mesh Method</h2>
+  <h3>입자-격자 방법</h3>
+  <div class='theorem'><b>English original:</b> The particle-mesh method computes long-range forces by mapping particles onto a grid.</div>
+  <div class='translation'><b>한글 번역:</b> 입자-격자 방법은 입자를 격자에 대응시켜 장거리 힘을 계산한다.</div>
+  
+        <div class='example'><h4>Example 1 · Cosmology / 우주론</h4>
+        <p><b>Situation:</b> A student models cosmology with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 입자-격자 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 우주론 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Fluid Particles</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: fluid particles.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. fluid particles에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t075'>
+  <div class='num'>#075</div>
+  <h2>Smoothed Particle Hydrodynamics</h2>
+  <h3>매끈입자 유체역학</h3>
+  <div class='theorem'><b>English original:</b> SPH represents fluids by particles whose properties are smoothed over nearby particles.</div>
+  <div class='translation'><b>한글 번역:</b> SPH는 가까운 입자들에 걸쳐 성질을 매끄럽게 하여 유체를 입자로 표현한다.</div>
+  
+        <div class='example'><h4>Example 1 · Water Splash / 물 튀김</h4>
+        <p><b>Situation:</b> A student models water splash with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 매끈입자 유체역학의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 물 튀김 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Lava Flow</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: lava flow.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. lava flow에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t076'>
+  <div class='num'>#076</div>
+  <h2>Lattice Boltzmann Method</h2>
+  <h3>격자 볼츠만 방법</h3>
+  <div class='theorem'><b>English original:</b> The lattice Boltzmann method simulates fluid flow by evolving particle distribution functions on a lattice.</div>
+  <div class='translation'><b>한글 번역:</b> 격자 볼츠만 방법은 격자 위 입자 분포함수를 진화시켜 유체 흐름을 시뮬레이션한다.</div>
+  
+        <div class='example'><h4>Example 1 · Blood Flow / 혈류</h4>
+        <p><b>Situation:</b> A student models blood flow with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 격자 볼츠만 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 혈류 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Air Ventilation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: air ventilation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. air ventilation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t077'>
+  <div class='num'>#077</div>
+  <h2>Cellular Automaton</h2>
+  <h3>셀룰러 오토마톤</h3>
+  <div class='theorem'><b>English original:</b> A cellular automaton evolves a grid of states according to local rules.</div>
+  <div class='translation'><b>한글 번역:</b> 셀룰러 오토마톤은 국소 규칙에 따라 상태 격자를 변화시킨다.</div>
+  
+        <div class='example'><h4>Example 1 · Traffic Jam / 교통 체증</h4>
+        <p><b>Situation:</b> A student models traffic jam with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 셀룰러 오토마톤의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 교통 체증 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Forest Fire</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: forest fire.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. forest fire에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t078'>
+  <div class='num'>#078</div>
+  <h2>Ising Model</h2>
+  <h3>아이징 모형</h3>
+  <div class='theorem'><b>English original:</b> The Ising model represents interacting spins that can align or oppose one another.</div>
+  <div class='translation'><b>한글 번역:</b> 아이징 모형은 서로 정렬하거나 반대될 수 있는 상호작용 스핀을 나타낸다.</div>
+  
+        <div class='example'><h4>Example 1 · Magnet / 자석</h4>
+        <p><b>Situation:</b> A student models magnet with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 아이징 모형의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 자석 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Opinion Spread</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: opinion spread.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. opinion spread에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t079'>
+  <div class='num'>#079</div>
+  <h2>Phase Transition Simulation</h2>
+  <h3>상전이 시뮬레이션</h3>
+  <div class='theorem'><b>English original:</b> A phase transition appears as a sudden macroscopic change caused by microscopic interactions.</div>
+  <div class='translation'><b>한글 번역:</b> 상전이는 미시적 상호작용으로 인해 거시적 성질이 갑자기 변하는 현상이다.</div>
+  
+        <div class='example'><h4>Example 1 · Water Freezing / 물의 결빙</h4>
+        <p><b>Situation:</b> A student models water freezing with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 상전이 시뮬레이션의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 물의 결빙 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Crowd Behavior</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: crowd behavior.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. crowd behavior에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t080'>
+  <div class='num'>#080</div>
+  <h2>Partition Function</h2>
+  <h3>분배함수</h3>
+  <div class='theorem'><b>English original:</b> The partition function encodes the statistical weights of all possible states of a system.</div>
+  <div class='translation'><b>한글 번역:</b> 분배함수는 계의 가능한 모든 상태의 통계적 가중치를 담는다.</div>
+  
+        <div class='example'><h4>Example 1 · Material Probability / 재료 확률</h4>
+        <p><b>Situation:</b> A student models material probability with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 분배함수의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 재료 확률 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Choice Model</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: choice model.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. choice model에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t081'>
+  <div class='num'>#081</div>
+  <h2>Boltzmann Distribution</h2>
+  <h3>볼츠만 분포</h3>
+  <div class='theorem'><b>English original:</b> At thermal equilibrium, states with energy E have probability proportional to exp(-E/kT).</div>
+  <div class='translation'><b>한글 번역:</b> 열평형에서 에너지 E를 가진 상태의 확률은 exp(-E/kT)에 비례한다.</div>
+  
+        <div class='example'><h4>Example 1 · Molecule Speeds / 분자 속도</h4>
+        <p><b>Situation:</b> A student models molecule speeds with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 볼츠만 분포의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 분자 속도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Thermal Defects</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: thermal defects.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. thermal defects에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t082'>
+  <div class='num'>#082</div>
+  <h2>Simulated Annealing</h2>
+  <h3>모의 담금질</h3>
+  <div class='theorem'><b>English original:</b> Simulated annealing searches for low-energy solutions by gradually lowering an artificial temperature.</div>
+  <div class='translation'><b>한글 번역:</b> 모의 담금질은 인공 온도를 천천히 낮추며 낮은 에너지 해를 찾는다.</div>
+  
+        <div class='example'><h4>Example 1 · Delivery Route / 배송 경로</h4>
+        <p><b>Situation:</b> A student models delivery route with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 모의 담금질의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 배송 경로 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · School Timetable</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: school timetable.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. school timetable에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t083'>
+  <div class='num'>#083</div>
+  <h2>Optimization Landscape</h2>
+  <h3>최적화 지형</h3>
+  <div class='theorem'><b>English original:</b> An optimization problem can be viewed as a landscape of objective-function values over possible states.</div>
+  <div class='translation'><b>한글 번역:</b> 최적화 문제는 가능한 상태 위의 목적함수 값으로 이루어진 지형으로 볼 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Job Scheduling / 작업 배정</h4>
+        <p><b>Situation:</b> A student models job scheduling with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 최적화 지형의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 작업 배정 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Material Design</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: material design.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. material design에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t084'>
+  <div class='num'>#084</div>
+  <h2>Gradient Descent</h2>
+  <h3>경사하강법</h3>
+  <div class='theorem'><b>English original:</b> Gradient descent updates parameters in the direction of decreasing objective function.</div>
+  <div class='translation'><b>한글 번역:</b> 경사하강법은 목적함수가 감소하는 방향으로 매개변수를 갱신한다.</div>
+  
+        <div class='example'><h4>Example 1 · Model Fitting / 모델 적합</h4>
+        <p><b>Situation:</b> A student models model fitting with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 경사하강법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 모델 적합 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Robot Control</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: robot control.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. robot control에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t085'>
+  <div class='num'>#085</div>
+  <h2>Newton Method</h2>
+  <h3>뉴턴 방법</h3>
+  <div class='theorem'><b>English original:</b> Newton&#x27;s method uses derivatives to iteratively find roots or optimize functions.</div>
+  <div class='translation'><b>한글 번역:</b> 뉴턴 방법은 도함수를 이용하여 근을 찾거나 함수를 최적화한다.</div>
+  
+        <div class='example'><h4>Example 1 · Loan Rate / 대출 이율</h4>
+        <p><b>Situation:</b> A student models loan rate with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 뉴턴 방법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 대출 이율 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Orbit Correction</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: orbit correction.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. orbit correction에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t086'>
+  <div class='num'>#086</div>
+  <h2>Root Finding</h2>
+  <h3>근 찾기</h3>
+  <div class='theorem'><b>English original:</b> Root-finding algorithms solve equations by locating where a function becomes zero.</div>
+  <div class='translation'><b>한글 번역:</b> 근 찾기 알고리즘은 함수가 0이 되는 위치를 찾아 방정식을 푼다.</div>
+  
+        <div class='example'><h4>Example 1 · Break-Even Point / 손익분기점</h4>
+        <p><b>Situation:</b> A student models break-even point with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 근 찾기의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 손익분기점 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Chemical Equilibrium</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: chemical equilibrium.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. chemical equilibrium에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t087'>
+  <div class='num'>#087</div>
+  <h2>Bisection Method</h2>
+  <h3>이분법</h3>
+  <div class='theorem'><b>English original:</b> The bisection method repeatedly halves an interval containing a root.</div>
+  <div class='translation'><b>한글 번역:</b> 이분법은 근을 포함하는 구간을 반복적으로 반으로 나눈다.</div>
+  
+        <div class='example'><h4>Example 1 · Thermostat Threshold / 온도 기준</h4>
+        <p><b>Situation:</b> A student models thermostat threshold with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 이분법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 온도 기준 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Ticket Price</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: ticket price.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. ticket price에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t088'>
+  <div class='num'>#088</div>
+  <h2>Secant Method</h2>
+  <h3>할선법</h3>
+  <div class='theorem'><b>English original:</b> The secant method approximates derivatives using two previous points to find roots.</div>
+  <div class='translation'><b>한글 번역:</b> 할선법은 이전 두 점으로 도함수를 근사하여 근을 찾는다.</div>
+  
+        <div class='example'><h4>Example 1 · Calibration / 보정</h4>
+        <p><b>Situation:</b> A student models calibration with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 할선법의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 보정 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Balance Point</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: balance point.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. balance point에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t089'>
+  <div class='num'>#089</div>
+  <h2>Error Norm</h2>
+  <h3>오차 노름</h3>
+  <div class='theorem'><b>English original:</b> An error norm summarizes the size of numerical error over a vector, grid, or field.</div>
+  <div class='translation'><b>한글 번역:</b> 오차 노름은 벡터, 격자, 장 전체의 수치 오차 크기를 요약한다.</div>
+  
+        <div class='example'><h4>Example 1 · Weather Map Error / 날씨 지도 오차</h4>
+        <p><b>Situation:</b> A student models weather map error with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 오차 노름의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 날씨 지도 오차 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Image Difference</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: image difference.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. image difference에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t090'>
+  <div class='num'>#090</div>
+  <h2>Convergence Test</h2>
+  <h3>수렴 검사</h3>
+  <div class='theorem'><b>English original:</b> A numerical method converges when its approximations approach a stable solution as resolution or iterations increase.</div>
+  <div class='translation'><b>한글 번역:</b> 수치 방법은 해상도나 반복 횟수가 증가할 때 근사값이 안정된 해로 가까워지면 수렴한다.</div>
+  
+        <div class='example'><h4>Example 1 · Budget Iteration / 예산 반복</h4>
+        <p><b>Situation:</b> A student models budget iteration with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 수렴 검사의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 예산 반복 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Mesh Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: mesh simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. mesh simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t091'>
+  <div class='num'>#091</div>
+  <h2>Order of Accuracy</h2>
+  <h3>정확도 차수</h3>
+  <div class='theorem'><b>English original:</b> The order of accuracy describes how fast error decreases as the step size becomes smaller.</div>
+  <div class='translation'><b>한글 번역:</b> 정확도 차수는 간격이 작아질 때 오차가 얼마나 빠르게 감소하는지를 나타낸다.</div>
+  
+        <div class='example'><h4>Example 1 · Map Resolution / 지도 해상도</h4>
+        <p><b>Situation:</b> A student models map resolution with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 정확도 차수의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 지도 해상도 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Lab Measurement</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: lab measurement.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. lab measurement에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t092'>
+  <div class='num'>#092</div>
+  <h2>Floating Point Error</h2>
+  <h3>부동소수점 오차</h3>
+  <div class='theorem'><b>English original:</b> Computers represent real numbers approximately, causing round-off error in calculations.</div>
+  <div class='translation'><b>한글 번역:</b> 컴퓨터는 실수를 근사적으로 표현하므로 계산에서 반올림 오차가 생긴다.</div>
+  
+        <div class='example'><h4>Example 1 · Money Decimal / 금액 소수</h4>
+        <p><b>Situation:</b> A student models money decimal with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 부동소수점 오차의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 금액 소수 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Gps Coordinate</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: GPS coordinate.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. GPS coordinate에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t093'>
+  <div class='num'>#093</div>
+  <h2>Round Off Error</h2>
+  <h3>반올림 오차</h3>
+  <div class='theorem'><b>English original:</b> Round-off error occurs when a number is stored with limited precision.</div>
+  <div class='translation'><b>한글 번역:</b> 반올림 오차는 수가 제한된 정밀도로 저장될 때 발생한다.</div>
+  
+        <div class='example'><h4>Example 1 · Calculator Display / 계산기 표시</h4>
+        <p><b>Situation:</b> A student models calculator display with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 반올림 오차의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 계산기 표시 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Sensor Decimal</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: sensor decimal.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. sensor decimal에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t094'>
+  <div class='num'>#094</div>
+  <h2>Catastrophic Cancellation</h2>
+  <h3>치명적 소거</h3>
+  <div class='theorem'><b>English original:</b> Subtracting nearly equal numbers can remove significant digits and amplify relative error.</div>
+  <div class='translation'><b>한글 번역:</b> 거의 같은 수를 빼면 중요한 자릿수가 사라져 상대오차가 커질 수 있다.</div>
+  
+        <div class='example'><h4>Example 1 · Financial Difference / 재무 차이</h4>
+        <p><b>Situation:</b> A student models financial difference with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 치명적 소거의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 재무 차이 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Distance Difference</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: distance difference.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. distance difference에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t095'>
+  <div class='num'>#095</div>
+  <h2>Dimensional Analysis</h2>
+  <h3>차원 분석</h3>
+  <div class='theorem'><b>English original:</b> Equations and simulations must preserve consistent physical dimensions.</div>
+  <div class='translation'><b>한글 번역:</b> 방정식과 시뮬레이션은 일관된 물리 차원을 유지해야 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Unit Conversion / 단위 변환</h4>
+        <p><b>Situation:</b> A student models unit conversion with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 차원 분석의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 단위 변환 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Medicine Dose</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: medicine dose.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. medicine dose에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t096'>
+  <div class='num'>#096</div>
+  <h2>Nondimensionalization</h2>
+  <h3>무차원화</h3>
+  <div class='theorem'><b>English original:</b> Nondimensionalization rescales variables to reduce parameters and improve numerical behavior.</div>
+  <div class='translation'><b>한글 번역:</b> 무차원화는 변수를 재조정하여 매개변수를 줄이고 수치적 특성을 개선한다.</div>
+  
+        <div class='example'><h4>Example 1 · Wind Tunnel / 풍동</h4>
+        <p><b>Situation:</b> A student models wind tunnel with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 무차원화의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 풍동 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Model Bridge</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: model bridge.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. model bridge에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t097'>
+  <div class='num'>#097</div>
+  <h2>Scaling Law</h2>
+  <h3>스케일링 법칙</h3>
+  <div class='theorem'><b>English original:</b> Scaling laws describe how system behavior changes when size, time, or other scales change.</div>
+  <div class='translation'><b>한글 번역:</b> 스케일링 법칙은 크기, 시간 등 척도가 바뀔 때 계의 거동이 어떻게 변하는지 설명한다.</div>
+  
+        <div class='example'><h4>Example 1 · Model Airplane / 모형 비행기</h4>
+        <p><b>Situation:</b> A student models model airplane with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 스케일링 법칙의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 모형 비행기 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Animal Metabolism</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: animal metabolism.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. animal metabolism에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t098'>
+  <div class='num'>#098</div>
+  <h2>Parallel Computing</h2>
+  <h3>병렬 계산</h3>
+  <div class='theorem'><b>English original:</b> Parallel computing speeds up simulations by dividing work among multiple processors.</div>
+  <div class='translation'><b>한글 번역:</b> 병렬 계산은 여러 처리 장치에 일을 나누어 시뮬레이션을 빠르게 한다.</div>
+  
+        <div class='example'><h4>Example 1 · Weather Forecast / 날씨 예보</h4>
+        <p><b>Situation:</b> A student models weather forecast with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 병렬 계산의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 날씨 예보 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Movie Rendering</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: movie rendering.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. movie rendering에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t099'>
+  <div class='num'>#099</div>
+  <h2>Domain Decomposition</h2>
+  <h3>영역 분할</h3>
+  <div class='theorem'><b>English original:</b> Domain decomposition divides a computational region into subregions assigned to different processors.</div>
+  <div class='translation'><b>한글 번역:</b> 영역 분할은 계산 영역을 여러 부분 영역으로 나누어 다른 처리 장치에 배정한다.</div>
+  
+        <div class='example'><h4>Example 1 · Climate Grid / 기후 격자</h4>
+        <p><b>Situation:</b> A student models climate grid with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> 영역 분할의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 기후 격자 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Traffic City Zones</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: traffic city zones.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. traffic city zones에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+<section class='card' id='t100'>
+  <div class='num'>#100</div>
+  <h2>GPU Acceleration</h2>
+  <h3>GPU 가속</h3>
+  <div class='theorem'><b>English original:</b> GPU acceleration uses many simple cores to perform large numbers of similar calculations quickly.</div>
+  <div class='translation'><b>한글 번역:</b> GPU 가속은 많은 단순 코어로 비슷한 계산을 대량으로 빠르게 수행한다.</div>
+  
+        <div class='example'><h4>Example 1 · Graphics Physics / 그래픽 물리</h4>
+        <p><b>Situation:</b> A student models graphics physics with a simple computational physics idea.</p>
+        <p><b>Step 1.</b> Identify the physical quantity or data values involved. <b>Step 2.</b> Replace the continuous idea with computable numbers, grids, samples, or iterations. <b>Step 3.</b> Check the result by comparing units, trends, and error size.</p>
+        <p><b>풀이:</b> GPU 가속의 핵심은 현실 현상을 바로 공식 하나로 끝내지 않고, 컴퓨터가 계산할 수 있는 작은 단계로 바꾸는 것입니다. 예를 들어 그래픽 물리 문제에서는 입력값을 정리한 뒤, 가까운 값·반복값·확률 표본 등을 이용해 근사합니다. 마지막에는 값의 크기와 단위가 현실적인지 확인해야 합니다.</p>
+        </div>
+  
+        <div class='example'><h4>Example 2 · Deep Simulation</h4>
+        <p><b>Situation:</b> The same theorem is applied to a different real-life problem: deep simulation.</p>
+        <p><b>Step 1.</b> Build a small model. <b>Step 2.</b> Compute the answer using the theorem. <b>Step 3.</b> Interpret whether the numerical answer makes practical sense.</p>
+        <p><b>풀이:</b> 같은 정리라도 실제 문제에서는 오차, 계산 시간, 자료의 간격, 경계조건이 중요합니다. deep simulation에서는 모델을 단순화한 뒤 계산하고, 결과가 너무 민감하면 시간 간격이나 격자 크기를 줄여 다시 계산합니다. 이렇게 하면 수식의 의미와 현실 판단을 함께 익힐 수 있습니다.</p>
+        </div>
+</section>
+
+</div><footer>Computational Physics 100 Theorems & Principles · HTML Learning File</footer>
+</body></html>
